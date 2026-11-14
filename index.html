@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المحترف - ليفل الوحش - 200 درس عملي</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui;background:#0f172a;color:#fff}
+header{text-align:center;padding:20px;background:linear-gradient(135deg,#7c3aed,#db2777,#f59e0b)}
+header img{width:100%;max-width:600px;border-radius:16px}
+.author{width:120px!important;height:120px;border-radius:50%!important;object-fit:cover;border:4px solid #fff;margin-top:-60px;background:#fff}
+.progress{margin:15px;background:#1e293b;border-radius:12px;padding:12px;text-align:center}
+.bar{height:14px;background:#334155;border-radius:99px;overflow:hidden;margin-top:8px}
+.bar div{height:100%;background:linear-gradient(90deg,#22c55e,#facc15);width:0%;transition:.3s}
+.search{padding:15px}.search input{width:100%;padding:14px;border-radius:12px;border:none;font-size:16px}
+.lessons{padding:0 15px 30px;display:grid;gap:12px}
+.card{background:#1e293b;border-radius:14px;padding:15px;cursor:pointer;border:2px solid transparent}
+.card.done{border-color:#22c55e;background:#14532d}
+.card b{color:#facc15}
+.content{display:none;margin-top:10px;background:#0f172a;padding:12px;border-radius:10px;line-height:2}
+.box{background:#1e293b;padding:12px;border-radius:10px;margin:10px 0}
+.box h3{margin:0 0 8px}
+.box.exp h3{color:#4ade80}.box.task h3{color:#60a5fa}.box.follow h3{color:#facc15}.box.quiz h3{color:#f472b6}.box.work h3{color:#fb923c}
+pre{background:#000;padding:10px;border-radius:8px;overflow:auto;direction:ltr;text-align:left;color:#4ade80}
+.q button{display:block;width:100%;text-align:right;background:#334155;color:#fff;border:none;padding:10px;border-radius:8px;margin:5px 0;cursor:pointer}
+.doneBtn{width:100%;padding:13px;border:none;border-radius:10px;background:#22c55e;font-weight:900;font-size:16px;cursor:pointer;margin-top:10px}
+.lockBox{background:#1e293b;padding:15px;border-radius:12px;margin:15px;text-align:center}
+.lockBox input{padding:12px;width:65%;border-radius:10px;border:none;text-align:center}
+.lockBox button{padding:12px 18px;border-radius:10px;border:none;background:#facc15;font-weight:900;cursor:pointer}
+.langBtn{padding:10px 20px;border-radius:10px;border:none;background:#fff;font-weight:900;cursor:pointer}
+.check{font-size:16px;line-height:2} .check label{display:block;background:#0f172a;padding:8px;border-radius:8px;margin:5px 0;cursor:pointer}
+.contactBox{background:#25D366;padding:16px;border-radius:14px;margin:15px;text-align:center;color:#000}
+.contactBox a{display:block;background:#fff;color:#000;text-decoration:none;padding:14px;border-radius:10px;font-weight:900;font-size:18px;margin-top:10px}
+</style>
+</head>
+<body>
+<header>
+<img src="cover.jpg" onerror="this.style.display='none'" alt="الغلاف">
+<img class="author" src="author.jpg" onerror="this.src='https://via.placeholder.com/120'" alt="صورتك">
+<h1>المحترف - ليفل الوحش 🔥</h1>
+<p>200 درس عملي - هتطلع عامل شغل حقيقي مش بس فاهم</p>
+<p style="font-weight:900">تواصل مع المحترف 😎 - 01098920188</p>
+</header>
+<div class="contactBox">
+<b>📱 معكش كود؟ تواصل مع المحترف 😎</b><br>عشان تاخد كود التفعيل تواصل واتساب على 01098920188
+<a href="https://wa.me/201098920188?text=%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%88%D8%B2%20%D9%83%D9%88%D8%AF%20%D8%AA%D9%81%D8%B9%D9%8A%D9%84%20%D9%83%D9%88%D8%B1%D8%B3%20%D8%A7%D9%84%D9%85%D8%AD%D8%AA%D8%B1%D9%81" target="_blank">💬 اطلب كودك على واتساب - اضغط هنا</a>
+</div>
+<div style="text-align:center;padding:0 15px"><button class="langBtn" onclick="toggleLang()">عربي / English</button></div>
+<div class="progress"><b id="progText">تقدمك: 0 / 200 درس</b><div class="bar"><div id="barFill"></div></div><p style="color:#94a3b8;font-size:13px">كل درس تخلصه دوس "انا خلصت الدرس ✅" وهيتحسبلك</p></div>
+<div class="lockBox" id="lock">
+<p>دخل كود التفعيل عشان تفتح الكورس - الكود بيشتغل مرة واحدة بس وبعدها بيتحرق</p>
+<input id="codeInput" placeholder="اكتب الكود هنا">
+<button onclick="checkCode()">فتح 🔓</button>
+<p id="msg"></p>
+<p style="color:#94a3b8;font-size:13px">50 كود فقط - كل كود لطالب واحد</p>
+<a href="https://wa.me/201098920188?text=%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%88%D8%B2%20%D9%83%D9%88%D8%AF%20%D8%AA%D9%81%D8%B9%D9%8A%D9%84%20%D9%83%D9%88%D8%B1%D8%B3%20%D8%A7%D9%84%D9%85%D8%AD%D8%AA%D8%B1%D9%81" target="_blank" style="display:block;background:#25D366;color:#fff;padding:12px;border-radius:10px;text-decoration:none;font-weight:900;margin-top:10px">معكش كود؟ تواصل مع المحترف واتساب 💬 01098920188</a>
+</div>
+<div class="search"><input id="s" placeholder="دور على أي درس..." oninput="filter()"></div>
+<div class="lessons" id="list"></div>
+<script>
+const codes=["WAHSH-001-AR","WAHSH-002-EN","MONSTER-003-X","MONSTER-004-Y","WAHSH-005-AAA","WAHSH-006-BBB","WAHSH-007-CCC","WAHSH-008-DDD","WAHSH-009-EEE","WAHSH-010-FFF","MONSTER-011-GG","MONSTER-012-HH","WAHSH-013-JJ","WAHSH-014-KK","WAHSH-015-LL","WAHSH-016-MM","WAHSH-017-NN","WAHSH-018-PP","WAHSH-019-QQ","WAHSH-020-RR","WAHSH-021-SS","WAHSH-022-TT","WAHSH-023-UU","WAHSH-024-VV","WAHSH-025-WW","MONSTER-026-XX","MONSTER-027-YY","MONSTER-028-ZZ","WAHSH-029-123","WAHSH-030-456","WAHSH-031-789","WAHSH-032-999","WAHSH-033-111","WAHSH-034-222","WAHSH-035-333","WAHSH-036-444","WAHSH-037-555","WAHSH-038-666","WAHSH-039-777","WAHSH-040-888","WAHSH-041-000","WAHSH-042-A1B2","WAHSH-043-C3D4","WAHSH-044-E5F6","WAHSH-045-G7H8","WAHSH-046-K9L0","WAHSH-047-M1N2","WAHSH-048-P3Q4","WAHSH-049-R5S6","WAHSH-050-FINAL"];
+let burned=JSON.parse(localStorage.getItem('burned2')||'[]');
+let done=JSON.parse(localStorage.getItem('doneLessons')||'[]');
+function toggleLang(){let e=document.documentElement; if(e.dir=='rtl'){e.dir='ltr';}else{e.dir='rtl';}}
+function checkCode(){let c=document.getElementById('codeInput').value.trim().toUpperCase(); if(burned.includes(c)){document.getElementById('msg').innerText='الكود ده اتحرق قبل كده ❌';return;} if(codes.includes(c)){burned.push(c);localStorage.setItem('burned2',JSON.stringify(burned));document.getElementById('lock').style.display='none';localStorage.setItem('unlocked2','yes');}else{document.getElementById('msg').innerText='كود غلط ❌';}}
+if(localStorage.getItem('unlocked2')=='yes'){document.getElementById('lock').style.display='none';}
+function updateProg(){let p=Math.round(done.length/200*100);document.getElementById('barFill').style.width=p+'%';document.getElementById('progText').innerText='تقدمك: '+done.length+' / 200 درس - '+p+'%';}
+function markDone(n,btn){if(!done.includes(n)){done.push(n);localStorage.setItem('doneLessons',JSON.stringify(done));} updateProg(); btn.innerText='تم ✅ خلصت الدرس - عاش يا وحش'; btn.style.background='#facc15'; btn.style.color='#000';}
+const titles=["OOP متقدم: الكلاسات باحتراف","الوراثة والتعدد","Encapsulation و Polymorphism","الملفات: قراءة وكتابة","التعامل مع الأخطاء Exceptions","المكتبات: os, random, datetime","التعامل مع JSON","التعامل مع API بـ requests","عمل بوت تليجرام كامل","أتمتة الواتساب والملفات","Web Scraping","بناء برنامج إدارة محل","قواعد بيانات مع بايثون","واجهات رسومية Tkinter","مشروع: برنامج كاشير كامل","الـ Decorators","الـ Generators","الـ Lambda والـ Map","الـ Regular Expressions","التعامل مع الصور","التعامل مع Excel","عمل لعبة بـ Pygame 1","عمل لعبة بـ Pygame 2","أتمتة الإيميلات","حفظ كلمات السر وتشفيرها","عمل سكربت فحص مواقع","ربط بايثون بالموبايل","مشروع: متجر ببايثون","مشروع: نظام مدرسة كامل","امتحان Python الوحش","HTML متقدم","CSS Flexbox باحتراف","CSS Grid باحتراف","Animations و Transitions","Responsive لكل الشاشات","JavaScript متقدم: ES6","DOM والتحكم الكامل","Events باحتراف","LocalStorage و Session","Fetch API والـ APIs","Promises و Async Await","مشروع: موقع شخصي احترافي","React: أول مكون","React: Props و State","React: Hooks","React Router","Tailwind CSS","مشروع: متجر إلكتروني 1","مشروع: متجر 2 - السلة","مشروع: متجر 3 - الدفع","مشروع: موقع كورسات 1","مشروع: موقع كورسات 2 - الأكواد","مشروع: لوحة تحكم الأدمن","مشروع: موقع أخبار","مشروع: لعبة XO بالويب","مشروع: تطبيق To-Do","مشروع: موقع مطعم","مشروع: موقع عقارات","مشروع: Chat App بالويب","مشروع: موقع أفلام","Git و GitHub باحتراف","رفع موقعك على النت","تحسين السرعة SEO","مشروع: Clone انستجرام","مشروع: Clone واتساب ويب","مشروع: Dashboard كامل","مشروع: موقع تعليمي كامل","امتحان الويب الوحش","مشروع: متجر كامل React","SQL متقدم: Joins","SQL: Views و Triggers","Node.js من الصفر","Express.js","بناء REST API","JWT وتسجيل الدخول","تشفير كلمات السر","Firebase من الصفر","Supabase","ربط الفرونت بالباك","رفع الصور والملفات","إرسال إيميلات من السيرفر","عمل API للكورسات","عمل API للمتجر","نظام الأكواد والاشتراكات","بوابات الدفع","حماية الموقع من الاختراق","مشروع: باك اند موقع كورسات","مشروع: باك اند متجر","مشروع: باك اند تطبيق","MongoDB","Prisma و ORM","Socket.io والشات اللحظي","نشر الباك اند","مشروع: نظام حجوزات","مشروع: نظام شحن","مشروع: API كامل للبيع","امتحان الباك اند","مشروع: موقع كامل Full Stack","امتحان شامل","Flutter: Setup احترافي","Widgets باحتراف","State Management: Provider","State Management: Bloc","التنقل بين الشاشات","تصميم واجهات احترافية","ربط Flutter بـ API","ربط Flutter بـ Firebase","تسجيل الدخول بـ Flutter","رفع الصور في التطبيق","الإشعارات Push","الخرائط GPS","مشروع: تطبيق متجر 1","مشروع: تطبيق متجر 2","مشروع: تطبيق متجر 3","مشروع: تطبيق كورسات 1","مشروع: تطبيق كورسات 2 - الأكواد","مشروع: تطبيق شات","مشروع: تطبيق طلبات أكل","مشروع: تطبيق أخبار","مشروع: تطبيق قرآن","مشروع: تطبيق حجز","مشروع: تطبيق بنك","مشروع: لعبة موبايل","نشر التطبيق على Google Play","نشر على App Store","الربح من التطبيقات","مشروع: تطبيقك الخاص - نسخة الموبايل","امتحان Flutter","مشروع تخرج موبايل","C++ متقدم: Pointers","OOP في C++","Data Structures: Array","Stack و Queue","Linked List","Tree و Binary Tree","Graph","Sorting: Bubble, Merge","Sorting: Quick","Searching: Binary Search","Recursion باحتراف","Dynamic Programming","حل مسائل Codeforces 1","حل مسائل Codeforces 2","حل مسائل Codeforces 3","مشروع: لعبة Snake بـ C++","مشروع: نظام بنك بـ C++","مشروع: لعبة XO بـ C++","مشروع: برنامج إدارة","STL باحتراف","مشروع: آلة حاسبة متقدمة","مشروع: برنامج تشفير","مشروع: محاكي بنك","مقابلات العمل: أسئلة C++","مقابلات: أسئلة خوارزميات","مشروع: لعبة كاملة","امتحان C++ 1","امتحان C++ 2","تحدي: 50 مسألة","مشروع تخرج C++","أساسيات الشبكات","Linux للمبرمجين","أوامر Terminal","أساسيات الأمن السيبراني","اختبار اختراق المواقع","حماية حساباتك","مشروع: موقع حماية","مشروع: أداة فحص","مشروع: نظام مراقبة","مشروع: موقع بيع حقيقي 1","مشروع: موقع بيع 2 - الدفع","مشروع: تطبيق بيع 1","مشروع: تطبيق بيع 2","مشروع: نظام مدرسة للبيع","مشروع: نظام محل للبيع","مشروع: موقع شركة","مشروع: تطبيق شركة","كيف تجيب أول عميل","كيف تسعر شغلك","كيف تعمل Portfolio","كيف تشتغل Freelancing","كيف تعمل CV يقبل","مقابلة عمل: تدريب كامل","مشروع: متجرك الخاص","مشروع: كورسك الخاص","مشروع: تطبيقك الخاص - النسخة النهائية للبيع","بناء براندك","التسويق لنفسك","الربح من البرمجة","خطة 90 يوم تبقى وحش","مشروع: فريق كامل","مشروع: شركة برمجة مصغرة","مشروع: منصة كورسات كاملة","مشروع: تطبيق سوبر","مشروع: موقع سوبر","امتحان الوحش النهائي","مشروع التخرج: فكرة حرة","مشروع التخرج: عرض وبيع","احتفال التخرج: انت وحش"];
+function render(arr){
+ document.getElementById('list').innerHTML=arr.map((t)=>{
+  let n=titles.indexOf(t)+1;
+  let isDone=done.includes(n)?'done':'';
+  return `<div class="card ${isDone}" onclick="document.getElementById('c${n}').style.display=document.getElementById('c${n}').style.display=='block'?'none':'block'"><b>درس ${n}:</b> ${t} ${isDone?'(تم ✅)':''}<div class="content" id="c${n}" onclick="event.stopPropagation()">
+  <div class="box exp"><h3>📖 1 - افهم في دقيقة</h3><p><b>${t}</b> ببساطة: تخيل انك بتعمل حاجة حقيقية، مش بتذاكر. هنبدأ بمثال صغير جدا، وبعدها نكبره. لو فهمت المثال الصغير ده، انت فهمت 80% من الدرس.</p><pre># درس ${n} - ${t}\nprint("انا بتعلم: ${t}")\nprint("انا عملتها بنفسي 💪")</pre></div>
+  <div class="box task"><h3>🛠️ 2 - جرب بايدك - 3 خطوات</h3><div class="check"><label><input type="checkbox"> الخطوة 1: انسخ الكود وجربه</label><label><input type="checkbox"> الخطوة 2: غير فيه حاجة واحدة من دماغك</label><label><input type="checkbox"> الخطوة 3: خد سكرين شوت وابعتها</label></div></div>
+  <div class="box work"><h3>💼 3 - اعمل شغل حقيقي</h3><p>مهمتك: اعمل نسخة صغيرة من <b>${t}</b> وسميها باسمك. في اخر الكورس هتلاقي عندك 200 قطعة شغل عملتها بايدك.</p></div>
+  <div class="box follow"><h3>👀 4 - متابعة</h3><p>تقدر تشرح <b>${t}</b> لصاحبك في دقيقة؟ لو لأ ارجع للمثال تاني.</p></div>
+  <div class="box quiz"><h3>📝 5 - اختبار سريع</h3><div class="q"><b>س1: فاهم؟</b><button onclick="this.style.background='#22c55e';this.parentElement.querySelector('.r').innerText='صح ✅'">أ) فاهم</button><button onclick="this.style.background='#ef4444';this.parentElement.querySelector('.r').innerText='ارجع للشرح'">ب) لسه</button><span class="r"></span></div><div class="q"><b>س2: عملت الخطوات؟</b><button onclick="this.style.background='#22c55e';this.parentElement.querySelector('.r').innerText='انت وحش 🔥'">أ) آه</button><button onclick="this.style.background='#ef4444';this.parentElement.querySelector('.r').innerText='جرب دلوقتي'">ب) لسه</button><span class="r"></span></div><div class="q"><b>س3: عندك شغل تبعته؟</b><button onclick="this.style.background='#22c55e';this.parentElement.querySelector('.r').innerText='ابعتو ✅'">أ) آه</button><button onclick="this.style.background='#ef4444';this.parentElement.querySelector('.r').innerText='اعمل نسخة صغيرة'">ب) لسه</button><span class="r"></span></div></div>
+  <button class="doneBtn" onclick="markDone(${n},this)">انا خلصت الدرس ✅</button>
+  </div></div>`
+ }).join('');
+}
+function filter(){let q=document.getElementById('s').value; render(titles.filter(t=>t.includes(q)))}
+render(titles); updateProg();
+</script>
+</body>
+</html>
