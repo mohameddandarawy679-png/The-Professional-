@@ -6,8 +6,11 @@
 <title>المحترف - ليفل الوحش - 200 درس</title>
 <style>
 *{box-sizing:border-box;font-family:'Segoe UI',Tahoma}body{margin:0;background:#0A1931;color:#fff}
-.top{padding:22px 20px;text-align:center;border-bottom:3px solid #FFD700}
-.top h1{color:#FFD700;font-size:26px}.cover{width:130px;height:130px;border-radius:50%;border:3px solid #FFD700;object-fit:cover;display:block;margin:0 auto}
+.top{position:relative;padding:22px 20px;text-align:center;border-bottom:3px solid #FFD700;overflow:hidden}
+.top-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35;z-index:0}
+.top-content{position:relative;z-index:1}
+.top h1{color:#FFD700;font-size:26px;text-shadow:0 2px 10px #000}
+.cover{width:130px;height:130px;border-radius:50%;border:3px solid #FFD700;object-fit:cover;display:block;margin:0 auto;background:#122A52}
 .lock-box{margin:20px;background:#0E2447;border:2px solid #FFD700;border-radius:20px;padding:20px;text-align:center}
 .whats{background:#25D366;color:#fff;padding:14px;border-radius:12px;display:block;text-decoration:none;font-weight:bold;margin:15px 0}
 input{width:100%;padding:14px;border-radius:12px;border:none;font-size:16px;text-align:center;margin-bottom:12px}
@@ -29,25 +32,21 @@ input{width:100%;padding:14px;border-radius:12px;border:none;font-size:16px;text
 .gift a{display:block;background:#000;color:#FFD700;padding:15px;border-radius:12px;text-decoration:none;font-weight:bold;font-size:18px;margin-top:12px}
 .job{background:#0E2447;border:2px solid #25D366;padding:22px;border-radius:20px;text-align:center}
 .job a{display:block;background:#25D366;color:#fff;padding:15px;border-radius:12px;text-decoration:none;font-weight:bold;font-size:18px;margin-top:12px}
-.sec{background:#FFD700;color:#0A1931;padding:12px;border-radius:12px;text-align:center;font-weight:bold;font-size:19px;margin:22px 0 10px}
 </style>
 </head>
 <body>
 <div id="lockScreen">
-<div class="top"><img class="cover" src="profile.jpg" onerror="this.src='https://via.placeholder.com/130'"><h1>المحترف 😎 - ليفل الوحش 🔥</h1><p>200 درس - ليفل أعلى من الـ 120 - مفيش إعادة</p><p>خلصت الأساسيات؟ دلوقتي وقت الشغل الحقيقي</p></div>
+<div class="top"><img class="top-bg" src="cover.jpg" onerror="this.style.display='none'"><div class="top-content"><img class="cover" src="author.jpg" onerror="this.src='https://via.placeholder.com/130'"><h1>المحترف 😎 - ليفل الوحش 🔥</h1><p>200 درس - ليفل أعلى من الـ 120 - مفيش إعادة</p><p>خلصت الأساسيات؟ دلوقتي وقت الشغل الحقيقي</p></div></div>
 <div class="lock-box"><h2>🔒 الكتاب مقفول</h2><p>اكتب كود التفعيل عشان تفتح كتاب الوحش</p><a class="whats" href="https://wa.me/201098920188?text=ازيك%20يا%20محترف%2C%20عايز%20كود%20كتاب%20الوحش" target="_blank">📱 اطلب كودك على واتساب - 01098920188</a><input id="codeInput" placeholder="اكتب كود التفعيل هنا"><button class="btn-gold" onclick="activate()">افتح الكتاب الآن 🔓</button><p id="msg" style="color:#FFD700;font-weight:bold"></p></div>
 </div>
 <div id="bookScreen" class="book">
-<div class="top"><h1>ليفل الوحش - 200 درس</h1><p>كل درس: شرح مبسط + مثالين + تدريب + الحل في الآخر</p></div>
+<div class="top"><img class="top-bg" src="cover.jpg" onerror="this.style.display='none'"><div class="top-content"><h1>ليفل الوحش - 200 درس</h1><p>كل درس: شرح مبسط + مثالين + تدريب + الحل في الآخر</p></div></div>
 <div class="prog"><b id="progText">تقدمك: 0 / 200 درس</b><div class="bar"><div id="barFill"></div></div><p style="font-size:13px">خلص الـ 200 كلهم عشان تظهرلك المفاجأة والشغل 🎁💼</p></div>
 <div class="search"><input id="s" placeholder="دور على أي درس..." oninput="render()"></div>
-
 <div id="finalBox" class="finalBox">
 <div class="gift"><h2>🎁 مفاجأة مكنتش تتوقعها!</h2><p><b>انت خلصت الـ 200 درس كلهم يا وحش... انت مش طبيعي!</b></p><p>دلوقتي كلم المحترف، قوله "أنا خلصت الوحش"، وحل سؤاله، وخد هديتك.</p><p>الهدية مفاجأة... مش هتعرفها غير لما تكلمه.</p><a href="https://wa.me/201098920188?text=%D8%A7%D9%86%D8%A7%20%D8%AE%D9%84%D8%B5%D8%AA%20%D8%A7%D9%84%D9%88%D8%AD%D8%B4%20%D9%A2%D9%A0%D9%A0%20%D8%AF%D8%B1%D8%B3%20%D8%B9%D8%A7%D9%88%D8%B2%20%D8%A7%D8%AD%D9%84%20%D8%B3%D8%A4%D8%A7%D9%84%D9%83%20%D9%88%D8%A7%D8%AE%D8%AF%20%D9%87%D8%AF%D9%8A%D8%AA%D9%8A%20%F0%9F%8E%81" target="_blank">💬 كلم المحترف وخد هديتك - اضغط هنا</a></div>
-
 <div class="job"><h2 style="color:#25D366">💼 عايز تشتغل مع المحترف؟</h2><p>خلصت الوحش؟ دلوقتي قدم واشتغل مع المحترف بجد.</p><p>مش أي حد هيتقبل، لازم تكون خلصت الـ 200، وعملت مشروع التخرج، وحليت سؤال المقابلة.</p><p style="color:#FFD700">ابعت للمحترف: 1- أنا خلصت الوحش 2- لينك مشروع تخرجي 3- حل سؤال المقابلة</p><a href="https://wa.me/201098920188?text=%D8%A7%D8%B2%D9%8A%D9%83%20%D9%8A%D8%A7%20%D9%85%D8%AD%D8%AA%D8%B1%D9%81%2C%20%D8%A7%D9%86%D8%A7%20%D8%AE%D9%84%D8%B5%D8%AA%20%D8%A7%D9%84%D9%88%D8%AD%D8%B4%20%D9%A2%D9%A0%D9%A0%20%D8%AF%D8%B1%D8%B3%2C%20%D9%88%D8%AF%D9%87%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D8%AA%D8%AE%D8%B1%D8%AC%D9%8A%3A%20%5B%D8%AD%D8%B7%20%D8%A7%D9%84%D9%84%D9%8A%D9%86%D9%83%20%D9%87%D9%86%D8%A7%5D%2C%20%D9%88%D8%B9%D8%A7%D9%88%D8%B2%20%D8%A7%D9%82%D8%AF%D9%85%20%D9%88%D8%A7%D8%B4%D8%AA%D8%BA%D9%84%20%D9%85%D8%B9%D8%A7%D9%83%20%F0%9F%92%BC" target="_blank">💼 قدم واشتغل مع المحترف - اضغط هنا</a></div>
 </div>
-
 <div id="list"></div>
 <div style="text-align:center;padding:20px;color:#FFD700">© 2026 المحترف 😎 - ليفل الوحش</div>
 </div>
