@@ -27,6 +27,7 @@ input{width:100%;padding:14px;border-radius:12px;border:none;font-size:16px;text
 .sol{background:#2a1a4a;padding:12px;border-radius:10px;border-right:4px solid #c084fc;margin:8px 0;display:none}
 .solBtn{background:#c084fc;color:#000;padding:10px 16px;border:none;border-radius:10px;font-weight:bold;cursor:pointer;margin-top:8px}
 .doneBtn{background:#25D366;color:#fff;padding:13px;border:none;border-radius:10px;width:100%;font-weight:bold;font-size:16px;cursor:pointer;margin-top:10px}
+.lockBtn{background:#ff4444;color:#fff;border:none;padding:12px;border-radius:10px;width:100%;font-weight:bold;margin-top:15px;cursor:pointer;font-size:16px}
 .finalBox{display:none;margin:20px 0}
 .gift{background:linear-gradient(135deg,#FFD700,#FF6B00);color:#000;padding:22px;border-radius:20px;text-align:center;margin-bottom:16px}
 .gift a,.job a{display:block;background:#000;color:#FFD700;padding:15px;border-radius:12px;text-decoration:none;font-weight:bold;font-size:18px;margin-top:12px}
@@ -35,36 +36,42 @@ input{width:100%;padding:14px;border-radius:12px;border:none;font-size:16px;text
 </head>
 <body>
 <button class="langBtn" onclick="toggleLang()" id="langBtn">English 🇺🇸</button>
+
 <div id="lockScreen">
 <div class="top"><img class="top-bg" src="cover.jpg"><div class="top-content"><img class="cover" src="author.jpg"><h1 id="t1">المحترف 😎 - ليفل الوحش 🔥</h1><p id="t2">200 درس - 200 Lessons</p></div></div>
-<div class="lock-box"><h2 id="t3">🔒 الكتاب مقفول / Book is Locked</h2><p id="t4">اكتب كود التفعيل عشان تفتح كتاب الوحش<br>Enter your code to unlock</p><a class="whats" href="https://wa.me/201098920188?text=ازيك%20يا%20محترف%2C%20عايز%20كود%20كتاب%20الوحش" target="_blank">📱 اطلب كودك على واتساب - 01098920188</a><input id="codeInput" placeholder="اكتب كود التفعيل هنا / Enter Code"><button class="btn-gold" onclick="activate()" id="t5">افتح الكتاب الآن 🔓 / Unlock Now</button><p id="msg" style="color:#FFD700;font-weight:bold"></p></div>
+<div class="lock-box"><h2 id="t3">🔒 الكتاب مقفول / Book is Locked</h2><p>اكتب كود التفعيل عشان تفتح كتاب الوحش<br>Enter your code to unlock</p><a class="whats" href="https://wa.me/201098920188?text=ازيك%20يا%20محترف%2C%20عايز%20كود%20كتاب%20الوحش" target="_blank">📱 اطلب كودك على واتساب - 01098920188</a><input id="codeInput" placeholder="اكتب كود التفعيل هنا / Enter Code"><button class="btn-gold" onclick="activate()" id="t5">افتح الكتاب الآن 🔓 / Unlock Now</button><p id="msg" style="color:#FFD700;font-weight:bold"></p><p style="font-size:13px;color:#aaa">جرب كود التجربة: WAHSH-001-AR<br>Demo Code: WAHSH-001-AR</p></div>
 </div>
+
 <div id="bookScreen" class="book">
-<div class="top"><img class="top-bg" src="cover.jpg"><div class="top-content"><img class="cover" src="author.jpg" style="width:90px;height:90px"><h1 id="t6">ليفل الوحش - 200 درس / Monster Level - 200 Lessons</h1><p id="t7">كل درس: شرح + مثالين + تدريب + الحل<br>Every lesson: Explanation + 2 Examples + Exercise + Solution</p></div></div>
-<div class="prog"><b id="progText">تقدمك: 0 / 200 درس</b><div class="bar"><div id="barFill"></div></div><p style="font-size:13px" id="t8">خلص الـ 200 كلهم عشان تظهرلك المفاجأة والشغل 🎁💼</p></div>
+<div class="top"><img class="top-bg" src="cover.jpg"><div class="top-content"><img class="cover" src="author.jpg" style="width:90px;height:90px"><h1 id="t6">ليفل الوحش - 200 درس / Monster Level - 200 Lessons</h1><p>كل درس: شرح + مثالين + تدريب + الحل<br>Every lesson: Explanation + 2 Examples + Exercise + Solution</p></div></div>
+<div class="prog"><b id="progText">تقدمك: 0 / 200 درس</b><div class="bar"><div id="barFill"></div></div><p style="font-size:13px">خلص الـ 200 كلهم عشان تظهرلك المفاجأة والشغل 🎁💼</p></div>
 <input id="s" placeholder="دور على أي درس... / Search..." oninput="render()" style="margin-bottom:15px">
 <div id="finalBox" class="finalBox">
 <div class="gift"><h2>🎁 مفاجأة / Surprise!</h2><p><b>انت خلصت الـ 200 درس كلهم يا وحش! / You finished all 200!</b></p><a href="https://wa.me/201098920188?text=%D8%A7%D9%86%D8%A7%20%D8%AE%D9%84%D8%B5%D8%AA%20%D8%A7%D9%84%D9%88%D8%AD%D8%B4%20%D9%A2%D9%A0%D9%A0%20%D8%AF%D8%B1%D8%B3" target="_blank">💬 كلم المحترف وخد هديتك / Chat & Get Gift</a></div>
 <div class="job"><h2 style="color:#25D366">💼 عايز تشتغل مع المحترف؟ / Want a Job?</h2><a href="https://wa.me/201098920188?text=%D8%A7%D9%86%D8%A7%20%D8%AE%D9%84%D8%B5%D8%AA%20%D8%A7%D9%84%D9%88%D8%AD%D8%B4%20%D9%88%D8%B9%D8%A7%D9%88%D8%B2%20%D8%A7%D9%82%D8%AF%D9%85" target="_blank">💼 قدم واشتغل مع المحترف / Apply Now</a></div>
 </div>
 <div id="list"></div>
+<button class="lockBtn" onclick="lockBook()">🔒 اقفل الكتاب تاني / Lock Book</button>
 <div style="text-align:center;padding:20px;color:#FFD700">© 2026 المحترف 😎 - Elmohtaref</div>
 </div>
+
 <script>
 let lang = localStorage.getItem('langW') || 'ar';
 const codes=["WAHSH-001-AR","WAHSH-002-EN","MONSTER-003-X","MONSTER-004-Y","WAHSH-005-AAA","WAHSH-006-BBB","WAHSH-007-CCC","WAHSH-008-DDD","WAHSH-009-EEE","WAHSH-010-FFF","MONSTER-011-GG","MONSTER-012-HH","WAHSH-013-JJ","WAHSH-014-KK","WAHSH-015-LL","WAHSH-016-MM","WAHSH-017-NN","WAHSH-018-PP","WAHSH-019-QQ","WAHSH-020-RR","WAHSH-021-SS","WAHSH-022-TT","WAHSH-023-UU","WAHSH-024-VV","WAHSH-025-WW","MONSTER-026-XX","MONSTER-027-YY","MONSTER-028-ZZ","WAHSH-029-123","WAHSH-030-456","WAHSH-031-789","WAHSH-032-999","WAHSH-033-111","WAHSH-034-222","WAHSH-035-333","WAHSH-036-444","WAHSH-037-555","WAHSH-038-666","WAHSH-039-777","WAHSH-040-888","WAHSH-041-000","WAHSH-042-A1B2","WAHSH-043-C3D4","WAHSH-044-E5F6","WAHSH-045-G7H8","WAHSH-046-K9L0","WAHSH-047-M1N2","WAHSH-048-P3Q4","WAHSH-049-R5S6","WAHSH-050-FINAL"];
-let burned=JSON.parse(localStorage.getItem('burnedW')||'[]'); let done=JSON.parse(localStorage.getItem('doneW')||'[]');
-function toggleLang(){lang=lang==='ar'?'en':'ar';localStorage.setItem('langW',lang);applyLang();render();}
+let burned=JSON.parse(localStorage.getItem('burnedW')||'[]');
+let done=JSON.parse(localStorage.getItem('doneW')||'[]');
+function toggleLang(){lang=lang==='ar'?'en':'ar';localStorage.setItem('langW',lang);applyLang();if(localStorage.getItem('unlockedW')=='yes'){render();}}
 function applyLang(){let e=lang==='en';document.documentElement.lang=e?'en':'ar';document.documentElement.dir=e?'ltr':'rtl';document.getElementById('langBtn').innerText=e?'عربي 🇪🇬':'English 🇺🇸';document.getElementById('t1').innerText=e?'Elmohtaref 😎 - Monster Level 🔥':'المحترف 😎 - ليفل الوحش 🔥';document.getElementById('t2').innerText=e?'200 Lessons':'200 درس';document.getElementById('t3').innerText=e?'🔒 Book is Locked':'🔒 الكتاب مقفول';document.getElementById('t5').innerText=e?'Unlock Now 🔓':'افتح الكتاب الآن 🔓';document.getElementById('t6').innerText=e?'Monster Level - 200 Lessons':'ليفل الوحش - 200 درس';updateProg();}
-function activate(){let c=document.getElementById('codeInput').value.trim().toUpperCase();if(burned.includes(c)){document.getElementById('msg').innerText=lang==='en'?'Already used':'الكود ده اتحرق';return;}if(codes.includes(c)){burned.push(c);localStorage.setItem('burnedW',JSON.stringify(burned));localStorage.setItem('unlockedW','yes');show();}else{document.getElementById('msg').innerText=lang==='en'?'Wrong code':'كود غلط';}}
+function activate(){let c=document.getElementById('codeInput').value.trim().toUpperCase();if(!c){document.getElementById('msg').innerText=lang==='en'?'Enter code first':'اكتب الكود الاول';return;}if(burned.includes(c)){document.getElementById('msg').innerText=lang==='en'?'This code is already used':'الكود ده اتحرق قبل كده';return;}if(codes.includes(c)){burned.push(c);localStorage.setItem('burnedW',JSON.stringify(burned));localStorage.setItem('unlockedW','yes');show();}else{document.getElementById('msg').innerText=lang==='en'?'Wrong code':'كود غلط';}}
 function show(){document.getElementById('lockScreen').style.display='none';document.getElementById('bookScreen').style.display='block';render();}
-if(localStorage.getItem('unlockedW')=='yes'){show();}
-function updateProg(){let p=Math.round(done.length/200*100);document.getElementById('barFill').style.width=p+'%';document.getElementById('progText').innerText=lang==='en'?'Progress: '+done.length+' / 200 - '+p+'%':'تقدمك: '+done.length+' / 200 درس - '+p+'%';if(done.length>=200){document.getElementById('finalBox').style.display='block';}}
+function lockBook(){localStorage.removeItem('unlockedW');location.reload();}
+if(localStorage.getItem('unlockedW')=='yes'){show();}else{document.getElementById('lockScreen').style.display='block';document.getElementById('bookScreen').style.display='none';}
+function updateProg(){let p=Math.round(done.length/200*100);let bar=document.getElementById('barFill');if(bar){bar.style.width=p+'%';}let pt=document.getElementById('progText');if(pt){pt.innerText=lang==='en'?'Progress: '+done.length+' / 200 - '+p+'%':'تقدمك: '+done.length+' / 200 درس - '+p+'%';}if(done.length>=200){let f=document.getElementById('finalBox');if(f){f.style.display='block';}}}
 function markDone(n,btn){if(!done.includes(n)){done.push(n);localStorage.setItem('doneW',JSON.stringify(done));}updateProg();btn.innerText=lang==='en'?'Done ✅':'تم ✅';}
 function getTitle(n){let ar='',en='';if(n<=30){ar="بايثون الوحش - درس "+n;en="Python Monster - Lesson "+n;}else if(n<=60){ar="ويب الوحش - درس "+n;en="Web Monster - Lesson "+n;}else if(n<=90){ar="باك أند الوحش - درس "+n;en="Backend Monster - Lesson "+n;}else if(n<=120){ar="موبايل ومشاريع - درس "+n;en="Mobile & Projects - Lesson "+n;}else if(n<=150){ar="مشاريع كاملة - درس "+n;en="Full Projects - Lesson "+n;}else if(n<=170){ar="مشروع التخرج - درس "+n;en="Graduation Project - Lesson "+n;}else{ar="شغل وفريلانسينج - درس "+n;en="Work & Freelancing - Lesson "+n;}return lang==='en'?en:ar+' / '+en;}
 function getCode(n){if(n<=30)return 'name = input("Your name: ")\nprint("Welcome Monster " + name)';if(n<=60)return '<h1>I am Monster</h1>\n<button onclick="alert(\'Great\')">Click Here</button>';if(n<=90)return 'app.get("/api/products", (req,res)=>{\n res.json([{name:"Mobile",price:5000}])\n})';return 'print("My project is ready to sell")';}
 function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-function render(){let q=document.getElementById('s').value||'';let html='';for(let n=1;n<=200;n++){let t=getTitle(n);if(q&&!t.toLowerCase().includes(q.toLowerCase()))continue;let isDone=done.includes(n)?(lang==='en'?' (Done ✅)':' (تم ✅)'):'';
+function render(){if(localStorage.getItem('unlockedW')!='yes'){return;}let q=document.getElementById('s').value||'';let html='';for(let n=1;n<=200;n++){let t=getTitle(n);if(q&&!t.toLowerCase().includes(q.toLowerCase()))continue;let isDone=done.includes(n)?(lang==='en'?' (Done ✅)':' (تم ✅)'):'';
 let s1=lang==='en'?'<b>📖 Understand:</b><br>Imagine you know basics from 120 book. This is next step, real work that sells. Understand why, dont memorize.':'<b>📖 افهم ببساطة:</b><br>تخيل انك عارف الاساسيات من كتاب الـ 120. ده الخطوة اللي بعدها، شغل حقيقي يتباع. افهم ليه، متحفظش.';
 let e1=lang==='en'?'<b>💡 Example 1:</b><br>If you have a shop and want program to calculate for customers, do this.':'<b>💡 مثال 1:</b><br>لو فاتح محل وعايز برنامج يحسب للزبون، هتعمل كده.';
 let e2=lang==='en'?'<b>💼 Example 2 - Real Work:</b><br>Same idea used by any website that sells for money. Monster turns idea into full project.':'<b>💼 مثال 2 - شغل حقيقي:</b><br>نفس الفكرة بيستخدمها اي موقع بيتباع بفلوس. الوحش بيحول الفكرة لمشروع كامل.';
@@ -75,7 +82,7 @@ let dt=lang==='en'?'I finished ✅':'انا خلصت الدرس ✅';
 let lw=lang==='en'?'Lesson ':'درس ';
 html+='<div class="lesson"><span class="tag">'+lw+n+'</span><h3>'+t+isDone+'</h3><div class="step">'+s1+'</div><div class="step">'+e1+'</div><pre class="code">'+esc(getCode(n))+'</pre><div class="step">'+e2+'</div><div class="try">'+tr+'</div><button class="solBtn" onclick="document.getElementById(\'sol'+n+'\').style.display=\'block\';this.style.display=\'none\'">'+sb+'</button><div class="sol" id="sol'+n+'">'+st+'</div><button class="doneBtn" onclick="markDone('+n+',this)">'+dt+'</button></div>';}
 document.getElementById('list').innerHTML=html;updateProg();}
-applyLang();render();
+applyLang();
 </script>
 </body>
 </html>
