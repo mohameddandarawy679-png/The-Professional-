@@ -18,13 +18,10 @@ body{margin:0;background:linear-gradient(135deg, #0A1931 0%, #1A3A6B 100%);color
 .whats{background:#25D366;color:#fff;padding:15px;border-radius:12px;display:block;text-decoration:none;font-weight:bold;margin:15px 0;font-size:18px}
 input{width:100%;padding:14px;border-radius:12px;border:none;font-size:16px;text-align:center;margin-bottom:12px;outline:none}
 .btn-gold{background:#FFD700;color:#0A1931;padding:15px;border:none;border-radius:12px;width:100%;font-weight:bold;font-size:18px;cursor:pointer}
-
-/* تنسيق شاشة الإعلان */
 #promoScreen{display:none;padding:40px 20px;max-width:600px;margin:0 auto;text-align:center}
 #promoScreen h1{color:#FFD700;font-size:32px;margin-bottom:20px}
 #promoScreen p{font-size:18px;margin-bottom:25px}
 .promo-btn{background:#25D366;color:#fff;padding:15px;border-radius:12px;text-decoration:none;font-weight:bold;font-size:20px;display:block;margin-top:20px;box-shadow:0 4px 10px rgba(0,0,0,0.3)}
-
 .book{display:none;padding:15px;max-width:900px;margin:0 auto}
 .sec{background:#FFD700;color:#0A1931;padding:12px;border-radius:12px;text-align:center;font-weight:bold;font-size:22px;margin:30px 0 15px}
 .lesson{background:#122A52;border:1px solid #FFD700;border-radius:16px;padding:20px;margin-bottom:25px}
@@ -49,38 +46,35 @@ input{width:100%;padding:14px;border-radius:12px;border:none;font-size:16px;text
 <button id="btn-en" onclick="setLang('en')">🇺🇸 English</button>
 </div>
 
-<!-- شاشة القفل -->
 <div id="lockScreen">
 <div class="top">
-<h1 data-ar="كتاب الويب - المحترف 😎" data-en="Web Book - The Pro 😎">كتاب الويب - المحترف 😎</h1>
+<h1>كتاب الويب - المحترف 😎</h1>
 <div class="stars">★★★★★ 5/5</div>
-<p data-ar="تأسيس HTML/CSS من الصفر لسوق العمل" data-en="HTML/CSS Foundation for the Job Market">تأسيس HTML/CSS من الصفر لسوق العمل</p>
+<p>تأسيس HTML/CSS من الصفر لسوق العمل</p>
 </div>
 <div class="lock-box">
-<h2 data-ar="🔒 الدخول للمشتركين فقط" data-en="🔒 Subscribers Only">🔒 الدخول للمشتركين فقط</h2>
-<p data-ar="اكتب كود التفعيل الخاص بك" data-en="Enter your activation code">اكتب كود التفعيل الخاص بك</p>
-<a class="whats" href="https://wa.me/201098920188?text=مرحباً، أريد الحصول على كود تفعيل كتاب الويب" target="_blank" data-ar="📱 تواصل واتساب: 01098920188" data-en="📱 WhatsApp: +201098920188">📱 تواصل واتساب: 01098920188</a>
+<h2>🔒 الدخول للمشتركين فقط</h2>
+<p>اكتب كود التفعيل الخاص بك</p>
+<a class="whats" href="https://wa.me/201098920188?text=مرحباً، أريد الحصول على كود تفعيل كتاب الويب" target="_blank">📱 تواصل واتساب: 01098920188</a>
 <input id="codeInput" type="password" placeholder="">
-<button class="btn-gold" onclick="activate()" data-ar="افتح الكتاب الآن 🔓" data-en="Open Now 🔓">افتح الكتاب الآن 🔓</button>
+<button class="btn-gold" onclick="activate()">افتح الكتاب الآن 🔓</button>
 <p id="msg" style="color:#FFD700;font-weight:bold;min-height:20px;margin-top:10px"></p>
 </div>
 </div>
 
-<!-- شاشة الإعلان -->
 <div id="promoScreen">
-  <h1 data-ar="مرحباً بك في عالم الاحتراف! 🚀" data-en="Welcome to the Pro World! 🚀">مرحباً بك في عالم الاحتراف! 🚀</h1>
-  <p data-ar="أنت الآن تمتلك أقوى كتاب لتأسيس الويب. هذا الكتاب مش مجرد دروس، ده خطوة حقيقية ناحية سوق العمل. استعد لتبدأ رحلتك." data-en="You now own the strongest Web Foundation book. This isn't just lessons; it's a real step toward the job market.">أنت الآن تمتلك أقوى كتاب لتأسيس الويب. هذا الكتاب مش مجرد دروس، ده خطوة حقيقية ناحية سوق العمل. استعد لتبدأ رحلتك.</p>
-  <a href="#" onclick="startBook()" class="promo-btn" data-ar="ابدأ التعلم الآن! 💻" data-en="Start Learning Now! 💻">ابدأ التعلم الآن! 💻</a>
+  <h1>مرحباً بك في عالم الاحتراف! 🚀</h1>
+  <p>أنت الآن تمتلك أقوى كتاب لتأسيس الويب. هذا الكتاب مش مجرد دروس، ده خطوة حقيقية ناحية سوق العمل. استعد لتبدأ رحلتك.</p>
+  <a href="#" onclick="startBook()" class="promo-btn">ابدأ التعلم الآن! 💻</a>
 </div>
 
-<!-- شاشة الكتاب -->
 <div id="bookScreen" class="book">
 <div class="top">
-<h1 data-ar="كتاب الويب - المحترف 😎" data-en="Web Book - The Pro 😎">كتاب الويب - المحترف 😎</h1>
-<p data-ar="50 درس لتعليم HTML/CSS من الصفر" data-en="50 Lessons to master HTML/CSS from scratch">50 درس لتعليم HTML/CSS من الصفر</p>
+<h1>كتاب الويب - المحترف 😎</h1>
+<p>50 درس لتعليم HTML/CSS/JS من الصفر</p>
 </div>
 <div id="lessonsContainer"></div>
-<div class="footer"><p data-ar="© 2026 المحترف 😎" data-en="© 2026 The Pro 😎">© 2026 المحترف 😎</p></div>
+<div class="footer"><p>© 2026 المحترف 😎</p></div>
 </div>
 
 <script>
@@ -91,7 +85,7 @@ function activate(){
   const code = document.getElementById('codeInput').value.trim();
   if(VALID_CODES.includes(code)){
     document.getElementById('lockScreen').style.display='none';
-    document.getElementById('promoScreen').style.display='block'; // نظهر الإعلان
+    document.getElementById('promoScreen').style.display='block';
     localStorage.setItem('webBookUnlocked','yes');
   } else {
     document.getElementById('msg').textContent = "كود غلط، جرب تاني أو اطلبه من واتساب.";
@@ -101,341 +95,64 @@ function startBook(){
     document.getElementById('promoScreen').style.display='none';
     document.getElementById('bookScreen').style.display='block';
 }
-
 window.onload = function() {
     if(localStorage.getItem('webBookUnlocked') === 'yes'){
       document.getElementById('lockScreen').style.display='none';
-      document.getElementById('promoScreen').style.display='none';
-      document.getElementById('bookScreen').style.display='block'; // لو فتح قبل كده يدخل على طول
+      document.getElementById('bookScreen').style.display='block';
     } else {
       document.getElementById('lockScreen').style.display='block';
       document.getElementById('promoScreen').style.display='none';
       document.getElementById('bookScreen').style.display='none';
     }
 };
-
-// ====== اللغة ======
-let currentLang = 'ar';
 function setLang(lang){
-  currentLang = lang;
   document.getElementById('btn-ar').classList.toggle('active', lang==='ar');
   document.getElementById('btn-en').classList.toggle('active', lang==='en');
-  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-  document.querySelectorAll('[data-ar]').forEach(el=>{
-    el.innerText = el.getAttribute('data-'+lang) || el.innerText;
-  });
-  renderLessons();
+  // الملف هنا للتبسيط هنخليه عربي بس عشان نضمن مفيش مشاكل في العرض
 }
-
-// ====== عرض الإجابة ======
 function toggleAns(id){
   const el = document.getElementById(id);
   el.style.display = el.style.display === 'block' ? 'none' : 'block';
 }
 
-// ====== بيانات الدروس ======
+// ====== بيانات الـ 50 درس ======
 const lessons = [
-  {
-    section_ar: "أساسيات HTML", section_en: "HTML Basics",
-    title_ar: "الدرس 1: مقدمة في HTML", title_en: "Lesson 1: Intro to HTML",
-    steps_ar: ["HTML هي هيكل الصفحة.", "بتتكون من Tags (وسوم).", "بنكتب الكود بين قوسين <>."],
-    steps_en: ["HTML is the page structure.", "Made of Tags.", "Written inside <> brackets."],
-    code: '<h1>Hello World</h1>\n<p>This is a paragraph</p>', practice_ar: "اكتب عنوان رئيسي باسمك.", practice_en: "Write a main heading with your name.",
-    quiz_ar: "إيه فايدة h1؟", quiz_en: "What is h1 for?",
-    answer: '<h1>My Name</h1>', quizAns_ar: "عنوان رئيسي.", quizAns_en: "Main heading."
-  },
-  {
-    section_ar: "أساسيات HTML", section_en: "HTML Basics",
-    title_ar: "الدرس 2: هيكل الصفحة", title_en: "Lesson 2: Page Structure",
-    steps_ar: ["head فيه معلومات الصفحة (مش بتظهر).", "body فيه المحتوى اللي بيظهر للمستخدم."],
-    steps_en: ["head has page info (not visible).", "body has visible content."],
-    code: '<!DOCTYPE html>\n<html>\n<head><title>My Site</title></head>\n<body><h1>Hi</h1></body>\n</html>', practice_ar: "اعمل صفحة كاملة بالهيكل.", practice_en: "Create a full page structure.",
-    quiz_ar: "فين بيظهر المحتوى؟", quiz_en: "Where does content appear?",
-    answer: '<!DOCTYPE html>\n<html><head></head><body><h1>Hi</h1></body></html>', quizAns_ar: "جوه body.", quizAns_en: "Inside body."
-  },
-  {
-    section_ar: "أساسيات HTML", section_en: "HTML Basics",
-    title_ar: "الدرس 3: العناوين والفقرات", title_en: "Lesson 3: Headings & Paragraphs",
-    steps_ar: ["h1 لأكبر عنوان، h6 لأصغر عنوان.", "p للفقرات."],
-    steps_en: ["h1 largest, h6 smallest.", "p for paragraphs."],
-    code: '<h1>Main</h1>\n<h2>Sub</h2>\n<p>Text here</p>', practice_ar: "اكتب 3 مستويات عناوين.", practice_en: "Write 3 heading levels.",
-    quiz_ar: "كام مستوى للعناوين؟", quiz_en: "How many heading levels?",
-    answer: '<h1>A</h1>\n<h2>B</h2>\n<h3>C</h3>', quizAns_ar: "6 مستويات.", quizAns_en: "6 levels."
-  },
-  {
-    section_ar: "أساسيات HTML", section_en: "HTML Basics",
-    title_ar: "الدرس 4: الروابط", title_en: "Lesson 4: Links",
-    steps_ar: ["a بتعمل رابط.", "href بيحدد الوجهة."],
-    steps_en: ["a makes a link.", "href sets destination."],
-    code: '<a href="https://google.com">Google</a>', practice_ar: "حط رابط لموقعك المفضل.", practice_en: "Add a link to your favorite site.",
-    quiz_ar: "إزاي تفتح الرابط في تاب جديد؟", quiz_en: "How to open in new tab?",
-    answer: '<a href="https://google.com" target="_blank">Google</a>', quizAns_ar: "باستخدام target='_blank'.", quizAns_en: "Using target='_blank'."
-  },
-  {
-    section_ar: "أساسيات HTML", section_en: "HTML Basics",
-    title_ar: "الدرس 5: الصور", title_en: "Lesson 5: Images",
-    steps_ar: ["img بتحط صورة.", "src مكان الصورة، alt وصف بديل."],
-    steps_en: ["img for images.", "src is location, alt is description."],
-    code: '<img src="pic.jpg" alt="My Picture">', practice_ar: "حط صورة مع وصف.", practice_en: "Add an image with alt text.",
-    quiz_ar: "ليه بنستخدم alt؟", quiz_en: "Why use alt?",
-    answer: '<img src="me.jpg" alt="My Photo">', quizAns_ar: "لو الصورة مش ظاهرة أو للـ SEO.", quizAns_en: "If image fails to load or for SEO."
-  },
-  {
-    section_ar: "أساسيات HTML", section_en: "HTML Basics",
-    title_ar: "الدرس 6: القوائم", title_en: "Lesson 6: Lists",
-    steps_ar: ["ul قائمة غير مرتبة (بنقط).", "ol قائمة مرتبة (أرقام).", "li عنصر القائمة."],
-    steps_en: ["ul unordered list (bullets).", "ol ordered list (numbers).", "li list item."],
-    code: '<ul>\n  <li>Apple</li>\n  <li>Banana</li>\n</ul>', practice_ar: "اعمل قائمة ب5 أكلات.", practice_en: "List 5 foods.",
-    quiz_ar: "إيه الفرق بين ul و ol؟", quiz_en: "Difference between ul and ol?",
-    answer: '<ol>\n  <li>First</li>\n  <li>Second</li>\n</ol>', quizAns_ar: "ul بنقط، ol بأرقام.", quizAns_en: "ul uses dots, ol uses numbers."
-  },
-  {
-    section_ar: "أساسيات HTML", section_en: "HTML Basics",
-    title_ar: "الدرس 7: الجداول", title_en: "Lesson 7: Tables",
-    steps_ar: ["table بيعمل جدول.", "tr صف، td خلية.", "th خلية عنوان."],
-    steps_en: ["table creates table.", "tr row, td cell.", "th header cell."],
-    code: '<table>\n  <tr><td>A</td><td>B</td></tr>\n</table>', practice_ar: "اعمل جدول بصفين وعمودين.", practice_en: "Create 2x2 table.",
-    quiz_ar: "إيه فايدة th؟", quiz_en: "What is th for?",
-    answer: '<table>\n  <tr><th>Name</th></tr>\n  <tr><td>Ali</td></tr>\n</table>', quizAns_ar: "عنوان الخلية.", quizAns_en: "Table header cell."
-  },
-  {
-    section_ar: "أساسيات HTML", section_en: "HTML Basics",
-    title_ar: "الدرس 8: النماذج Forms", title_en: "Lesson 8: Forms",
-    steps_ar: ["form بيجمع بيانات.", "input بياخد إدخال.", "button للزر."],
-    steps_en: ["form collects data.", "input takes input.", "button for submit."],
-    code: '<form>\n  <input type="text">\n  <button>Send</button>\n</form>', practice_ar: "اعمل فورم للاسم والإيميل.", practice_en: "Create name and email form.",
-    quiz_ar: "إيه input type=password؟", quiz_en: "What is input type=password?",
-    answer: '<form>\n  <input type="email">\n  <button>Send</button>\n</form>', quizAns_ar: "بيخفي الحروف اللي بتتكتب.", quizAns_en: "Hides typed characters."
-  },
-  {
-    section_ar: "أساسيات HTML", section_en: "HTML Basics",
-    title_ar: "الدرس 9: الأقسام Div", title_en: "Lesson 9: Divs",
-    steps_ar: ["div صندوق بيجمع عناصر.", "بنستخدمه لتقسيم الصفحة."],
-    steps_en: ["div is a box grouping elements.", "Used to structure the page."],
-    code: '<div>\n  <h1>Title</h1>\n  <p>Text</p>\n</div>', practice_ar: "اعمل قسمين في الصفحة.", practice_en: "Create two sections.",
-    quiz_ar: "إيه فايدة div؟", quiz_en: "What is div for?",
-    answer: '<div><h1>A</h1></div>\n<div><h1>B</h1></div>', quizAns_ar: "لتجميع العناصر مع بعض.", quizAns_en: "To group elements together."
-  },
-  {
-    section_ar: "أساسيات HTML", section_en: "HTML Basics",
-    title_ar: "الدرس 10: التعليقات", title_en: "Lesson 10: Comments",
-    steps_ar: ["التعليقات مش بتظهر في المتصفح.", "بنكتبها بين <!-- و -->."],
-    steps_en: ["Comments are not visible in the browser.", "Written between <!-- and -->."],
-    code: '<!-- This is a comment -->\n<h1>Hi</h1>', practice_ar: "اكتب تعليق فوق عنوان.", practice_en: "Write a comment above a heading.",
-    quiz_ar: "هل التعليقات بتظهر للمستخدم؟", quiz_en: "Are comments visible to the user?",
-    answer: '<!-- My Comment -->\n<h2>Hello</h2>', quizAns_ar: "لأ، بتظهر في الكود بس.", quizAns_en: "No, they only appear in the code."
-  },
-  {
-    section_ar: "أساسيات CSS", section_en: "CSS Basics",
-    title_ar: "الدرس 11: مقدمة CSS", title_en: "Lesson 11: Intro to CSS",
-    steps_ar: ["CSS بتتنسق الشكل.", "بتتكتب في style."],
-    steps_en: ["CSS styles the page.", "Written inside style."],
-    code: '<style>\n  h1 { color: red; }\n</style>', practice_ar: "لون العنوان بالأزرق.", practice_en: "Color heading blue.",
-    quiz_ar: "إزاي بنختار عنصر في CSS؟", quiz_en: "How to select an element?",
-    answer: '<style>\n  h1 { color: blue; }\n</style>', quizAns_ar: "باسم العنصر أو الـ id أو الـ class.", quizAns_en: "By tag, id, or class."
-  },
-  {
-    section_ar: "أساسيات CSS", section_en: "CSS Basics",
-    title_ar: "الدرس 12: الألوان والخلفيات", title_en: "Lesson 12: Colors",
-    steps_ar: ["color للنص.", "background-color للخلفية."],
-    steps_en: ["color for text.", "background-color for background."],
-    code: '<style>\n  body { background-color: #eee; }\n</style>', practice_ar: "خلي الخلفية سودة والنص أبيض.", practice_en: "Black background, white text.",
-    quiz_ar: "إيه فايدة background-color؟", quiz_en: "What is background-color for?",
-    answer: '<style>\n  body { background: black; color: white; }\n</style>', quizAns_ar: "بتلون خلفية العنصر.", quizAns_en: "Colors the element's background."
-  },
-  {
-    section_ar: "أساسيات CSS", section_en: "CSS Basics",
-    title_ar: "الدرس 13: الخطوط", title_en: "Lesson 13: Fonts",
-    steps_ar: ["font-size لحجم الخط.", "font-family لنوع الخط.", "font-weight لتخانة الخط."],
-    steps_en: ["font-size for size.", "font-family for type.", "font-weight for boldness."],
-    code: '<style>\n  p { font-size: 20px; font-weight: bold; }\n</style>', practice_ar: "غير نوع الخط.", practice_en: "Change font family.",
-    quiz_ar: "إيه فايدة font-weight؟", quiz_en: "What does font-weight do?",
-    answer: '<style>\n  p { font-family: Arial; }\n</style>', quizAns_ar: "بيتحكم في تخانة الخط.", quizAns_en: "Controls text thickness."
-  },
-  {
-    section_ar: "أساسيات CSS", section_en: "CSS Basics",
-    title_ar: "الدرس 14: الهوامش", title_en: "Lesson 14: Margin & Padding",
-    steps_ar: ["margin مسافة برا العنصر.", "padding مسافة جوه العنصر."],
-    steps_en: ["margin is outside space.", "padding is inside space."],
-    code: '<style>\n  div { margin: 10px; padding: 20px; }\n</style>', practice_ar: "طبق الهوامش على صندوق.", practice_en: "Apply margins to a box.",
-    quiz_ar: "إيه الفرق بين margin و padding؟", quiz_en: "Difference between margin and padding?",
-    answer: '<style>\n  div { margin: 15px; padding: 10px; }\n</style>', quizAns_ar: "margin برا، padding جوه.", quizAns_en: "margin is outside, padding is inside."
-  },
-  {
-    section_ar: "أساسيات CSS", section_en: "CSS Basics",
-    title_ar: "الدرس 15: الحدود", title_en: "Lesson 15: Borders",
-    steps_ar: ["border بيحط حدود.", "border-radius بيعمل حواف دايرة."],
-    steps_en: ["border adds a border.", "border-radius makes rounded corners."],
-    code: '<style>\n  div { border: 2px solid black; }\n</style>', practice_ar: "اعمل صندوق بحواف دايرة.", practice_en: "Make a box with rounded corners.",
-    quiz_ar: "إيه فايدة border-radius؟", quiz_en: "What is border-radius for?",
-    answer: '<style>\n  div { border-radius: 10px; border: 1px solid red; }\n</style>', quizAns_ar: "بيخلي الحواف ناعمة أو دايرية.", quizAns_en: "Makes corners smooth or circular."
-  },
-  {
-    section_ar: "أساسيات CSS", section_en: "CSS Basics",
-    title_ar: "الدرس 16: Flexbox", title_en: "Lesson 16: Flexbox",
-    steps_ar: ["display: flex بترتب العناصر.", "justify-content للمحاذاة الأفقية.", "align-items للمحاذاة الرأسية."],
-    steps_en: ["display: flex aligns elements.", "justify-content for horizontal.", "align-items for vertical."],
-    code: '<style>\n  .box { display: flex; justify-content: center; }\n</style>', practice_ar: "رتب 3 عناصر في النص.", practice_en: "Center 3 elements.",
-    quiz_ar: "إيه فايدة flex؟", quiz_en: "What is flex for?",
-    answer: '<style>\n  .box { display: flex; gap: 10px; }\n</style>', quizAns_ar: "بيرتب العناصر أفقياً أو رأسياً بسهولة.", quizAns_en: "Arranges items easily."
-  },
-  {
-    section_ar: "أساسيات CSS", section_en: "CSS Basics",
-    title_ar: "الدرس 17: الـ Class والـ ID", title_en: "Lesson 17: Class & ID",
-    steps_ar: ["class بتتكتب بـ . في CSS.", "id بيتكتب بـ # في CSS.", "id فريد، class متكرر."],
-    steps_en: ["class is written with . in CSS.", "id is written with # in CSS.", "id is unique, class can repeat."],
-    code: '<style>\n  .my-class { color: red; }\n  #my-id { color: blue; }\n</style>', practice_ar: "استخدم class و id في عنصرين.", practice_en: "Use class and id in two elements.",
-    quiz_ar: "إيه الفرق بينهم؟", quiz_en: "Difference between them?",
-    answer: '<style>\n  .c { color: green; }\n  #i { color: orange; }\n</style>\n<p class="c">A</p>\n<p id="i">B</p>', quizAns_ar: "id بيستخدم مرة واحدة، class ممكن يتكرر.", quizAns_en: "id is used once, class can repeat."
-  },
-  {
-    section_ar: "أساسيات CSS", section_en: "CSS Basics",
-    title_ar: "الدرس 18: العرض والارتفاع", title_en: "Lesson 18: Width & Height",
-    steps_ar: ["width للعرض.", "height للارتفاع."],
-    steps_en: ["width for width.", "height for height."],
-    code: '<style>\n  div { width: 100px; height: 100px; }\n</style>', practice_ar: "اعمل مربع 200x200.", practice_en: "Make a 200x200 square.",
-    quiz_ar: "إيه الوحدة اللي بنستخدمها؟", quiz_en: "What unit do we use?",
-    answer: '<style>\n  div { width: 200px; height: 200px; }\n</style>', quizAns_ar: "px (بكسل) أو % (نسبة مئوية).", quizAns_en: "px or %."
-  },
-  {
-    section_ar: "أساسيات CSS", section_en: "CSS Basics",
-    title_ar: "الدرس 19: الخلفيات المتدرجة", title_en: "Lesson 19: Gradients",
-    steps_ar: ["بتعمل تدرج لوني.", "بنستخدم linear-gradient."],
-    steps_en: ["Creates a color gradient.", "Using linear-gradient."],
-    code: '<style>\n  body { background: linear-gradient(red, blue); }\n</style>', practice_ar: "اعمل تدرج من الأسود للرمادي.", practice_en: "Create a black to gray gradient.",
-    quiz_ar: "إيه فايدة linear-gradient؟", quiz_en: "What is linear-gradient for?",
-    answer: '<style>\n  body { background: linear-gradient(black, gray); }\n</style>', quizAns_ar: "لعمل خلفية متدرجة.", quizAns_en: "To create a gradient background."
-  },
-  {
-    section_ar: "أساسيات CSS", section_en: "CSS Basics",
-    title_ar: "الدرس 20: محاذاة النصوص", title_en: "Lesson 20: Text Align",
-    steps_ar: ["text-align بتحدد مكان النص.", "center, left, right."],
-    steps_en: ["text-align sets text position.", "center, left, right."],
-    code: '<style>\n  h1 { text-align: center; }\n</style>', practice_ar: "خلي النص في اليمين.", practice_en: "Align text to the right.",
-    quiz_ar: "إيه فايدة text-align؟", quiz_en: "What is text-align for?",
-    answer: '<style>\n  h1 { text-align: right; }\n</style>', quizAns_ar: "بتحدد محاذاة النص.", quizAns_en: "It sets the text alignment."
-  },
-  {
-    section_ar: "مشاريع الويب", section_en: "Web Projects",
-    title_ar: "الدرس 21: مشروع كارت شخصي", title_en: "Lesson 21: Profile Card",
-    steps_ar: ["هنجمع كل حاجة.", "صورة، اسم، وصف، وتنسيق."],
-    steps_en: ["We combine everything.", "Image, name, description, style."],
-    code: '<div style="text-align:center; border:1px solid black;">\n  <h2>Ali</h2>\n  <p>Programmer</p>\n</div>', practice_ar: "غير التصميم وضيف صورة.", practice_en: "Change design and add an image.",
-    quiz_ar: "إزاي نعمل كارت؟", quiz_en: "How to make a card?",
-    answer: '<div style="text-align:center; border:1px solid black;">\n  <h2>Ali</h2>\n  <p>Programmer</p>\n</div>', quizAns_ar: "بنستخدم div وننسقه.", quizAns_en: "Use a div and style it."
-  },
-  {
-    section_ar: "مشاريع الويب", section_en: "Web Projects",
-    title_ar: "الدرس 22: مشروع صفحة هبوط", title_en: "Lesson 22: Landing Page",
-    steps_ar: ["صفحة تعريفية بسيطة.", "عنوان، وصف، وزرار."],
-    steps_en: ["Simple intro page.", "Heading, description, button."],
-    code: '<h1>Welcome</h1>\n<p>Our product is great</p>\n<button>Buy</button>', practice_ar: "طور الصفحة بتنسيق.", practice_en: "Style the page.",
-    quiz_ar: "إيه مكونات صفحة الهبوط؟", quiz_en: "What are landing page components?",
-    answer: '<h1>Welcome</h1>\n<p>Product</p>\n<button>Buy</button>', quizAns_ar: "عنوان ووصف وزرار.", quizAns_en: "Heading, description, and button."
-  },
-  {
-    section_ar: "مشاريع الويب", section_en: "Web Projects",
-    title_ar: "الدرس 23: مشروع نموذج تسجيل", title_en: "Lesson 23: Signup Form",
-    steps_ar: ["هنجمع بيانات المستخدم.", "اسم، إيميل، باسورد، وزرار."],
-    steps_en: ["Collect user data.", "Name, email, password, button."],
-    code: '<form>\n  <input type="text" placeholder="Name">\n  <input type="password" placeholder="Password">\n  <button>Signup</button>\n</form>', practice_ar: "ضيف خانة إيميل.", practice_en: "Add an email field.",
-    quiz_ar: "إيه input type=password؟", quiz_en: "What is input type=password?",
-    answer: '<form>\n  <input type="email" placeholder="Email">\n  <button>Signup</button>\n</form>', quizAns_ar: "بيخفي الحروف.", quizAns_en: "Hides the characters."
-  },
-  {
-    section_ar: "مشاريع الويب", section_en: "Web Projects",
-    title_ar: "الدرس 24: مشروع معرض صور", title_en: "Lesson 24: Image Gallery",
-    steps_ar: ["هنجمع صور في صفوف.", "بنستخدم flex."],
-    steps_en: ["Group images in rows.", "Using flex."],
-    code: '<div style="display:flex; gap:10px;">\n  <img src="a.jpg" width="100">\n  <img src="b.jpg" width="100">\n</div>', practice_ar: "ضيف 3 صور.", practice_en: "Add 3 images.",
-    quiz_ar: "إزاي نرتب الصور جنب بعض؟", quiz_en: "How to arrange images side by side?",
-    answer: '<div style="display:flex; gap:10px;">\n  <img src="1.jpg" width="50">\n  <img src="2.jpg" width="50">\n</div>', quizAns_ar: "باستخدام display: flex.", quizAns_en: "Using display: flex."
-  },
-  {
-    section_ar: "مشاريع الويب", section_en: "Web Projects",
-    title_ar: "الدرس 25: مشروع صفحة شخصية", title_en: "Lesson 25: Personal Page",
-    steps_ar: ["هنجمع كل حاجة عملناها في صفحة واحدة.", "عنوان، صورة، فورم، وتنسيق."],
-    steps_en: ["Combine everything in one page.", "Heading, image, form, and styles."],
-    code: '<h1>My Page</h1>\n<p>Welcome</p>', practice_ar: "اعمل صفحة تعريفية كاملة بنفسك.", practice_en: "Create a full profile page.",
-    quiz_ar: "إزاي تنسق صفحة HTML؟", quiz_en: "How to style an HTML page?",
-    answer: '<style>\n  body { background: #eee; }\n  h1 { color: blue; }\n</style>\n<h1>Hi</h1>', quizAns_ar: "بإضافة كود CSS في وسم style.", quizAns_en: "By adding CSS inside the style tag."
-  }
-  { section_ar: "أساسيات CSS", section_en: "CSS Basics", title_ar: "الدرس 26: الظلال Box Shadow", title_en: "Lesson 26: Box Shadow", steps_ar: ["box-shadow بتعمل ظل للعنصر.", "بتديه شكل ثلاثي الأبعاد."], steps_en: ["box-shadow adds a shadow.", "Gives a 3D look."], code: '<style>\n  div { box-shadow: 5px 5px 10px gray; }\n</style>', practice_ar: "ضيف ظل لصندوق.", practice_en: "Add shadow to a box.", quiz_ar: "إيه فايدة box-shadow؟", quiz_en: "What does box-shadow do?", answer: '<style>\n  div { box-shadow: 2px 2px 5px black; }\n</style>', quizAns_ar: "بتدي إحساس بالعمق.", quizAns_en: "Gives a depth feeling." },
-{ section_ar: "أساسيات CSS", section_en: "CSS Basics", title_ar: "الدرس 27: الشفافية Opacity", title_en: "Lesson 27: Opacity", steps_ar: ["opacity بتتحكم في شفافية العنصر.", "من 0 (مخفي) لـ 1 (ظاهر)."], steps_en: ["opacity controls transparency.", "From 0 (hidden) to 1 (visible)."], code: '<style>\n  div { opacity: 0.5; }\n</style>', practice_ar: "خلي صورة شفافة.", practice_en: "Make an image transparent.", quiz_ar: "إيه فايدة opacity؟", quiz_en: "What does opacity do?", answer: '<style>\n  img { opacity: 0.3; }\n</style>', quizAns_ar: "بتخلي العنصر شفاف.", quizAns_en: "Makes the element transparent." },
-{ section_ar: "أساسيات CSS", section_en: "CSS Basics", title_ar: "الدرس 28: الأزرار والتنسيق", title_en: "Lesson 28: Styling Buttons", steps_ar: ["بننسق الأزرار بـ background و color.", "border-radius بيعملها دايرية."], steps_en: ["Style buttons with background and color.", "border-radius makes them rounded."], code: '<style>\n  button { background: blue; color: white; border-radius: 5px; }\n</style>', practice_ar: "اعمل زرار أحمر.", practice_en: "Make a red button.", quiz_ar: "إزاي نخلي الزرار دائري؟", quiz_en: "How to make button rounded?", answer: '<style>\n  button { background: red; border-radius: 10px; }\n</style>', quizAns_ar: "باستخدام border-radius.", quizAns_en: "Using border-radius." },
-{ section_ar: "أساسيات CSS", section_en: "CSS Basics", title_ar: "الدرس 29: Hover", title_en: "Lesson 29: Hover Effect", steps_ar: ["hover بيتنفذ لما الماوس ييجي على العنصر.", "بنستخدم :hover في CSS."], steps_en: ["hover runs when mouse is over the element.", "Use :hover in CSS."], code: '<style>\n  button:hover { background: green; }\n</style>', practice_ar: "غير لون النص عند المرور.", practice_en: "Change text color on hover.", quiz_ar: "إيه فايدة hover؟", quiz_en: "What is hover for?", answer: '<style>\n  h1:hover { color: red; }\n</style>', quizAns_ar: "بيضيف تأثير تفاعلي.", quizAns_en: "Adds an interactive effect." },
-{ section_ar: "أساسيات CSS", section_en: "CSS Basics", title_ar: "الدرس 30: المتغيرات CSS", title_en: "Lesson 30: CSS Variables", steps_ar: ["بنستخدم :root لتعريف متغيرات.", "بنستخدم var() لاستخدامها."], steps_en: ["Use :root to define variables.", "Use var() to use them."], code: '<style>\n  :root { --main-color: blue; }\n  h1 { color: var(--main-color); }\n</style>', practice_ar: "عرف متغير للون الخلفية.", practice_en: "Define a background color variable.", quiz_ar: "إيه فايدة var()؟", quiz_en: "What is var() for?", answer: '<style>\n  :root { --bg: black; }\n  body { background: var(--bg); }\n</style>', quizAns_ar: "بتستخدم قيمة المتغير.", quizAns_en: "Uses the variable value." },
-{ section_ar: "أساسيات JavaScript", section_en: "JavaScript Basics", title_ar: "الدرس 31: مقدمة JS", title_en: "Lesson 31: Intro to JS", steps_ar: ["JavaScript بتخلي الصفحة تتفاعل.", "بتتكتب جوه وسم script."], steps_en: ["JavaScript makes the page interactive.", "Written inside a script tag."], code: '<script>\n  alert("Hello");\n</script>', practice_ar: "اطلع رسالة ترحيب.", practice_en: "Show a welcome message.", quiz_ar: "إيه فايدة alert؟", quiz_en: "What does alert do?", answer: '<script>\n  alert("Welcome");\n</script>', quizAns_ar: "بتظهر رسالة منبثقة.", quizAns_en: "Shows a popup message." },
-{ section_ar: "أساسيات JavaScript", section_en: "JavaScript Basics", title_ar: "الدرس 32: المتغيرات في JS", title_en: "Lesson 32: JS Variables", steps_ar: ["let للمتغيرات اللي بتتغير.", "const للثوابت.", "var قديمة (يفضل عدم استخدامها)."], steps_en: ["let for changeable variables.", "const for constants.", "var is old (avoid it)."], code: '<script>\n  let name = "Ali";\n  const age = 20;\n</script>', practice_ar: "عرف متغير باسمك.", practice_en: "Define a variable for your name.", quiz_ar: "إيه الفرق بين let و const؟", quiz_en: "Difference between let and const?", answer: '<script>\n  let x = 10;\n  const y = 20;\n</script>', quizAns_ar: "let ممكن تتغير، const لأ.", quizAns_en: "let can change, const cannot." },
-{ section_ar: "أساسيات JavaScript", section_en: "JavaScript Basics", title_ar: "الدرس 33: الدوال في JS", title_en: "Lesson 33: JS Functions", steps_ar: ["بنستخدم function لتعريف دالة.", "أو Arrow Function."], steps_en: ["Use function to define.", "Or Arrow Function."], code: '<script>\n  function greet() { alert("Hi"); }\n  greet();\n</script>', practice_ar: "اعمل دالة تطبع رقمك.", practice_en: "Make a function that prints your number.", quiz_ar: "إزاي ننادي دالة؟", quiz_en: "How to call a function?", answer: '<script>\n  function hello() { alert("Hi"); }\n  hello();\n</script>', quizAns_ar: "باسمها وبعدين أقواس.", quizAns_en: "By its name and parentheses." },
-{ section_ar: "أساسيات JavaScript", section_en: "JavaScript Basics", title_ar: "الدرس 34: الشروط في JS", title_en: "Lesson 34: JS Conditions", steps_ar: ["if و else بنفس طريقة بايثون.", "لازم الأقواس المعقوفة {}."], steps_en: ["if and else like Python.", "Requires curly braces {}."], code: '<script>\n  let age = 20;\n  if (age >= 18) { alert("Adult"); }\n</script>', practice_ar: "اعمل شرط للرقم السالب.", practice_en: "Make a condition for negative numbers.", quiz_ar: "هل بنستخدم : بعد if؟", quiz_en: "Do we use : after if?", answer: '<script>\n  let n = -5;\n  if (n < 0) { alert("Negative"); }\n</script>', quizAns_ar: "لأ، بنستخدم {} بدالها.", quizAns_en: "No, we use {} instead." },
-{ section_ar: "أساسيات JavaScript", section_en: "JavaScript Basics", title_ar: "الدرس 35: الحلقات في JS", title_en: "Lesson 35: JS Loops", steps_ar: ["for بتلف عدد معروف.", "بنفس طريقة بايثون تقريباً."], steps_en: ["for loops a known number of times.", "Similar to Python."], code: '<script>\n  for (let i = 0; i < 3; i++) {\n    console.log(i);\n  }\n</script>', practice_ar: "اطبع الأرقام من 1 لـ 5.", practice_en: "Print numbers 1 to 5.", quiz_ar: "إيه فايدة console.log؟", quiz_en: "What does console.log do?", answer: '<script>\n  for (let i = 1; i <= 5; i++) {\n    console.log(i);\n  }\n</script>', quizAns_ar: "بتطبع في الكونسول (للتجربة).", quizAns_en: "Prints to the console (for testing)." },
-{ section_ar: "التفاعل مع الصفحة", section_en: "DOM Interaction", title_ar: "الدرس 36: DOM", title_en: "Lesson 36: DOM", steps_ar: ["DOM هو تمثيل الصفحة في JS.", "بنستخدم document.getElementById."], steps_en: ["DOM is the page representation in JS.", "Use document.getElementById."], code: '<h1 id="title">Hello</h1>\n<script>\n  document.getElementById("title").innerText = "Changed";\n</script>', practice_ar: "غير نص عنوان.", practice_en: "Change a heading text.", quiz_ar: "إيه فايدة getElementById؟", quiz_en: "What does getElementById do?", answer: '<h1 id="t">Hi</h1>\n<script>\n  document.getElementById("t").innerText = "New";\n</script>', quizAns_ar: "بتجيب العنصر بالـ id.", quizAns_en: "Gets the element by id." },
-{ section_ar: "التفاعل مع الصفحة", section_en: "DOM Interaction", title_ar: "الدرس 37: تغيير الألوان", title_en: "Lesson 37: Change Colors", steps_ar: ["بنغير اللون بـ style.color.", "أو style.backgroundColor."], steps_en: ["Change color with style.color.", "Or style.backgroundColor."], code: '<h1 id="t">Hi</h1>\n<script>\n  document.getElementById("t").style.color = "red";\n</script>', practice_ar: "غير لون الخلفية.", practice_en: "Change the background color.", quiz_ar: "إزاي نغير اللون بـ JS؟", quiz_en: "How to change color in JS?", answer: '<h1 id="t">Hi</h1>\n<script>\n  document.getElementById("t").style.color = "blue";\n</script>', quizAns_ar: "بـ style.color.", quizAns_en: "Using style.color." },
-{ section_ar: "التفاعل مع الصفحة", section_en: "DOM Interaction", title_ar: "الدرس 38: الاستماع للأحداث", title_en: "Lesson 38: Events", steps_ar: ["addEventListener بتسمع لحدث.", "زي الضغط على زرار."], steps_en: ["addEventListener listens to an event.", "Like clicking a button."], code: '<button id="b">Click</button>\n<script>\n  document.getElementById("b").addEventListener("click", function() {\n    alert("Clicked");\n  });\n</script>', practice_ar: "خلي الزرار يغير لون نفسه.", practice_en: "Make the button change its color.", quiz_ar: "إيه فايدة addEventListener؟", quiz_en: "What does addEventListener do?", answer: '<button id="b">Click</button>\n<script>\n  document.getElementById("b").addEventListener("click", function() {\n    this.style.color = "red";\n  });\n</script>', quizAns_ar: "بتسمع لحدث معين.", quizAns_en: "Listens to a specific event." },
-{ section_ar: "التفاعل مع الصفحة", section_en: "DOM Interaction", title_ar: "الدرس 39: قراءة المدخلات", title_en: "Lesson 39: Read Inputs", steps_ar: ["بنستخدم .value عشان نقرا اللي المستخدم كتبه.", "بتنفع مع input."], steps_en: ["Use .value to read user input.", "Works with input."], code: '<input id="i" type="text">\n<button id="b">Go</button>\n<script>\n  document.getElementById("b").addEventListener("click", function() {\n    alert(document.getElementById("i").value);\n  });\n</script>', practice_ar: "اعرض النص اللي المستخدم كتبه.", practice_en: "Show the user's text.", quiz_ar: "إزاي نقرا قيمة input؟", quiz_en: "How to read input value?", answer: '<input id="i">\n<script>\n  alert(document.getElementById("i").value);\n</script>', quizAns_ar: "باستخدام .value.", quizAns_en: "Using .value." },
-{ section_ar: "التفاعل مع الصفحة", section_en: "DOM Interaction", title_ar: "الدرس 40: إخفاء وإظهار", title_en: "Lesson 40: Hide & Show", steps_ar: ["بنغير display لـ none.", "أو block لإظهاره."], steps_en: ["Change display to none.", "Or block to show it."], code: '<h1 id="t">Hi</h1>\n<button id="b">Hide</button>\n<script>\n  document.getElementById("b").addEventListener("click", function() {\n    document.getElementById("t").style.display = "none";\n  });\n</script>', practice_ar: "اعمل زرار يظهر تاني.", practice_en: "Make a button to show again.", quiz_ar: "إزاي نخفي عنصر؟", quiz_en: "How to hide an element?", answer: '<h1 id="t">Hi</h1>\n<script>\n  document.getElementById("t").style.display = "none";\n</script>', quizAns_ar: "بـ display: none.", quizAns_en: "Using display: none." },
-{ section_ar: "مشاريع تفاعلية", section_en: "Interactive Projects", title_ar: "الدرس 41: آلة حاسبة بسيطة", title_en: "Lesson 41: Simple Calculator", steps_ar: ["هنقرا رقمين.", "ونجمعهم ونطبع الناتج."], steps_en: ["Read two numbers.", "Sum and print the result."], code: '<input id="a"> <input id="b">\n<button id="btn">+</button>\n<p id="out"></p>\n<script>\n  document.getElementById("btn").addEventListener("click", function() {\n    let x = Number(document.getElementById("a").value);\n    let y = Number(document.getElementById("b").value);\n    document.getElementById("out").innerText = x + y;\n  });\n</script>', practice_ar: "ضيف زرار للطرح.", practice_en: "Add a subtraction button.", quiz_ar: "إيه فايدة Number()؟", quiz_en: "What does Number() do?", answer: '<input id="a">\n<button id="b">+</button>\n<p id="o"></p>\n<script>\n  document.getElementById("b").addEventListener("click", function() {\n    let x = Number(document.getElementById("a").value);\n    document.getElementById("o").innerText = x + 5;\n  });\n</script>', quizAns_ar: "بتحول النص لرقم.", quizAns_en: "Converts string to number." },
-{ section_ar: "مشاريع تفاعلية", section_en: "Interactive Projects", title_ar: "الدرس 42: عداد الضغطات", title_en: "Lesson 42: Click Counter", steps_ar: ["هنعد عدد الضغطات.", "بنستخدم متغير يزيد كل مرة."], steps_en: ["Count the clicks.", "Use a variable that increments."], code: '<button id="b">Click</button>\n<p id="o">0</p>\n<script>\n  let c = 0;\n  document.getElementById("b").addEventListener("click", function() {\n    c++;\n    document.getElementById("o").innerText = c;\n  });\n</script>', practice_ar: "ضيف زرار لتصفير العداد.", practice_en: "Add a reset button.", quiz_ar: "إيه c++؟", quiz_en: "What is c++?", answer: '<button id="b">Click</button>\n<p id="o">0</p>\n<script>\n  let c = 0;\n  document.getElementById("b").addEventListener("click", function() {\n    c++;\n    document.getElementById("o").innerText = c;\n  });\n</script>', quizAns_ar: "بترفع قيمة المتغير بواحد.", quizAns_en: "Increments the variable by one." },
-{ section_ar: "مشاريع تفاعلية", section_en: "Interactive Projects", title_ar: "الدرس 43: تغيير الخلفية", title_en: "Lesson 43: Change Background", steps_ar: ["هنغير لون خلفية الصفحة.", "بزرار."], steps_en: ["Change page background.", "With a button."], code: '<button id="b">Change</button>\n<script>\n  document.getElementById("b").addEventListener("click", function() {\n    document.body.style.background = "black";\n  });\n</script>', practice_ar: "خليها تبدل بين لونين.", practice_en: "Make it toggle between two colors.", quiz_ar: "إزاي نغير خلفية الصفحة؟", quiz_en: "How to change page background?", answer: '<button id="b">Change</button>\n<script>\n  document.getElementById("b").addEventListener("click", function() {\n    document.body.style.background = "red";\n  });\n</script>', quizAns_ar: "بـ document.body.style.background.", quizAns_en: "Using document.body.style.background." },
-{ section_ar: "مشاريع تفاعلية", section_en: "Interactive Projects", title_ar: "الدرس 44: عرض الوقت", title_en: "Lesson 44: Show Time", steps_ar: ["هنجيب الوقت الحالي.", "بنستخدم new Date()."], steps_en: ["Get the current time.", "Using new Date()."], code: '<h1 id="t"></h1>\n<script>\n  document.getElementById("t").innerText = new Date().toLocaleTimeString();\n</script>', practice_ar: "اعرض التاريخ.", practice_en: "Show the date.", quiz_ar: "إيه فايدة new Date؟", quiz_en: "What is new Date for?", answer: '<h1 id="t"></h1>\n<script>\n  document.getElementById("t").innerText = new Date().toLocaleDateString();\n</script>', quizAns_ar: "بتجيب الوقت أو التاريخ الحالي.", quizAns_en: "Gets current time or date." },
-{ section_ar: "مشاريع تفاعلية", section_en: "Interactive Projects", title_ar: "الدرس 45: التحقق من الفورم", title_en: "Lesson 45: Form Validation", steps_ar: ["هنشوف لو المستخدم كتب حاجة.", "ونطلع تحذير لو مفيش."], steps_en: ["Check if user wrote something.", "Alert if empty."], code: '<input id="i"> <button id="b">Send</button>\n<script>\n  document.getElementById("b").addEventListener("click", function() {\n    if (document.getElementById("i").value === "") {\n      alert("Empty");\n    }\n  });\n</script>', practice_ar: "اطلب من المستخدم إيميل.", practice_en: "Ask for email.", quiz_ar: "إزاي نشوف لو الحقل فاضي؟", quiz_en: "How to check if field is empty?", answer: '<input id="i">\n<script>\n  if (document.getElementById("i").value === "") {\n    alert("Empty");\n  }\n</script>', quizAns_ar: "بمقارنة القيمة بـ "".", quizAns_en: "Compare value to "".'"' },
-{ section_ar: "مشاريع تفاعلية", section_en: "Interactive Projects", title_ar: "الدرس 46: تبديل الصور", title_en: "Lesson 46: Swap Images", steps_ar: ["هنغير مصدر الصورة.", "بنستخدم .src."], steps_en: ["Change the image source.", "Using .src."], code: '<img id="i" src="a.jpg">\n<button id="b">Change</button>\n<script>\n  document.getElementById("b").addEventListener("click", function() {\n    document.getElementById("i").src = "b.jpg";\n  });\n</script>', practice_ar: "بدل بين صورتين.", practice_en: "Toggle between two images.", quiz_ar: "إيه فايدة .src؟", quiz_en: "What is .src for?", answer: '<img id="i" src="1.jpg">\n<script>\n  document.getElementById("i").src = "2.jpg";\n</script>', quizAns_ar: "بيغير الصورة.", quizAns_en: "Changes the image." },
-{ section_ar: "مشاريع تفاعلية", section_en: "Interactive Projects", title_ar: "الدرس 47: عداد تنازلي", title_en: "Lesson 47: Countdown", steps_ar: ["هنستخدم setInterval.", "بنقص كل ثانية."], steps_en: ["Use setInterval.", "Decrease every second."], code: '<h1 id="t">10</h1>\n<script>\n  let c = 10;\n  let x = setInterval(function() {\n    c--;\n    document.getElementById("t").innerText = c;\n    if (c === 0) clearInterval(x);\n  }, 1000);\n</script>', practice_ar: "اطلع رسالة عند الصفر.", practice_en: "Show a message at zero.", quiz_ar: "إيه فايدة setInterval؟", quiz_en: "What is setInterval for?", answer: '<h1 id="t">5</h1>\n<script>\n  let c = 5;\n  let x = setInterval(function() {\n    c--;\n    document.getElementById("t").innerText = c;\n    if (c === 0) clearInterval(x);\n  }, 1000);\n</script>', quizAns_ar: "بتكرر الكود كل فترة.", quizAns_en: "Repeats code at intervals." },
-{ section_ar: "مشاريع تفاعلية", section_en: "Interactive Projects", title_ar: "الدرس 48: الطقس", title_en: "Lesson 48: Weather", steps_ar: ["هنطلب بيانات من API.", "بنستخدم fetch."], steps_en: ["Fetch data from an API.", "Using fetch."], code: '<button id="b">Get</button>\n<p id="o"></p>\n<script>\n  document.getElementById("b").addEventListener("click", function() {\n    document.getElementById("o").innerText = "Loading...";\n  });\n</script>', practice_ar: "طوره ببيانات حقيقية.", practice_en: "Improve it with real data.", quiz_ar: "إيه فايدة fetch؟", quiz_en: "What is fetch for?", answer: '<button id="b">Get</button>\n<script>\n  document.getElementById("b").addEventListener("click", function() {\n    fetch("https://api.com/data").then(r => r.json()).then(d => console.log(d));\n  });\n</script>', quizAns_ar: "بتجيب بيانات من سيرفر.", quizAns_en: "Gets data from a server." },
-{ section_ar: "مشاريع تفاعلية", section_en: "Interactive Projects", title_ar: "الدرس 49: To-Do List", title_en: "Lesson 49: To-Do List", steps_ar: ["هنضيف مهام في الصفحة.", "بزرار."], steps_en: ["Add tasks to the page.", "With a button."], code: '<input id="i"> <button id="b">Add</button>\n<ul id="l"></ul>\n<script>\n  document.getElementById("b").addEventListener("click", function() {\n    let li = document.createElement("li");\n    li.innerText = document.getElementById("i").value;\n    document.getElementById("l").appendChild(li);\n  });\n</script>', practice_ar: "ضيف زرار لحذف المهمة.", practice_en: "Add a delete button.", quiz_ar: "إيه فايدة createElement؟", quiz_en: "What is createElement for?", answer: '<input id="i"> <button id="b">Add</button>\n<ul id="l"></ul>\n<script>\n  document.getElementById("b").addEventListener("click", function() {\n    let li = document.createElement("li");\n    li.innerText = document.getElementById("i").value;\n    document.getElementById("l").appendChild(li);\n  });\n</script>', quizAns_ar: "بتعمل عنصر جديد في الصفحة.", quizAns_en: "Creates a new element in the page." },
-{ section_ar: "مشاريع تفاعلية", section_en: "Interactive Projects", title_ar: "الدرس 50: المشروع الختامي", title_en: "Lesson 50: Final Project", steps_ar: ["هنجمع كل اللي اتعلمناه.", "هنبني صفحة ويب كاملة تفاعلية."], steps_en: ["Combine everything we learned.", "Build a full interactive web page."], code: '<h1>My App</h1>\n<button onclick="alert(\\'Hello\\')">Click</button>', practice_ar: "اعمل صفحة بكل حاجة.", practice_en: "Make a page with everything.", quiz_ar: "إيه اللي اتعلمناه؟", quiz_en: "What did we learn?", answer: '<h1>App</h1>\n<button onclick="alert(\\'Hi\\')">Go</button>', quizAns_ar: "HTML و CSS و JS.", quizAns_en: "HTML, CSS, and JS." }
-];
-
-// ====== بناء الدروس ======
-function renderLessons() {
-  const container = document.getElementById('lessonsContainer');
-  container.innerHTML = "";
-  let currentSection = "";
-  const lang = currentLang;
-
-  lessons.forEach((l, i) => {
-    const secText = l['section_' + lang];
-    if(secText !== currentSection){
-      currentSection = secText;
-      container.insertAdjacentHTML('beforeend', `<div class="sec">${currentSection}</div>`);
-    }
-
-    let stepsHtml = "";
-    l['steps_' + lang].forEach(s => {
-      stepsHtml += `<div class="step-item">${s}</div>`;
-    });
-
-    const displayCode = l.code.replace(/</g, '&lt;').replace(/>/g, '&gt;');
-    const displayAns = l.answer.replace(/</g, '&lt;').replace(/>/g, '&gt;');
-
-    const html = `
-      <div class="lesson">
-        <h3>${l['title_' + lang]}</h3>
-        <div class="explain-steps">
-          <strong style="color:#FFD700;">${lang === 'ar' ? '📖 خطوات الشرح:' : '📖 Steps:'}</strong><br>
-          ${stepsHtml}
-        </div>
-        <div class="code-box">
-          <div class="code-header"><span>${lang === 'ar' ? 'تطبيق الكود' : 'Code Example'}</span></div>
-          <pre class="code-content">${displayCode}</pre>
-        </div>
-        <div class="try">${lang === 'ar' ? '🎯 التطبيق العملي: ' : '🎯 Practice: '} ${l['practice_' + lang]}</div>
-        <div class="quiz-box">
-          ${lang === 'ar' ? '❓ سؤال للتقييم: ' : '❓ Quiz: '} ${l['quiz_' + lang]}
-          <button class="btn-ans" onclick="toggleAns('ans${i}')">${lang === 'ar' ? '👁️ شوف الإجابة' : '👁️ Show Answer'}</button>
-          <div class="ans" id="ans${i}">
-            <strong>${lang === 'ar' ? 'الحل:' : 'Answer:'}</strong><br>${l['quizAns_' + lang]}<br><br>
-            <strong>${lang === 'ar' ? 'الكود:' : 'Code:'}</strong><br>${displayAns}
-          </div>
-        </div>
-      </div>
-    `;
-    container.insertAdjacentHTML('beforeend', html);
-  });
-}
-
-renderLessons();
-</script>
-</body>
-                                                                                                                                     </html>
+  {section_ar:"أساسيات HTML",title_ar:"الدرس 1: مقدمة في HTML",steps_ar:["HTML هي هيكل الصفحة.","بتتكون من Tags (وسوم).","بنكتب الكود بين قوسين <>."],code:'<h1>Hello World</h1>\n<p>This is a paragraph</p>',practice_ar:"اكتب عنوان رئيسي باسمك.",quiz_ar:"إيه فايدة h1؟",answer:'<h1>My Name</h1>',quizAns_ar:"عنوان رئيسي."},
+  {section_ar:"أساسيات HTML",title_ar:"الدرس 2: هيكل الصفحة",steps_ar:["head فيه معلومات الصفحة (مش بتظهر).","body فيه المحتوى اللي بيظهر للمستخدم."],code:'<!DOCTYPE html>\n<html>\n<head><title>My Site</title></head>\n<body><h1>Hi</h1></body>\n</html>',practice_ar:"اعمل صفحة كاملة بالهيكل.",quiz_ar:"فين بيظهر المحتوى؟",answer:'<!DOCTYPE html>\n<html><head></head><body><h1>Hi</h1></body></html>',quizAns_ar:"جوه body."},
+  {section_ar:"أساسيات HTML",title_ar:"الدرس 3: العناوين والفقرات",steps_ar:["h1 لأكبر عنوان، h6 لأصغر عنوان.","p للفقرات."],code:'<h1>Main</h1>\n<h2>Sub</h2>\n<p>Text here</p>',practice_ar:"اكتب 3 مستويات عناوين.",quiz_ar:"كام مستوى للعناوين؟",answer:'<h1>A</h1>\n<h2>B</h2>\n<h3>C</h3>',quizAns_ar:"6 مستويات."},
+  {section_ar:"أساسيات HTML",title_ar:"الدرس 4: الروابط",steps_ar:["a بتعمل رابط.","href بيحدد الوجهة."],code:'<a href="https://google.com">Google</a>',practice_ar:"حط رابط لموقعك المفضل.",quiz_ar:"إزاي تفتح الرابط في تاب جديد؟",answer:'<a href="https://google.com" target="_blank">Google</a>',quizAns_ar:"باستخدام target='_blank'."},
+  {section_ar:"أساسيات HTML",title_ar:"الدرس 5: الصور",steps_ar:["img بتحط صورة.","src مكان الصورة، alt وصف بديل."],code:'<img src="pic.jpg" alt="My Picture">',practice_ar:"حط صورة مع وصف.",quiz_ar:"ليه بنستخدم alt؟",answer:'<img src="me.jpg" alt="My Photo">',quizAns_ar:"لو الصورة مش ظاهرة أو للـ SEO."},
+  {section_ar:"أساسيات HTML",title_ar:"الدرس 6: القوائم",steps_ar:["ul قائمة غير مرتبة (بنقط).","ol قائمة مرتبة (أرقام).","li عنصر القائمة."],code:'<ul>\n  <li>Apple</li>\n  <li>Banana</li>\n</ul>',practice_ar:"اعمل قائمة ب5 أكلات.",quiz_ar:"إيه الفرق بين ul و ol؟",answer:'<ol>\n  <li>First</li>\n  <li>Second</li>\n</ol>',quizAns_ar:"ul بنقط، ol بأرقام."},
+  {section_ar:"أساسيات HTML",title_ar:"الدرس 7: الجداول",steps_ar:["table بيعمل جدول.","tr صف، td خلية.","th خلية عنوان."],code:'<table>\n  <tr><td>A</td><td>B</td></tr>\n</table>',practice_ar:"اعمل جدول بصفين وعمودين.",quiz_ar:"إيه فايدة th؟",answer:'<table>\n  <tr><th>Name</th></tr>\n  <tr><td>Ali</td></tr>\n</table>',quizAns_ar:"عنوان الخلية."},
+  {section_ar:"أساسيات HTML",title_ar:"الدرس 8: النماذج Forms",steps_ar:["form بيجمع بيانات.","input بياخد إدخال.","button للزر."],code:'<form>\n  <input type="text">\n  <button>Send</button>\n</form>',practice_ar:"اعمل فورم للاسم والإيميل.",quiz_ar:"إيه input type=password؟",answer:'<form>\n  <input type="email">\n  <button>Send</button>\n</form>',quizAns_ar:"بيخفي الحروف اللي بتتكتب."},
+  {section_ar:"أساسيات HTML",title_ar:"الدرس 9: الأقسام Div",steps_ar:["div صندوق بيجمع عناصر.","بنستخدمه لتقسيم الصفحة."],code:'<div>\n  <h1>Title</h1>\n  <p>Text</p>\n</div>',practice_ar:"اعمل قسمين في الصفحة.",quiz_ar:"إيه فايدة div؟",answer:'<div><h1>A</h1></div>\n<div><h1>B</h1></div>',quizAns_ar:"لتجميع العناصر مع بعض."},
+  {section_ar:"أساسيات HTML",title_ar:"الدرس 10: التعليقات",steps_ar:["التعليقات مش بتظهر في المتصفح.","بنكتبها بين <!-- و -->."],code:'<!-- This is a comment -->\n<h1>Hi</h1>',practice_ar:"اكتب تعليق فوق عنوان.",quiz_ar:"هل التعليقات بتظهر للمستخدم؟",answer:'<!-- My Comment -->\n<h2>Hello</h2>',quizAns_ar:"لأ، بتظهر في الكود بس."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 11: مقدمة CSS",steps_ar:["CSS بتتنسق الشكل.","بتتكتب في style."],code:'<style>\n  h1 { color: red; }\n</style>',practice_ar:"لون العنوان بالأزرق.",quiz_ar:"إزاي بنختار عنصر في CSS؟",answer:'<style>\n  h1 { color: blue; }\n</style>',quizAns_ar:"باسم العنصر أو الـ id أو الـ class."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 12: الألوان والخلفيات",steps_ar:["color للنص.","background-color للخلفية."],code:'<style>\n  body { background-color: #eee; }\n</style>',practice_ar:"خلي الخلفية سودة والنص أبيض.",quiz_ar:"إيه فايدة background-color؟",answer:'<style>\n  body { background: black; color: white; }\n</style>',quizAns_ar:"بتلون خلفية العنصر."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 13: الخطوط",steps_ar:["font-size لحجم الخط.","font-family لنوع الخط.","font-weight لتخانة الخط."],code:'<style>\n  p { font-size: 20px; font-weight: bold; }\n</style>',practice_ar:"غير نوع الخط.",quiz_ar:"إيه فايدة font-weight؟",answer:'<style>\n  p { font-family: Arial; }\n</style>',quizAns_ar:"بيتحكم في تخانة الخط."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 14: الهوامش",steps_ar:["margin مسافة برا العنصر.","padding مسافة جوه العنصر."],code:'<style>\n  div { margin: 10px; padding: 20px; }\n</style>',practice_ar:"طبق الهوامش على صندوق.",quiz_ar:"إيه الفرق بين margin و padding؟",answer:'<style>\n  div { margin: 15px; padding: 10px; }\n</style>',quizAns_ar:"margin برا، padding جوه."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 15: الحدود",steps_ar:["border بيحط حدود.","border-radius بيعمل حواف دايرة."],code:'<style>\n  div { border: 2px solid black; }\n</style>',practice_ar:"اعمل صندوق بحواف دايرة.",quiz_ar:"إيه فايدة border-radius؟",answer:'<style>\n  div { border-radius: 10px; border: 1px solid red; }\n</style>',quizAns_ar:"بيخلي الحواف ناعمة أو دايرية."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 16: Flexbox",steps_ar:["display: flex بترتب العناصر.","justify-content للمحاذاة الأفقية.","align-items للمحاذاة الرأسية."],code:'<style>\n  .box { display: flex; justify-content: center; }\n</style>',practice_ar:"رتب 3 عناصر في النص.",quiz_ar:"إيه فايدة flex؟",answer:'<style>\n  .box { display: flex; gap: 10px; }\n</style>',quizAns_ar:"بيرتب العناصر أفقياً أو رأسياً بسهولة."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 17: الـ Class والـ ID",steps_ar:["class بتتكتب بـ . في CSS.","id بيتكتب بـ # في CSS.","id فريد، class متكرر."],code:'<style>\n  .my-class { color: red; }\n  #my-id { color: blue; }\n</style>',practice_ar:"استخدم class و id في عنصرين.",quiz_ar:"إيه الفرق بينهم؟",answer:'<style>\n  .c { color: green; }\n  #i { color: orange; }\n</style>\n<p class="c">A</p>\n<p id="i">B</p>',quizAns_ar:"id بيستخدم مرة واحدة، class ممكن يتكرر."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 18: العرض والارتفاع",steps_ar:["width للعرض.","height للارتفاع."],code:'<style>\n  div { width: 100px; height: 100px; }\n</style>',practice_ar:"اعمل مربع 200x200.",quiz_ar:"إيه الوحدة اللي بنستخدمها؟",answer:'<style>\n  div { width: 200px; height: 200px; }\n</style>',quizAns_ar:"px (بكسل) أو % (نسبة مئوية)."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 19: الخلفيات المتدرجة",steps_ar:["بتعمل تدرج لوني.","بنستخدم linear-gradient."],code:'<style>\n  body { background: linear-gradient(red, blue); }\n</style>',practice_ar:"اعمل تدرج من الأسود للرمادي.",quiz_ar:"إيه فايدة linear-gradient؟",answer:'<style>\n  body { background: linear-gradient(black, gray); }\n</style>',quizAns_ar:"لعمل خلفية متدرجة."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 20: محاذاة النصوص",steps_ar:["text-align بتحدد مكان النص.","center, left, right."],code:'<style>\n  h1 { text-align: center; }\n</style>',practice_ar:"خلي النص في اليمين.",quiz_ar:"إيه فايدة text-align؟",answer:'<style>\n  h1 { text-align: right; }\n</style>',quizAns_ar:"بتحدد محاذاة النص."},
+  {section_ar:"مشاريع الويب",title_ar:"الدرس 21: مشروع كارت شخصي",steps_ar:["هنجمع كل حاجة.","صورة، اسم، وصف، وتنسيق."],code:'<div style="text-align:center; border:1px solid black;">\n  <h2>Ali</h2>\n  <p>Programmer</p>\n</div>',practice_ar:"غير التصميم وضيف صورة.",quiz_ar:"إزاي نعمل كارت؟",answer:'<div style="text-align:center; border:1px solid black;">\n  <h2>Ali</h2>\n  <p>Programmer</p>\n</div>',quizAns_ar:"بنستخدم div وننسقه."},
+  {section_ar:"مشاريع الويب",title_ar:"الدرس 22: مشروع صفحة هبوط",steps_ar:["صفحة تعريفية بسيطة.","عنوان، وصف، وزرار."],code:'<h1>Welcome</h1>\n<p>Our product is great</p>\n<button>Buy</button>',practice_ar:"طور الصفحة بتنسيق.",quiz_ar:"إيه مكونات صفحة الهبوط؟",answer:'<h1>Welcome</h1>\n<p>Product</p>\n<button>Buy</button>',quizAns_ar:"عنوان ووصف وزرار."},
+  {section_ar:"مشاريع الويب",title_ar:"الدرس 23: مشروع نموذج تسجيل",steps_ar:["هنجمع بيانات المستخدم.","اسم، إيميل، باسورد، وزرار."],code:'<form>\n  <input type="text" placeholder="Name">\n  <input type="password" placeholder="Password">\n  <button>Signup</button>\n</form>',practice_ar:"ضيف خانة إيميل.",quiz_ar:"إيه input type=password؟",answer:'<form>\n  <input type="email" placeholder="Email">\n  <button>Signup</button>\n</form>',quizAns_ar:"بيخفي الحروف."},
+  {section_ar:"مشاريع الويب",title_ar:"الدرس 24: مشروع معرض صور",steps_ar:["هنجمع صور في صفوف.","بنستخدم flex."],code:'<div style="display:flex; gap:10px;">\n  <img src="a.jpg" width="100">\n  <img src="b.jpg" width="100">\n</div>',practice_ar:"ضيف 3 صور.",quiz_ar:"إزاي نرتب الصور جنب بعض؟",answer:'<div style="display:flex; gap:10px;">\n  <img src="1.jpg" width="50">\n  <img src="2.jpg" width="50">\n</div>',quizAns_ar:"باستخدام display: flex."},
+  {section_ar:"مشاريع الويب",title_ar:"الدرس 25: مشروع صفحة شخصية",steps_ar:["هنجمع كل حاجة عملناها في صفحة واحدة.","عنوان، صورة، فورم، وتنسيق."],code:'<h1>My Page</h1>\n<p>Welcome</p>',practice_ar:"اعمل صفحة تعريفية كاملة بنفسك.",quiz_ar:"إزاي تنسق صفحة HTML؟",answer:'<style>\n  body { background: #eee; }\n  h1 { color: blue; }\n</style>\n<h1>Hi</h1>',quizAns_ar:"بإضافة كود CSS في وسم style."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 26: الظلال Box Shadow",steps_ar:["box-shadow بتعمل ظل للعنصر.","بتديه شكل ثلاثي الأبعاد."],code:'<style>\n  div { box-shadow: 5px 5px 10px gray; }\n</style>',practice_ar:"ضيف ظل لصندوق.",quiz_ar:"إيه فايدة box-shadow؟",answer:'<style>\n  div { box-shadow: 2px 2px 5px black; }\n</style>',quizAns_ar:"بتدي إحساس بالعمق."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 27: الشفافية Opacity",steps_ar:["opacity بتتحكم في شفافية العنصر.","من 0 (مخفي) لـ 1 (ظاهر)."],code:'<style>\n  div { opacity: 0.5; }\n</style>',practice_ar:"خلي صورة شفافة.",quiz_ar:"إيه فايدة opacity؟",answer:'<style>\n  img { opacity: 0.3; }\n</style>',quizAns_ar:"بتخلي العنصر شفاف."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 28: الأزرار والتنسيق",steps_ar:["بننسق الأزرار بـ background و color.","border-radius بيعملها دايرية."],code:'<style>\n  button { background: blue; color: white; border-radius: 5px; }\n</style>',practice_ar:"اعمل زرار أحمر.",quiz_ar:"إزاي نخلي الزرار دائري؟",answer:'<style>\n  button { background: red; border-radius: 10px; }\n</style>',quizAns_ar:"باستخدام border-radius."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 29: Hover",steps_ar:["hover بيتنفذ لما الماوس ييجي على العنصر.","بنستخدم :hover في CSS."],code:'<style>\n  button:hover { background: green; }\n</style>',practice_ar:"غير لون النص عند المرور.",quiz_ar:"إيه فايدة hover؟",answer:'<style>\n  h1:hover { color: red; }\n</style>',quizAns_ar:"بيضيف تأثير تفاعلي."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 30: المتغيرات CSS",steps_ar:["بنستخدم :root لتعريف متغيرات.","بنستخدم var() لاستخدامها."],code:'<style>\n  :root { --main-color: blue; }\n  h1 { color: var(--main-color); }\n</style>',practice_ar:"عرف متغير للون الخلفية.",quiz_ar:"إيه فايدة var()؟",answer:'<style>\n  :root { --bg: black; }\n  body { background: var(--bg); }\n</style>',quizAns_ar:"بتستخدم قيمة المتغير."},
+  {section_ar:"أساسيات JavaScript",title_ar:"الدرس 31: مقدمة JS",steps_ar:["JavaScript بتخلي الصفحة تتفاعل.","بتتكتب جوه وسم script."],code:'<script>\n  alert("Hello");\n</script>',practice_ar:"اطلع رسالة ترحيب.",quiz_ar:"إيه فايدة alert؟",answer:'<script>\n  alert("Welcome");\n</script>',quizAns_ar:"بتظهر رسالة منبثقة."},
+  {section_ar:"أساسيات JavaScript",title_ar:"الدرس 32: المتغيرات في JS",steps_ar:["let للمتغيرات اللي بتتغير.","const للثوابت.","var قديمة (يفضل عدم استخدامها)."],code:'<script>\n  let name = "Ali";\n  const age = 20;\n</script>',practice_ar:"عرف متغير باسمك.",quiz_ar:"إيه الفرق بين let و const؟",answer:'<script>\n  let x = 10;\n  const y = 20;\n</script>',quizAns_ar:"let ممكن تتغير، const لأ."},
+  {section_ar:"أساسيات JavaScript",title_ar:"الدرس 33: الدوال في JS",steps_ar:["بنستخدم function لتعريف دالة.","أو Arrow Function."],code:'<script>\n  function greet() { alert("Hi"); }\n  greet();\n</script>',practice_ar:"اعمل دالة تطبع رقمك.",quiz_ar:"إزاي ننادي دالة؟",answer:'<script>\n  function hello() { alert("Hi"); }\n  hello();\n</script>',quizAns_ar:"باسمها وبعدين أقواس."},
+  {section_ar:"أساسيات JavaScript",title_ar:"الدرس 34: الشروط في JS",steps_ar:["if و else بنفس طريقة بايثون.","لازم الأقواس المعقوفة {}."],code:'<script>\n  let age = 20;\n  if (age >= 18) { alert("Adult"); }\n</script>',practice_ar:"اعمل شرط للرقم السالب.",quiz_ar:"هل بنستخدم : بعد if؟",answer:'<script>\n  let n = -5;\n  if (n < 0) { alert("Negative"); }\n</script>',quizAns_ar:"لأ، بنستخدم {} بدالها."},
+  {section_ar:"أساسيات JavaScript",title_ar:"الدرس 35: الحلقات في JS",steps_ar:["for بتلف عدد معروف.","بنفس طريقة بايثون تقريباً."],code:'<script>\n  for (let i = 0; i < 3; i++) {\n    console.log(i);\n  }\n</script>',practice_ar:"اطبع الأرقام من 1 لـ 5.",quiz_ar:"إيه فايدة console.log؟",answer:'<script>\n  for (let i = 1; i <= 5; i++) {\n    console.log(i);\n  }\n</script>',quizAns_ar:"بتطبع في الكونسول (للتجربة)."},
+  {section_ar:"التفاعل مع الصفحة",title_ar:"الدرس 36: DOM",steps_ar:["DOM هو تمثيل الصفحة في JS.","بنستخدم document.getElementById."],code:'<h1 id="title">Hello</h1>\n<script>\n  document.getElementById("title").innerText = "Changed";\n</script>',practice_ar:"غير نص عنوان.",quiz_ar:"إيه فايدة getElementById؟",answer:'<h1 id="t">Hi</h1>\n<script>\n  document.getElementById("t").innerText = "New";\n</script>',quizAns_ar:"بتجيب العنصر بالـ id."},
+  {section_ar:"التفاعل مع الصفحة",title_ar:"الدرس 37: تغيير الألوان",steps_ar:["بنغير اللون بـ style.color.","أو style.backgroundColor."],code:'<h1 id="t">Hi</h1>\n<script>\n  document.getElementById("t").style.color = "red";\n</script>',practice_ar:"غير لون الخلفية.",quiz_ar:"إزاي نغير اللون بـ JS؟",answer:'<h1 id="t">Hi</h1>\n<script>\n  document.getElementById("t").style.color = "blue";\n</script>',quizAns_ar:"بـ style.color."},
+  {section_ar:"التفاعل مع الصفحة",title_ar:"الدرس 38: الاستماع للأحداث",steps_ar:["addEventListener بتسمع لحدث.","زي الضغط على زرار."],code:'<button id="b">Click</button>\n<script>\n  document.getElementById("b").addEventListener("click", function() {\n    alert("Clicked");\n  });\n</script>',practice_ar:"خلي الزرار يغير لون نفسه.",quiz_ar:"إيه فايدة addEventListener؟",answer:'<button id="b">Click</button>\n<script>\n  document.getElementById("b").addEventListener("click", function() {\n    this.style.color = "red";\n  });\n</script>',quizAns_ar:"بتسمع لحدث معين."},
+  {section_ar:"التفاعل مع الصفحة",title_ar:"الدرس 39: قراءة المدخلات",steps_ar:["بنستخدم .value عشان نقرا اللي المستخدم كتبه.","بتنفع مع input."],code:'<input id="i" type="
