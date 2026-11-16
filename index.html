@@ -2,87 +2,118 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elmohtaref - Monster Level | المحترف - ليفل الوحش</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>رحلة المليون دولار - المحترف 😎</title>
 <style>
-*{box-sizing:border-box;font-family:'Segoe UI',Tahoma,Arial}body{margin:0;background:#0A1931;color:#fff}
-.top{position:relative;padding:20px;text-align:center;border-bottom:3px solid #FFD700;overflow:hidden}
-.top-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35}
-.top-content{position:relative;z-index:1}
-.top h1{color:#FFD700;font-size:25px;text-shadow:0 2px 10px #000;margin:8px 0}
-.cover{width:125px;height:125px;border-radius:50%;border:3px solid #FFD700;object-fit:cover;display:block;margin:0 auto;background:#122A52}
-.langBtn{position:fixed;top:12px;left:12px;z-index:99;background:#FFD700;color:#000;border:none;padding:10px 16px;border-radius:99px;font-weight:bold;cursor:pointer;font-size:15px}
-.lock-box{margin:20px;background:#0E2447;border:2px solid #FFD700;border-radius:20px;padding:20px;text-align:center}
-.whats{background:#25D366;color:#fff;padding:14px;border-radius:12px;display:block;text-decoration:none;font-weight:bold;margin:15px 0}
-input{width:100%;padding:14px;border-radius:12px;border:none;font-size:16px;text-align:center;margin-bottom:12px}
-.btn-gold{background:#FFD700;color:#0A1931;padding:14px;border:none;border-radius:12px;width:100%;font-weight:bold;font-size:18px;cursor:pointer}
-.book{display:none;padding:15px}
-.prog{background:#122A52;border:1px solid #FFD700;border-radius:12px;padding:12px;text-align:center;margin-bottom:15px}
-.bar{height:14px;background:#000;border-radius:99px;overflow:hidden;margin-top:8px}.bar div{height:100%;background:#FFD700;width:0%}
-.lesson{background:#122A52;border:1px solid #FFD700;border-radius:16px;padding:16px;margin-bottom:16px;line-height:2}
-.lesson h3{color:#FFD700;font-size:20px;margin:0 0 8px}.tag{display:inline-block;background:#FFD700;color:#0A1931;padding:4px 10px;border-radius:20px;font-weight:bold;font-size:12px}
-.code{background:#000;padding:12px;border-radius:10px;direction:ltr;text-align:left;color:#7CFF7C;margin:10px 0;font-size:14px;white-space:pre-wrap}
-.step{background:#0E2447;padding:12px;border-radius:10px;margin:8px 0;border-right:4px solid #25D366}
-.try{background:#1A3A6B;padding:12px;border-radius:10px;border-right:4px solid #FFD700;margin:8px 0}
-.sol{background:#2a1a4a;padding:12px;border-radius:10px;border-right:4px solid #c084fc;margin:8px 0;display:none}
-.solBtn{background:#c084fc;color:#000;padding:10px 16px;border:none;border-radius:10px;font-weight:bold;cursor:pointer;margin-top:8px}
-.doneBtn{background:#25D366;color:#fff;padding:13px;border:none;border-radius:10px;width:100%;font-weight:bold;font-size:16px;cursor:pointer;margin-top:10px}
-.lockBtn{background:#ff4444;color:#fff;border:none;padding:12px;border-radius:10px;width:100%;font-weight:bold;margin-top:15px;cursor:pointer;font-size:16px}
-.finalBox{display:none;margin:20px 0}
-.gift{background:linear-gradient(135deg,#FFD700,#FF6B00);color:#000;padding:22px;border-radius:20px;text-align:center;margin-bottom:16px}
-.gift a,.job a{display:block;background:#000;color:#FFD700;padding:15px;border-radius:12px;text-decoration:none;font-weight:bold;font-size:18px;margin-top:12px}
-.job{background:#0E2447;border:2px solid #25D366;padding:22px;border-radius:20px;text-align:center}.job a{background:#25D366;color:#fff}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui;background:#0f172a;color:#fff;background-size:cover;background-position:center;min-height:100vh}
+header{position:sticky;top:0;background:rgba(15,23,42,.95);padding:12px;display:flex;gap:8px;align-items:center;z-index:10;flex-wrap:wrap}
+.logo{width:44px;height:44px;border-radius:12px;background:#f59e0b;display:flex;align-items:center;justify-content:center;font-size:24px;overflow:hidden}.logo img{width:100%;height:100%;object-fit:cover}
+h1{font-size:18px;margin:0}h1 span{color:#f59e0b}
+.card{max-width:900px;margin:16px auto;background:#fff;color:#111;padding:20px;border-radius:22px}
+input{width:100%;padding:14px;border:2px solid #ddd;border-radius:14px;margin:8px 0;font-size:16px}
+.btn{background:#f59e0b;border:0;padding:13px;width:100%;border-radius:99px;font-weight:900;cursor:pointer;font-size:16px}
+.btn2{background:#111;color:#fff;border:0;padding:8px 14px;border-radius:99px;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;max-width:1000px;margin:12px auto;padding:0 12px}
+.lesson{background:#fff;color:#111;border-radius:18px;padding:14px;cursor:pointer;border:3px solid #f1f5f9}
+.lesson b{font-size:15px}.tag{display:inline-block;background:#fef3c7;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:800}
+details{margin-top:10px;background:#f8fafc;padding:10px;border-radius:12px}.qa{background:#fff7ed;padding:8px;border-radius:10px;margin:6px 0}
+.tools{display:flex;gap:6px;flex-wrap:wrap}.tools label{background:#1e293b;padding:8px 12px;border-radius:99px;font-size:13px;cursor:pointer}
+.hidden{display:none}.topbar{display:flex;gap:8px;margin:10px 0}.topbar input{flex:1}
+.progress{height:12px;background:#e2e8f0;border-radius:99px;overflow:hidden}.progress div{height:100%;background:#22c55e;width:0%}
 </style>
 </head>
 <body>
-<button class="langBtn" onclick="toggleLang()" id="langBtn">English 🇺🇸</button>
-
-<div id="lockScreen">
-<div class="top"><img class="top-bg" src="cover.jpg"><div class="top-content"><img class="cover" src="author.jpg"><h1 id="t1">المحترف 😎 - ليفل الوحش 🔥</h1><p id="t2">200 درس - 200 Lessons</p></div></div>
-<div class="lock-box"><h2 id="t3">🔒 الكتاب مقفول / Book is Locked</h2><p>اكتب كود التفعيل عشان تفتح كتاب الوحش<br>Enter your code to unlock</p><a class="whats" href="https://wa.me/201098920188?text=ازيك%20يا%20محترف%2C%20عايز%20كود%20كتاب%20الوحش" target="_blank">📱 اطلب كودك على واتساب - 01098920188</a><input id="codeInput" placeholder="اكتب كود التفعيل هنا / Enter Code"><button class="btn-gold" onclick="activate()" id="t5">افتح الكتاب الآن 🔓 / Unlock Now</button><p id="msg" style="color:#FFD700;font-weight:bold"></p><p style="font-size:13px;color:#aaa">جرب كود التجربة: WAHSH-001-AR<br>Demo Code: WAHSH-001-AR</p></div>
+<div id="loginPage">
+<div class="card" style="text-align:center;margin-top:40px">
+<div id="loginIcon" style="width:90px;height:90px;background:#f59e0b;border-radius:22px;margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:44px;overflow:hidden">💰</div>
+<h2>رحلة المليون دولار <span style="color:#f59e0b">المحترف 😎</span></h2>
+<p>200 درس | لغات + برمجة + صناعة + تصميم | من صفر لمحترف</p>
+<input id="pass" type="password" placeholder="✏️ اكتب كلمة المرور هنا...">
+<button class="btn" onclick="login()">دخول 🚀</button>
+<p id="msg" style="color:red;font-weight:800"></p>
+<p style="font-size:13px;color:#64748b">كل كلمة بتشتغل مرة واحدة بس وبعدها بتتحرق 🔥<br>جرب كلمة: TAREEQ-001-2026</p>
+<div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+<label style="background:#eee;padding:10px;border-radius:99px;cursor:pointer">🖼️ خلفية <input type="file" accept="image/*" hidden onchange="setBG(this)"></label>
+<label style="background:#eee;padding:10px;border-radius:99px;cursor:pointer">⭐ ايقونة <input type="file" accept="image/*" hidden onchange="setIcon(this)"></label>
+</div>
+</div>
 </div>
 
-<div id="bookScreen" class="book">
-<div class="top"><img class="top-bg" src="cover.jpg"><div class="top-content"><img class="cover" src="author.jpg" style="width:90px;height:90px"><h1 id="t6">ليفل الوحش - 200 درس / Monster Level - 200 Lessons</h1><p>كل درس: شرح + مثالين + تدريب + الحل<br>Every lesson: Explanation + 2 Examples + Exercise + Solution</p></div></div>
-<div class="prog"><b id="progText">تقدمك: 0 / 200 درس</b><div class="bar"><div id="barFill"></div></div><p style="font-size:13px">خلص الـ 200 كلهم عشان تظهرلك المفاجأة والشغل 🎁💼</p></div>
-<input id="s" placeholder="دور على أي درس... / Search..." oninput="render()" style="margin-bottom:15px">
-<div id="finalBox" class="finalBox">
-<div class="gift"><h2>🎁 مفاجأة / Surprise!</h2><p><b>انت خلصت الـ 200 درس كلهم يا وحش! / You finished all 200!</b></p><a href="https://wa.me/201098920188?text=%D8%A7%D9%86%D8%A7%20%D8%AE%D9%84%D8%B5%D8%AA%20%D8%A7%D9%84%D9%88%D8%AD%D8%B4%20%D9%A2%D9%A0%D9%A0%20%D8%AF%D8%B1%D8%B3" target="_blank">💬 كلم المحترف وخد هديتك / Chat & Get Gift</a></div>
-<div class="job"><h2 style="color:#25D366">💼 عايز تشتغل مع المحترف؟ / Want a Job?</h2><a href="https://wa.me/201098920188?text=%D8%A7%D9%86%D8%A7%20%D8%AE%D9%84%D8%B5%D8%AA%20%D8%A7%D9%84%D9%88%D8%AD%D8%B4%20%D9%88%D8%B9%D8%A7%D9%88%D8%B2%20%D8%A7%D9%82%D8%AF%D9%85" target="_blank">💼 قدم واشتغل مع المحترف / Apply Now</a></div>
+<div id="homePage" class="hidden">
+<header>
+<div class="logo" id="headIcon">💰</div>
+<div><h1>رحلة المليون دولار <span>المحترف</span></h1><small id="progText">0 / 200 درس</small></div>
+<div style="margin-inline-start:auto" class="tools">
+<label>🖼️ خلفية <input type="file" accept="image/*" hidden onchange="setBG(this)"></label>
+<label>⭐ ايقونة <input type="file" accept="image/*" hidden onchange="setIcon(this)"></label>
+<button class="btn2" onclick="logout()">خروج</button>
 </div>
-<div id="list"></div>
-<button class="lockBtn" onclick="lockBook()">🔒 اقفل الكتاب تاني / Lock Book</button>
-<div style="text-align:center;padding:20px;color:#FFD700">© 2026 المحترف 😎 - Elmohtaref</div>
+</header>
+<div style="max-width:1000px;margin:10px auto;padding:0 12px"><div class="progress"><div id="progBar"></div></div>
+<div class="topbar"><input id="search" oninput="render()" placeholder="🔍 دور على درس... مثلا: بايثون، تصميم، روبوت"><select id="filter" onchange="render()" style="padding:12px;border-radius:12px"><option value="">كل المراحل</option><option>التأسيس</option><option>HTML + CSS</option><option>JavaScript</option><option>Python</option><option>تصميم UI/UX</option><option>صناعة Maker</option><option>تطبيقات + AI</option><option>الاحتراف والشغل</option></select></div>
+<div id="stages" style="display:flex;gap:6px;flex-wrap:wrap"></div>
+</div>
+<div class="grid" id="list"></div>
+<div style="text-align:center;padding:20px;color:#cbd5e1">خلص 200 درس وخد شهادة المحترف 🏆</div>
 </div>
 
 <script>
-let lang = localStorage.getItem('langW') || 'ar';
-const codes=["WAHSH-001-AR","WAHSH-002-EN","MONSTER-003-X","MONSTER-004-Y","WAHSH-005-AAA","WAHSH-006-BBB","WAHSH-007-CCC","WAHSH-008-DDD","WAHSH-009-EEE","WAHSH-010-FFF","MONSTER-011-GG","MONSTER-012-HH","WAHSH-013-JJ","WAHSH-014-KK","WAHSH-015-LL","WAHSH-016-MM","WAHSH-017-NN","WAHSH-018-PP","WAHSH-019-QQ","WAHSH-020-RR","WAHSH-021-SS","WAHSH-022-TT","WAHSH-023-UU","WAHSH-024-VV","WAHSH-025-WW","MONSTER-026-XX","MONSTER-027-YY","MONSTER-028-ZZ","WAHSH-029-123","WAHSH-030-456","WAHSH-031-789","WAHSH-032-999","WAHSH-033-111","WAHSH-034-222","WAHSH-035-333","WAHSH-036-444","WAHSH-037-555","WAHSH-038-666","WAHSH-039-777","WAHSH-040-888","WAHSH-041-000","WAHSH-042-A1B2","WAHSH-043-C3D4","WAHSH-044-E5F6","WAHSH-045-G7H8","WAHSH-046-K9L0","WAHSH-047-M1N2","WAHSH-048-P3Q4","WAHSH-049-R5S6","WAHSH-050-FINAL"];
-let burned=JSON.parse(localStorage.getItem('burnedW')||'[]');
-let done=JSON.parse(localStorage.getItem('doneW')||'[]');
-function toggleLang(){lang=lang==='ar'?'en':'ar';localStorage.setItem('langW',lang);applyLang();if(localStorage.getItem('unlockedW')=='yes'){render();}}
-function applyLang(){let e=lang==='en';document.documentElement.lang=e?'en':'ar';document.documentElement.dir=e?'ltr':'rtl';document.getElementById('langBtn').innerText=e?'عربي 🇪🇬':'English 🇺🇸';document.getElementById('t1').innerText=e?'Elmohtaref 😎 - Monster Level 🔥':'المحترف 😎 - ليفل الوحش 🔥';document.getElementById('t2').innerText=e?'200 Lessons':'200 درس';document.getElementById('t3').innerText=e?'🔒 Book is Locked':'🔒 الكتاب مقفول';document.getElementById('t5').innerText=e?'Unlock Now 🔓':'افتح الكتاب الآن 🔓';document.getElementById('t6').innerText=e?'Monster Level - 200 Lessons':'ليفل الوحش - 200 درس';updateProg();}
-function activate(){let c=document.getElementById('codeInput').value.trim().toUpperCase();if(!c){document.getElementById('msg').innerText=lang==='en'?'Enter code first':'اكتب الكود الاول';return;}if(burned.includes(c)){document.getElementById('msg').innerText=lang==='en'?'This code is already used':'الكود ده اتحرق قبل كده';return;}if(codes.includes(c)){burned.push(c);localStorage.setItem('burnedW',JSON.stringify(burned));localStorage.setItem('unlockedW','yes');show();}else{document.getElementById('msg').innerText=lang==='en'?'Wrong code':'كود غلط';}}
-function show(){document.getElementById('lockScreen').style.display='none';document.getElementById('bookScreen').style.display='block';render();}
-function lockBook(){localStorage.removeItem('unlockedW');location.reload();}
-if(localStorage.getItem('unlockedW')=='yes'){show();}else{document.getElementById('lockScreen').style.display='block';document.getElementById('bookScreen').style.display='none';}
-function updateProg(){let p=Math.round(done.length/200*100);let bar=document.getElementById('barFill');if(bar){bar.style.width=p+'%';}let pt=document.getElementById('progText');if(pt){pt.innerText=lang==='en'?'Progress: '+done.length+' / 200 - '+p+'%':'تقدمك: '+done.length+' / 200 درس - '+p+'%';}if(done.length>=200){let f=document.getElementById('finalBox');if(f){f.style.display='block';}}}
-function markDone(n,btn){if(!done.includes(n)){done.push(n);localStorage.setItem('doneW',JSON.stringify(done));}updateProg();btn.innerText=lang==='en'?'Done ✅':'تم ✅';}
-function getTitle(n){let ar='',en='';if(n<=30){ar="بايثون الوحش - درس "+n;en="Python Monster - Lesson "+n;}else if(n<=60){ar="ويب الوحش - درس "+n;en="Web Monster - Lesson "+n;}else if(n<=90){ar="باك أند الوحش - درس "+n;en="Backend Monster - Lesson "+n;}else if(n<=120){ar="موبايل ومشاريع - درس "+n;en="Mobile & Projects - Lesson "+n;}else if(n<=150){ar="مشاريع كاملة - درس "+n;en="Full Projects - Lesson "+n;}else if(n<=170){ar="مشروع التخرج - درس "+n;en="Graduation Project - Lesson "+n;}else{ar="شغل وفريلانسينج - درس "+n;en="Work & Freelancing - Lesson "+n;}return lang==='en'?en:ar+' / '+en;}
-function getCode(n){if(n<=30)return 'name = input("Your name: ")\nprint("Welcome Monster " + name)';if(n<=60)return '<h1>I am Monster</h1>\n<button onclick="alert(\'Great\')">Click Here</button>';if(n<=90)return 'app.get("/api/products", (req,res)=>{\n res.json([{name:"Mobile",price:5000}])\n})';return 'print("My project is ready to sell")';}
-function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-function render(){if(localStorage.getItem('unlockedW')!='yes'){return;}let q=document.getElementById('s').value||'';let html='';for(let n=1;n<=200;n++){let t=getTitle(n);if(q&&!t.toLowerCase().includes(q.toLowerCase()))continue;let isDone=done.includes(n)?(lang==='en'?' (Done ✅)':' (تم ✅)'):'';
-let s1=lang==='en'?'<b>📖 Understand:</b><br>Imagine you know basics from 120 book. This is next step, real work that sells. Understand why, dont memorize.':'<b>📖 افهم ببساطة:</b><br>تخيل انك عارف الاساسيات من كتاب الـ 120. ده الخطوة اللي بعدها، شغل حقيقي يتباع. افهم ليه، متحفظش.';
-let e1=lang==='en'?'<b>💡 Example 1:</b><br>If you have a shop and want program to calculate for customers, do this.':'<b>💡 مثال 1:</b><br>لو فاتح محل وعايز برنامج يحسب للزبون، هتعمل كده.';
-let e2=lang==='en'?'<b>💼 Example 2 - Real Work:</b><br>Same idea used by any website that sells for money. Monster turns idea into full project.':'<b>💼 مثال 2 - شغل حقيقي:</b><br>نفس الفكرة بيستخدمها اي موقع بيتباع بفلوس. الوحش بيحول الفكرة لمشروع كامل.';
-let tr=lang==='en'?'<b>🎯 Exercise:</b><br>1. Try code and change something<br>2. Make version with your name<br>3. Make third version and sell it':'<b>🎯 تدريب:</b><br>1. جرب الكود وغير فيه حاجة<br>2. اعمل نسخة باسمك<br>3. اعمل نسخة تالتة وبيعها';
-let sb=lang==='en'?'👁️ Show Solution':'👁️ اضغط عشان تشوف الحل';
-let st=lang==='en'?'<b>✅ Solution:</b><br>Copy code, change name and number, run it. If it works you understood.':'<b>✅ الحل:</b><br>انسخ الكود، غير الاسم والرقم، وشغله. لو اشتغل انت فهمت.';
-let dt=lang==='en'?'I finished ✅':'انا خلصت الدرس ✅';
-let lw=lang==='en'?'Lesson ':'درس ';
-html+='<div class="lesson"><span class="tag">'+lw+n+'</span><h3>'+t+isDone+'</h3><div class="step">'+s1+'</div><div class="step">'+e1+'</div><pre class="code">'+esc(getCode(n))+'</pre><div class="step">'+e2+'</div><div class="try">'+tr+'</div><button class="solBtn" onclick="document.getElementById(\'sol'+n+'\').style.display=\'block\';this.style.display=\'none\'">'+sb+'</button><div class="sol" id="sol'+n+'">'+st+'</div><button class="doneBtn" onclick="markDone('+n+',this)">'+dt+'</button></div>';}
-document.getElementById('list').innerHTML=html;updateProg();}
-applyLang();
+// ===== 50 كلمة سر بتتحرق =====
+const ALL_CODES = Array.from({length:50},(_,i)=>`TAREEQ-${String(i+1).padStart(3,'0')}-2026`);
+let used = JSON.parse(localStorage.getItem('tareeq_used')||'[]');
+let done = JSON.parse(localStorage.getItem('tareeq_done')||'[]');
+let savedBG = localStorage.getItem('tareeq_bg'); if(savedBG) document.body.style.backgroundImage=`url(${savedBG})`;
+let savedIcon = localStorage.getItem('tareeq_icon'); if(savedIcon){document.getElementById('loginIcon').innerHTML=`<img src="${savedIcon}">`;document.getElementById('headIcon').innerHTML=`<img src="${savedIcon}">`;}
+if(localStorage.getItem('tareeq_login')==='yes'){showHome();}
+
+function login(){
+  let v=document.getElementById('pass').value.trim().toUpperCase();
+  if(used.includes(v)){document.getElementById('msg').textContent='الكلمة دي اتحرقت خلاص 🔥';return;}
+  if(!ALL_CODES.includes(v)){document.getElementById('msg').textContent='كلمة غلط، جرب TAREEQ-001-2026';return;}
+  used.push(v); localStorage.setItem('tareeq_used',JSON.stringify(used));
+  localStorage.setItem('tareeq_login','yes'); showHome();
+}
+function logout(){localStorage.removeItem('tareeq_login');location.reload();}
+function showHome(){document.getElementById('loginPage').classList.add('hidden');document.getElementById('homePage').classList.remove('hidden');render();}
+function setBG(el){let r=new FileReader();r.onload=e=>{document.body.style.backgroundImage=`url(${e.target.result})`;localStorage.setItem('tareeq_bg',e.target.result)};r.readAsDataURL(el.files[0]);}
+function setIcon(el){let r=new FileReader();r.onload=e=>{localStorage.setItem('tareeq_icon',e.target.result);document.getElementById('loginIcon').innerHTML=`<img src="${e.target.result}">`;document.getElementById('headIcon').innerHTML=`<img src="${e.target.result}">`};r.readAsDataURL(el.files[0]);}
+function toggleDone(id,btn){if(done.includes(id)){done=done.filter(x=>x!==id);btn.textContent='خلصت الدرس ✅';btn.style.background='#111';}else{done.push(id);btn.textContent='تم ✅ +10 نقط';btn.style.background='#22c55e';}localStorage.setItem('tareeq_done',JSON.stringify(done));updateProg();}
+
+// ===== الـ 200 عنوان =====
+const TITLES=[
+[1,"التأسيس","يعني ايه برمجة؟"],[2,"التأسيس","مكونات الكمبيوتر"],[3,"التأسيس","الانترنت بيشتغل ازاي؟"],[4,"التأسيس","انجليزي البرمجة - 100 كلمة"],[5,"التأسيس","التفكير المنطقي"],[6,"التأسيس","الخوارزميات"],[7,"التأسيس","اول برنامج ليك"],[8,"التأسيس","المتغيرات"],[9,"التأسيس","انواع البيانات"],[10,"التأسيس","العمليات الحسابية"],[11,"التأسيس","الشرط if"],[12,"التأسيس","التكرار Loop"],[13,"التأسيس","الدوال Functions"],[14,"التأسيس","المصفوفات Lists"],[15,"التأسيس","تصحيح الاخطاء Debugging"],[16,"التأسيس","توثيق الكود"],[17,"التأسيس","اختصارات الكيبورد"],[18,"التأسيس","ازاي تبحث زي المطورين"],[19,"التأسيس","الذكاء الاصطناعي مساعدك"],[20,"التأسيس","انواع المبرمجين والمرتبات"],[21,"التأسيس","ازاي تذاكر صح"],[22,"التأسيس","مشروع: قصة تفاعلية"],[23,"التأسيس","مشروع: آلة حاسبة بسيطة"],[24,"التأسيس","امتحان المرحلة 1"],[25,"التأسيس","شهادة المرحلة 1"],
+[26,"HTML + CSS","يعني ايه HTML؟"],[27,"HTML + CSS","الوسوم الاساسية"],[28,"HTML + CSS","الصور والروابط"],[29,"HTML + CSS","الجداول"],[30,"HTML + CSS","النماذج Forms"],[31,"HTML + CSS","CSS الالوان"],[32,"HTML + CSS","الخطوط"],[33,"HTML + CSS","البوكس موديل"],[34,"HTML + CSS","Flexbox"],[35,"HTML + CSS","Grid"],[36,"HTML + CSS","التصميم المتجاوب"],[37,"HTML + CSS","الانيميشن"],[38,"HTML + CSS","مشروع: صفحة هبوط"],[39,"HTML + CSS","مشروع: موقع مطعم"],[40,"HTML + CSS","مشروع: معرض صور"],[41,"HTML + CSS","مشروع: موقع العاب"],[42,"HTML + CSS","مشروع: صفحة تسجيل دخول"],[43,"HTML + CSS","مشروع: موقعك الشخصي"],[44,"HTML + CSS","مشروع: متجر بسيط"],[45,"HTML + CSS","مشروع: مدونة"],[46,"HTML + CSS","مشروع: صفحة فيديو"],[47,"HTML + CSS","مشروع: موقع مدرسة"],[48,"HTML + CSS","مشروع: موقع اخبار"],[49,"HTML + CSS","امتحان المرحلة 2"],[50,"HTML + CSS","شهادة المرحلة 2"],
+[51,"JavaScript","متغيرات JS"],[52,"JavaScript","الدوال في JS"],[53,"JavaScript","DOM - التحكم في الصفحة"],[54,"JavaScript","الاحداث Events"],[55,"JavaScript","لعبة XO"],[56,"JavaScript","التخزين LocalStorage"],[57,"JavaScript","المصفوفات المتقدمة"],[58,"JavaScript","الزرار بيغير اللون"],[59,"JavaScript","لعبة الذاكرة"],[60,"JavaScript","آلة حاسبة حقيقية"],[61,"JavaScript","الساعة والعداد"],[62,"JavaScript","قائمة مهام To-Do"],[63,"JavaScript","لعبة تخمين"],[64,"JavaScript","الفلاتر والبحث"],[65,"JavaScript","السحب والافلات"],[66,"JavaScript","النوافذ المنبثقة"],[67,"JavaScript","التحقق من النموذج"],[68,"JavaScript","مشروع: متجر كامل"],[69,"JavaScript","مشروع: لعبة ثعبان"],[70,"JavaScript","مشروع: محول عملات"],[71,"JavaScript","مشروع: حاسبة عمر"],[72,"JavaScript","مشروع: مشغل موسيقى"],[73,"JavaScript","مشروع: تطبيق طقس"],[74,"JavaScript","امتحان المرحلة 3"],[75,"JavaScript","شهادة المرحلة 3"],
+[76,"Python","تثبيت بايثون"],[77,"Python","اول كود بايثون"],[78,"Python","الطباعة والمدخلات"],[79,"Python","المتغيرات في بايثون"],[80,"Python","الشروط في بايثون"],[81,"Python","التكرار في بايثون"],[82,"Python","الدوال في بايثون"],[83,"Python","القوائم والقواميس"],[84,"Python","الملفات"],[85,"Python","المكتبات"],[86,"Python","مشروع: برنامج درجات"],[87,"Python","مشروع: بوت واتساب"],[88,"Python","مشروع: لعبة حجر ورقة مقص"],[89,"Python","مشروع: آلة حاسبة بايثون"],[90,"Python","مشروع: مولد كلمات سر"],[91,"Python","مشروع: برنامج مخزون"],[92,"Python","مشروع: تحويل صور"],[93,"Python","مشروع: سكرابينج"],[94,"Python","مشروع: تحليل بيانات"],[95,"Python","مشروع: روبوت تلجرام"],[96,"Python","مشروع: لعبة كلمات"],[97,"Python","مشروع: برنامج حضور"],[98,"Python","مشروع: مساعد صوتي"],[99,"Python","امتحان المرحلة 4"],[100,"Python","شهادة المرحلة 4"],
+[101,"تصميم UI/UX","نظرية الالوان"],[102,"تصميم UI/UX","الخطوط وانواعها"],[103,"تصميم UI/UX","Canva من الصفر"],[104,"تصميم UI/UX","Figma من الصفر"],[105,"تصميم UI/UX","تصميم لوجو"],[106,"تصميم UI/UX","تصميم بوست انستجرام"],[107,"تصميم UI/UX","تصميم غلاف يوتيوب"],[108,"تصميم UI/UX","تصميم واجهة موبايل UI"],[109,"تصميم UI/UX","تجربة المستخدم UX"],[110,"تصميم UI/UX","تصميم متجر"],[111,"تصميم UI/UX","تصميم بروفايل"],[112,"تصميم UI/UX","تصميم كارت شخصي"],[113,"تصميم UI/UX","تصميم اعلان"],[114,"تصميم UI/UX","تصميم قصة ستوري"],[115,"تصميم UI/UX","تصميم سيرة ذاتية"],[116,"تصميم UI/UX","تصميم شهادة"],[117,"تصميم UI/UX","تصميم غلاف كتاب"],[118,"تصميم UI/UX","تصميم لعبة"],[119,"تصميم UI/UX","تصميم موقع"],[120,"تصميم UI/UX","تصميم تطبيق توصيل"],[121,"تصميم UI/UX","تصميم تطبيق بنك"],[122,"تصميم UI/UX","مشروع: براند كامل"],[123,"تصميم UI/UX","مشروع: هوية بصرية"],[124,"تصميم UI/UX","امتحان المرحلة 5"],[125,"تصميم UI/UX","شهادة المرحلة 5"],
+[126,"صناعة Maker","الكهرباء للمبتدئين"],[127,"صناعة Maker","الاردوينو Arduino"],[128,"صناعة Maker","تشغيل LED"],[129,"صناعة Maker","الحساسات Sensors"],[130,"صناعة Maker","الموتور والحركة"],[131,"صناعة Maker","الروبوت بيمشي لوحده"],[132,"صناعة Maker","الطباعة ثلاثية الابعاد 3D"],[133,"صناعة Maker","القص بالليزر"],[134,"صناعة Maker","مشروع: بيت ذكي"],[135,"صناعة Maker","مشروع: روبوت تتبع خط"],[136,"صناعة Maker","مشروع: انذار ضد السرقة"],[137,"صناعة Maker","مشروع: ري ذكي للزرع"],[138,"صناعة Maker","مشروع: عربية تحكم"],[139,"صناعة Maker","مشروع: ساعة رقمية"],[140,"صناعة Maker","مشروع: مروحة ذكية"],[141,"صناعة Maker","مشروع: باب بالبصمة"],[142,"صناعة Maker","مشروع: مصباح ذكي"],[143,"صناعة Maker","مشروع: لعبة الكترونية"],[144,"صناعة Maker","مشروع: طابعة مصغرة"],[145,"صناعة Maker","مشروع: درون بسيط"],[146,"صناعة Maker","مشروع: ذراع روبوت"],[147,"صناعة Maker","مشروع: محطة طقس"],[148,"صناعة Maker","مشروع: ماكينة بيع"],[149,"صناعة Maker","امتحان المرحلة 6"],[150,"صناعة Maker","معرض مشاريع الصناعة"],
+[151,"تطبيقات + AI","Flutter من الصفر"],[152,"تطبيقات + AI","قواعد البيانات"],[153,"تطبيقات + AI","Firebase"],[154,"تطبيقات + AI","API يعني ايه؟"],[155,"تطبيقات + AI","ChatGPT API"],[156,"تطبيقات + AI","توليد صور بالذكاء الاصطناعي"],[157,"تطبيقات + AI","تطبيق مهام"],[158,"تطبيقات + AI","تطبيق متجر موبايل"],[159,"تطبيقات + AI","تطبيق شات"],[160,"تطبيقات + AI","تطبيق حاسبة"],[161,"تطبيقات + AI","تطبيق تعلم انجليزي"],[162,"تطبيقات + AI","تطبيق قرآن"],[163,"تطبيقات + AI","تطبيق طقس"],[164,"تطبيقات + AI","تطبيق اخبار"],[165,"تطبيقات + AI","تطبيق توصيل"],[166,"تطبيقات + AI","تطبيق العاب"],[167,"تطبيقات + AI","تطبيق بنك"],[168,"تطبيقات + AI","تطبيق ذكاء اصطناعي يكتب"],[169,"تطبيقات + AI","تطبيق يترجم"],[170,"تطبيقات + AI","تطبيق يرسم"],[171,"تطبيقات + AI","تطبيق مساعدك الشخصي"],[172,"تطبيقات + AI","نشر التطبيق على المتجر"],[173,"تطبيقات + AI","مشروع: تطبيقك الاول"],[174,"تطبيقات + AI","امتحان المرحلة 7"],[175,"تطبيقات + AI","شهادة المرحلة 7"],
+[176,"الاحتراف والشغل","GitHub من الصفر"],[177,"الاحتراف والشغل","ازاي تعمل CV محترف"],[178,"الاحتراف والشغل","البورتفوليو Portfolio"],[179,"الاحتراف والشغل","التوثيق بالبطاقة"],[180,"الاحتراف والشغل","التسعير - تطلب كام؟"],[181,"الاحتراف والشغل","الفريلانس"],[182,"الاحتراف والشغل","التعامل مع العميل"],[183,"الاحتراف والشغل","العقود"],[184,"الاحتراف والشغل","التسويق لنفسك"],[185,"الاحتراف والشغل","مشروع التخرج 1 - موقع"],[186,"الاحتراف والشغل","مشروع التخرج 2 - تطبيق"],[187,"الاحتراف والشغل","مشروع التخرج 3 - تصميم"],[188,"الاحتراف والشغل","مشروع التخرج 4 - روبوت"],[189,"الاحتراف والشغل","مشروع التخرج 5 - ذكاء اصطناعي"],[190,"الاحتراف والشغل","مراجعة المشاريع"],[191,"الاحتراف والشغل","تقديم المشروع"],[192,"الاحتراف والشغل","مقابلة الشغل"],[193,"الاحتراف والشغل","اول شغلانة"],[194,"الاحتراف والشغل","ازاي تكبر دخلك"],[195,"الاحتراف والشغل","فريق عمل"],[196,"الاحتراف والشغل","شركتك الخاصة"],[197,"الاحتراف والشغل","خطة المليون دولار"],[198,"الاحتراف والشغل","امتحان النهائي"],[199,"الاحتراف والشغل","تسليم المشاريع"],[200,"الاحتراف والشغل","شهادة المحترف 🏆 + حفلة التخرج"]
+];
+
+function updateProg(){let p=Math.round(done.length/200*100);document.getElementById('progBar').style.width=p+'%';document.getElementById('progText').textContent=done.length+' / 200 درس - '+p+'% - '+(done.length*10)+' نقطة';}
+function render(){
+  let q=(document.getElementById('search').value||'').toLowerCase();
+  let f=document.getElementById('filter').value;
+  let html='';
+  TITLES.forEach(t=>{
+    let [id,stage,title]=t;
+    if(f && stage!==f) return;
+    if(q && !title.includes(q) && !String(id).includes(q)) return;
+    let isDone=done.includes(id);
+    html+=`<div class="lesson"><span class="tag">${stage}</span> <span style="float:left">${isDone?'✅':''}</span><br><b>درس ${id}: ${title}</b><details><summary>افتح الشرح والاسئلة 👇</summary>
+    <p><b>الشرح:</b> في الدرس ده هتتعلم <b>${title}</b> من الصفر. هنبدأ بفكرة بسيطة، وبعدين نجرب بنفسنا، وبعدين نعمل مشروع صغير. لو مفهمتش من اول مرة، عيد الفيديو وطبق معايا خطوة بخطوة.</p>
+    <p><b>جرب بنفسك:</b> افتح محرر الاكواد واكتب اول مثال للدرس ده، وغلط عادي، الغلط هو اللي بيعلم.</p>
+    <div class="qa"><b>س1:</b> ايه فكرة درس ${title}؟ <br><button class="btn2" onclick="this.nextElementSibling.classList.toggle('hidden')">اظهر الاجابة</button><span class="hidden"> 👈 الفكرة هي ${title}، وهتستخدمها في مشروعك الجاي.</span></div>
+    <div class="qa"><b>س2:</b> فين هتستخدم ${title} في الحياة؟ <br><button class="btn2" onclick="this.nextElementSibling.classList.toggle('hidden')">اظهر الاجابة</button><span class="hidden"> 👈 في كل مشروع حقيقي، من موقع لموبايل لروبوت.</span></div>
+    <div class="qa"><b>س3:</b> ايه التحدي بتاع الدرس ده؟ <br><button class="btn2" onclick="this.nextElementSibling.classList.toggle('hidden')">اظهر الاجابة</button><span class="hidden"> 👈 اعمل مشروع صغير باللي اتعلمته وابعته.</span></div>
+    <button class="btn" onclick="toggleDone(${id},this)" style="margin-top:8px;background:${isDone?'#22c55e':'#111'}">${isDone?'تم ✅ +10 نقط':'خلصت الدرس ✅'}</button>
+    </details></div>`;
+  });
+  document.getElementById('list').innerHTML=html||'<p style="color:#fff;text-align:center">مفيش نتيجة، جرب كلمة تانية</p>';
+  updateProg();
+}
+render();
 </script>
 </body>
 </html>
