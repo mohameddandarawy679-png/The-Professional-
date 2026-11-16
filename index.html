@@ -35,14 +35,7 @@ input{width:100%;padding:14px;border-radius:12px;border:none;font-size:16px;text
 .btn-ans{background:#c084fc;color:#fff;border:none;padding:12px;border-radius:8px;cursor:pointer;font-weight:bold;margin-top:15px;width:100%;font-size:16px}
 .ans{display:none;background:#000;padding:15px;border-radius:8px;margin-top:15px;color:#7CFF7C;direction:ltr;text-align:left;font-family:monospace;white-space:pre-wrap;border:1px solid #c084fc;font-size:14px;line-height:1.6}
 .footer{margin-top:40px;padding:20px;text-align:center;border-top:1px solid #FFD700;color:#FFD700}
-
-/* زرار العودة لأعلى */
-#backToTop {
-  display: none; position: fixed; bottom: 20px; left: 20px; z-index: 99;
-  background: #FFD700; color: #0A1931; border: none; border-radius: 50%;
-  width: 50px; height: 50px; font-size: 24px; font-weight: bold; cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5); align-items: center; justify-content: center;
-}
+#backToTop {display: none; position: fixed; bottom: 20px; left: 20px; z-index: 99; background: #FFD700; color: #0A1931; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 24px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.5); align-items: center; justify-content: center;}
 </style>
 </head>
 <body>
@@ -54,40 +47,38 @@ input{width:100%;padding:14px;border-radius:12px;border:none;font-size:16px;text
 
 <div id="lockScreen">
 <div class="top">
-<h1>كتاب الويب - المحترف 😎</h1>
+<h1 data-ar="كتاب الويب - المحترف 😎" data-en="Web Book - The Pro 😎">كتاب الويب - المحترف 😎</h1>
 <div class="stars">★★★★★ 5/5</div>
-<p>تأسيس HTML/CSS/JS من الصفر لسوق العمل</p>
+<p data-ar="تأسيس HTML/CSS/JS من الصفر لسوق العمل" data-en="HTML/CSS/JS Foundation for the Job Market">تأسيس HTML/CSS/JS من الصفر لسوق العمل</p>
 </div>
 <div class="lock-box">
-<h2>🔒 الدخول للمشتركين فقط</h2>
-<p>اكتب كود التفعيل الخاص بك</p>
-<a class="whats" href="https://wa.me/201098920188?text=مرحباً، أريد الحصول على كود تفعيل كتاب الويب" target="_blank">📱 تواصل واتساب: 01098920188</a>
+<h2 data-ar="🔒 الدخول للمشتركين فقط" data-en="🔒 Subscribers Only">🔒 الدخول للمشتركين فقط</h2>
+<p data-ar="اكتب كود التفعيل الخاص بك" data-en="Enter your activation code">اكتب كود التفعيل الخاص بك</p>
+<a class="whats" href="https://wa.me/201098920188?text=مرحباً، أريد الحصول على كود تفعيل كتاب الويب" target="_blank" data-ar="📱 تواصل واتساب: 01098920188" data-en="📱 WhatsApp: +201098920188">📱 تواصل واتساب: 01098920188</a>
 <input id="codeInput" type="password" placeholder="">
-<button class="btn-gold" onclick="activate()">افتح الكتاب الآن 🔓</button>
+<button class="btn-gold" onclick="activate()" data-ar="افتح الكتاب الآن 🔓" data-en="Open Now 🔓">افتح الكتاب الآن 🔓</button>
 <p id="msg" style="color:#FFD700;font-weight:bold;min-height:20px;margin-top:10px"></p>
 </div>
 </div>
 
 <div id="promoScreen">
-  <h1>مرحباً بك في عالم الاحتراف! 🚀</h1>
-  <p>أنت الآن تمتلك أقوى موسوعة لتأسيس الويب. هذا الكتاب مش مجرد دروس، ده خطوة حقيقية ناحية سوق العمل. استعد لتبدأ رحلتك.</p>
-  <a href="#" onclick="startBook()" class="promo-btn">ابدأ التعلم الآن! 💻</a>
+  <h1 data-ar="مرحباً بك في عالم الاحتراف! 🚀" data-en="Welcome to the Pro World! 🚀">مرحباً بك في عالم الاحتراف! 🚀</h1>
+  <p data-ar="أنت الآن تمتلك أقوى موسوعة لتأسيس الويب. هذا الكتاب مش مجرد دروس، ده خطوة حقيقية ناحية سوق العمل. استعد لتبدأ رحلتك." data-en="You now own the strongest Web Foundation encyclopedia. This isn't just lessons; it's a real step toward the job market. Get ready to start your journey.">أنت الآن تمتلك أقوى موسوعة لتأسيس الويب. هذا الكتاب مش مجرد دروس، ده خطوة حقيقية ناحية سوق العمل. استعد لتبدأ رحلتك.</p>
+  <a href="#" onclick="startBook()" class="promo-btn" data-ar="ابدأ التعلم الآن! 💻" data-en="Start Learning Now! 💻">ابدأ التعلم الآن! 💻</a>
 </div>
 
 <div id="bookScreen" class="book">
 <div class="top">
-<h1>كتاب الويب - المحترف 😎</h1>
-<p>شرح موسوعي + أكواد + أسئلة</p>
+<h1 data-ar="كتاب الويب - المحترف 😎" data-en="Web Book - The Pro 😎">كتاب الويب - المحترف 😎</h1>
+<p data-ar="شرح موسوعي + أكواد + أسئلة" data-en="Encyclopedic Explanation + Code + Quiz">شرح موسوعي + أكواد + أسئلة</p>
 </div>
 <div id="lessonsContainer"></div>
-<div class="footer"><p>© 2026 المحترف 😎</p></div>
+<div class="footer"><p data-ar="© 2026 المحترف 😎" data-en="© 2026 The Pro 😎">© 2026 المحترف 😎</p></div>
 </div>
 
-<!-- زرار العودة لأعلى -->
 <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 
 <script>
-// التفعيل (أكواد الويب من snsn51 لـ snsn100)
 const VALID_CODES = Array.from({length: 50}, (_, i) => "snsn" + (i + 51));
 
 function activate(){
@@ -114,7 +105,6 @@ window.onload = function() {
       document.getElementById('bookScreen').style.display='none';
     }
 };
-// زرار العودة لأعلى
 window.onscroll = function() {
     let btn = document.getElementById("backToTop");
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
@@ -123,158 +113,119 @@ window.onscroll = function() {
         btn.style.display = "none";
     }
 };
+let currentLang = 'ar';
 function setLang(lang){
+  currentLang = lang;
   document.getElementById('btn-ar').classList.toggle('active', lang==='ar');
   document.getElementById('btn-en').classList.toggle('active', lang==='en');
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.querySelectorAll('[data-ar]').forEach(el=>{
+    el.innerText = el.getAttribute('data-'+lang) || el.innerText;
+  });
+  renderLessons();
 }
 function toggleAns(id){
   const el = document.getElementById(id);
   el.style.display = el.style.display === 'block' ? 'none' : 'block';
 }
 
-// بيانات الدروس
-const lessons = [
-  {
-    section: "المرحلة التأسيسية: HTML",
-    title: "الدرس 1: مقدمة في لغة HTML",
-    steps: "1. لغة HTML هي اختصار لـ (HyperText Markup Language)، وهي مش لغة برمجة بالمعنى الحرفي، لكنها لغة 'ترميز' أو 'هيكلة'.\n2. وظيفتها الأساسية هي بناء الهيكل العظمي لأي صفحة ويب. زي ما المبني محتاج هيكل خرساني، الموقع محتاج HTML.\n3. بتتكون من عناصر (Elements) كل عنصر ليه وسم بداية (Opening Tag) ووسم نهاية (Closing Tag).\n4. المتصفح بيقرأ الكود ده ويترجمه لشكل مرئي (عناوين، فقرات، صور).",
-    code: '<!-- ده عنوان رئيسي -->\n<h1>أهلاً بيك في موقعي</h1>\n\n<!-- ده عنوان فرعي -->\n<h2>أنا بتعلم برمجة</h2>\n\n<!-- ده نص عادي (فقرة) -->\n<p>النهاردة بدأت أتعلم HTML.</p>',
-    practice: "اكتب كود HTML فيه عنوان رئيسي باسمك، وعنوان فرعي بمدينتك، وفقرة بتعبر فيها عن نفسك.",
-    quiz: "لو كتبت الكود بدون أقواس زاوية < >، المتصفح هيفهمه؟",
-    answer: '<h1>اسمي أحمد</h1>\n<h2>أنا من القاهرة</h2>\n<p>أنا أحب البرمجة جداً وأتمنى أن أصبح محترفاً.</p>',
-    quizAns: "لأ، المتصفح مش هيعرف يترجمه وهيظهر كنص عادي جداً، لأن أقواس الزاوية هي اللي بتقول للمتصفح 'ده كود HTML'."
-  },
-  {
-    section: "المرحلة التأسيسية: HTML",
-    title: "الدرس 2: هيكل صفحة الويب الكامل",
-    steps: "1. أي صفحة ويب محترفة لازم يكون ليها هيكل أساسي ثابت.\n2. `<!DOCTYPE html>`: بيعرف المتصفح إن الملف ده HTML5.\n3. `<html>`: العنصر الجذر اللي بيحتوي كل حاجة.\n4. `<head>`: فيه معلومات مش بتظهر للمستخدم (زي عنوان الصفحة، وترميز الحروف، وروابط ملفات CSS).\n5. `<body>`: ده اللي بيظهر للمستخدم (الكلام، الصور، الأزرار).",
-    code: '<!DOCTYPE html>\n<html lang="ar">\n<head>\n  <meta charset="UTF-8">\n  <title>موقعي الأول</title>\n</head>\n<body>\n  <h1>مرحباً</h1>\n  <p>أنا الآن أبني موقعي الأول.</p>\n</body>\n</html>',
-    practice: "اعمل هيكل صفحة كاملة، وخلي عنوان الصفحة (Title) هو اسمك.",
-    quiz: "إيه الفرق بين وسم head ووسم body؟",
-    answer: '<!DOCTYPE html>\n<html lang="ar">\n<head>\n  <title>أحمد</title>\n</head>\n<body>\n  <h1>أهلاً</h1>\n</body>\n</html>',
-    quizAns: "الـ head بيحتوي على معلومات للخلفية (زي عنوان الصفحة) مش بتظهر في الشاشة، بينما الـ body هو كل المحتوى المرئي اللي بيشوفه المستخدم."
-  },
-  {
-    section: "المرحلة التأسيسية: HTML",
-    title: "الدرس 3: العناوين والفقرات",
-    steps: "1. العناوين في HTML بتبدأ من h1 (الأكبر والأهم) لحد h6 (الأصغر).\n2. استخدام العناوين بشكل منطقي مهم جداً لمحركات البحث (SEO).\n3. الفقرات بتتكتب بوسم p (Paragraph).\n4. تقدر تعمل كسر سطر بـ <br> بدون ما تفتح فقرة جديدة، وتقدر تعمل خط فاصل بـ <hr>.",
-    code: '<h1>عنوان رئيسي 1</h1>\n<h2>عنوان فرعي 2</h2>\n<h3>عنوان فرعي 3</h3>\n<h4>عنوان فرعي 4</h4>\n<h5>عنوان فرعي 5</h5>\n<h6>عنوان فرعي 6</h6>\n\n<hr>\n\n<p>ده نص فقرة عادي. بنقدر نكتب فيه أي حاجة.</p>\n<p>الفقرة دي تانية.<br>وهنا عملنا كسر سطر.</p>',
-    practice: "اكتب فقرة عن يومك، وقسمها لسطرين باستخدام وسم <br>.",
-    quiz: "كام مستوى للعناوين في HTML؟",
-    answer: '<p>استيقظت الصباح<br>ثم ذهبت للعمل</p>',
-    quizAns: "6 مستويات، من <h1> لحد <h6>."
-  },
-  {
-    section: "المرحلة التأسيسية: HTML",
-    title: "الدرس 4: الروابط (Links)",
-    steps: "1. الروابط بتتنشأ بوسم <a>.\n2. أهم خاصية فيه هي `href` (Hypertext Reference) وبتحدد مكان الرابط.\n3. ممكن يكون الرابط لموقع خارجي، أو لصفحة تانية في نفس الموقع، أو حتى لإيميل.\n4. خاصية `target=\"_blank\"` بتفتح الرابط في صفحة جديدة (تاب جديد).",
-    code: '<!-- رابط لموقع خارجي -->\n<a href="https://google.com">اذهب لجوجل</a>\n\n<!-- رابط يفتح في صفحة جديدة -->\n<a href="https://youtube.com" target="_blank">افتح يوتيوب في تاب جديد</a>\n\n<!-- رابط لإرسال إيميل -->\n<a href="mailto:test@test.com">راسلنا</a>',
-    practice: "اعمل رابط لموقعك المفضل، وخليه يفتح في تاب جديد.",
-    quiz: "إيه وظيفة target='_blank'؟",
-    answer: '<a href="https://www.facebook.com" target="_blank">فيسبوك</a>',
-    quizAns: "بتخلي الرابط يفتح في صفحة أو تاب جديد بدل ما يفتح في نفس الصفحة."
-  },
-  {
-    section: "المرحلة التأسيسية: HTML",
-    title: "الدرس 5: الصور (Images)",
-    steps: "1. الصور بتتضاف بوسم <img>، وهو وسم منفرد (مش بيقفل).\n2. خاصية `src` بتحدد مسار الصورة.\n3. خاصية `alt` بتكتب فيها وصف للصورة (بتظهر لو الصورة مش موجودة، ومهمة جداً للـ SEO وللمكفوفين).\n4. ممكن تتحكم في الحجم بـ `width` و `height`.",
-    code: '<!-- صورة عادية -->\n<img src="image.jpg" alt="صورة طبيعة">\n\n<!-- صورة بحجم محدد -->\n<img src="logo.png" alt="لوجو الموقع" width="100" height="100">',
-    practice: "ضيف صورة لموقعك بحجم 200 بكسل، واكتب لها وصف (alt).",
-    quiz: "ليه وسم الصورة من غير وسم إغلاق؟",
-    answer: '<img src="my-photo.jpg" alt="صورتي الشخصية" width="200">',
-    quizAns: "لأنه وسم منفرد (Self-closing) ومحتاجش محتوى جواه عشان يقفل."
-  },
-  {
-    section: "المرحلة التأسيسية: HTML",
-    title: "الدرس 6: القوائم (Lists)",
-    steps: "1. القوائم نوعين: غير مرتبة (ul) ومرتبة (ol).\n2. القائمة غير المرتبة (ul) بتظهر بشكل نقط أو مربعات.\n3. القائمة المرتبة (ol) بتظهر بأرقام أو حروف.\n4. كل عنصر جوه القائمة بيتكتب بوسم li.",
-    code: '<h3>قائمة غير مرتبة:</h3>\n<ul>\n  <li>تفاح</li>\n  <li>موز</li>\n  <li>برتقال</li>\n</ul>\n\n<h3>قائمة مرتبة:</h3>\n<ol>\n  <li>استيقظ</li>\n  <li>اغتسل</li>\n  <li>اذهب للعمل</li>\n</ol>',
-    practice: "اعمل قائمة غير مرتبة فيها 3 أكلاتك المفضلة، وقائمة مرتبة فيها خطوات عمل شاي.",
-    quiz: "إيه الفرق بين ul و ol؟",
-    answer: '<ul>\n  <li>بيتزا</li>\n  <li>برجر</li>\n</ul>\n\n<ol>\n  <li>اغلي الماء</li>\n  <li>ضع الشاي</li>\n</ol>',
-    quizAns: "الـ ul قائمة غير مرتبة (بنقط)، والـ ol قائمة مرتبة (بأرقام)."
-  },
-  {
-    section: "المرحلة التأسيسية: HTML",
-    title: "الدرس 7: الجداول (Tables)",
-    steps: "1. الجدول بيتكتب بوسم <table>.\n2. الصف بيتكتب بوسم <tr> (Table Row).\n3. الخلية العادية بتتكتب بوسم <td> (Table Data).\n4. خلية العنوان بتتكتب بوسم <th> (Table Header) وبتظهر بخط عريض.",
-    code: '<table border="1">\n  <tr>\n    <th>الاسم</th>\n    <th>العمر</th>\n  </tr>\n  <tr>\n    <td>علي</td>\n    <td>20</td>\n  </tr>\n  <tr>\n    <td>سارة</td>\n    <td>22</td>\n  </tr>\n</table>',
-    practice: "اعمل جدول فيه درجاتك في 3 مواد (مادة، الدرجة).",
-    quiz: "إيه فايدة th؟",
-    answer: '<table border="1">\n  <tr><th>المادة</th><th>الدرجة</th></tr>\n  <tr><td>رياضيات</td><td>90</td></tr>\n</table>',
-    quizAns: "بتعمل خلية عنوان (Header) للجدول بتبقى عريضة وواضحة."
-  },
-  {
-    section: "المرحلة التأسيسية: HTML",
-    title: "الدرس 8: النماذج (Forms)",
-    steps: "1. النماذج (Forms) بتستخدم عشان تجمع بيانات من المستخدم (زي تسجيل الدخول).\n2. وسم <form> بيحتوي على كل عناصر الإدخال.\n3. وسم <input> هو أهم عنصر، وليه أنواع كتير (text, email, password, number, etc).\n4. وسم <button> بيعمل زرار للإرسال.",
-    code: '<form>\n  <label>الاسم:</label><br>\n  <input type="text" placeholder="اكتب اسمك"><br><br>\n  \n  <label>الباسورد:</label><br>\n  <input type="password" placeholder="اكتب باسورد"><br><br>\n  \n  <button>إرسال</button>\n</form>',
-    practice: "اعمل فورم تسجيل بسيط (اسم، إيميل، باسورد، وزرار).",
-    quiz: "إيه نوع الإدخال اللي بيخفي الحروف اللي بتتكتب؟",
-    answer: '<form>\n  <input type="text" placeholder="Name">\n  <input type="email" placeholder="Email">\n  <input type="password" placeholder="Password">\n  <button>Signup</button>\n</form>',
-    quizAns: "نوع الإدخال password (type='password') هو اللي بيخفي الحروف ويظهرها على شكل نقط."
-  },
-  {
-    section: "المرحلة التأسيسية: HTML",
-    title: "الدرس 9: الأقسام Div",
-    steps: "1. وسم <div> هو 'صندوق' بنجمع فيه عناصر تانية عشان نتحكم فيهم وننسقهم.\n2. الـ div مش بيعمل أي شكل مرئي لوحده، هو مجرد حاوية.\n3. بنستخدم div عشان نقسم الصفحة لأقسام (Header, Main, Footer).\n4. ممكن نحط جوه الـ div أي حاجة (عناوين، صور، فقرات).",
-    code: '<div style="border: 2px solid red; padding: 10px;">\n  <h3>عنوان القسم الأول</h3>\n  <p>هذا النص موجود داخل صندوق div.</p>\n</div>\n\n<div style="border: 2px solid blue; padding: 10px; margin-top: 10px;">\n  <h3>عنوان القسم الثاني</h3>\n  <p>هذا النص موجود داخل صندوق div تاني.</p>\n</div>',
-    practice: "اعمل قسمين div، واحد بخلفية رمادية والتاني بخلفية بيضاء، وحط في كل واحد عنوان.",
-    quiz: "إيه الفايدة الأساسية من div؟",
-    answer: '<div style="background: gray; padding: 10px;">\n  <h3>قسم 1</h3>\n</div>\n<div style="background: white; padding: 10px;">\n  <h3>قسم 2</h3>\n</div>',
-    quizAns: "إنه بيجمع العناصر مع بعض عشان يسهل التحكم فيهم وتنسيقهم كمجموعة واحدة."
-  },
-  {
-    section: "المرحلة التأسيسية: HTML",
-    title: "الدرس 10: التعليقات (Comments)",
-    steps: "1. التعليقات هي نصوص بتتكتب في الكود عشان تشرح أو تفتكر حاجة.\n2. التعليقات مش بتظهر للمستخدم في المتصفح خالص.\n3. بتتكتب بين < !-- و --> .\n4. بتفيد جداً في تنظيم الكود وتوضيح الأجزاء الصعبة.",
-    code: '<!-- هذا تعليق مش هيظهر في المتصفح -->\n<h1>مرحباً</h1>\n\n<!-- بداية قسم الفقرات -->\n<p>هذا النص سيظهر للمستخدم.</p>\n<!-- نهاية قسم الفقرات -->',
-    practice: "اكتب كود فيه تعليق فوق عنوان، وتعليق تحت فقرة.",
-    quiz: "هل التعليقات بتظهر للمستخدم؟",
-    answer: '<!-- تعليق فوق العنوان -->\n<h1>عنوان</h1>\n<p>فقرة</p>\n<!-- تعليق تحت الفقرة -->',
-    quizAns: "لأ، التعليقات بتظهر في الكود المصدري بس، لكن المتصفح بيتجاهلها ومش بيعرضها للزائر."
-  }
-  // [ضع هنا الجزء التاني من الدروس]
+// البيانات (عربي وإنجليزي مختصرة عشان تتحمل)
+const D = [
+["HTML","D1: HTML Intro","1. HTML is a markup language, not programming.\n2. It builds the skeleton of the page.\n3. Uses opening and closing tags.\n4. Browser reads it to display content.","1. HTML هي لغة ترميز وليست برمجة.\n2. تبني الهيكل العظمي للصفحة.\n3. تستخدم وسوم فتح وإغلاق.\n4. المتصفح يقرأها لعرض المحتوى.",'<h1>Hello</h1>\n<p>Text</p>',"اكتب عنوان رئيسي باسمك.","Write a main heading with your name.","إيه فايدة h1؟","What is h1 for?",'<h1>My Name</h1>',"عنوان رئيسي.","Main heading."],
+["HTML","D2: Page Structure","1. <!DOCTYPE html> defines HTML5.\n2. <head> has hidden info (title, meta).\n3. <body> has visible content.\n4. <html> is the root.","1. <!DOCTYPE html> تعرف HTML5.\n2. <head> فيه معلومات مخفية.\n3. <body> فيه المحتوى المرئي.\n4. <html> هو الجذر.",'<!DOCTYPE html>\n<html>\n<head><title>Site</title></head>\n<body><h1>Hi</h1></body>\n</html>',"اعمل هيكل صفحة كاملة.","Create a full page structure.","فين بيظهر المحتوى؟","Where does content appear?",'<body><h1>Hi</h1></body>',"جوه body.","Inside body."],
+["HTML","D3: Headings & Paragraphs","1. h1 is largest, h6 smallest.\n2. p is for paragraphs.\n3. br is line break.\n4. hr is horizontal line.","1. h1 الأكبر و h6 الأصغر.\n2. p للفقرات.\n3. br لكسر السطر.\n4. hr لخط فاصل.",'<h1>A</h1>\n<h2>B</h2>\n<p>Text<br>New line</p>',"اكتب 3 مستويات عناوين.","Write 3 heading levels.","كام مستوى للعناوين؟","How many heading levels?",'<h1>A</h1>\n<h2>B</h2>\n<h3>C</h3>',"6 مستويات.","6 levels."],
+["HTML","D4: Links","1. a tag creates a link.\n2. href sets destination.\n3. target='_blank' opens new tab.\n4. mailto: opens email.","1. a تعمل رابط.\n2. href يحدد الوجهة.\n3. target='_blank' يفتح تاب جديد.\n4. mailto: للإيميل.",'<a href="https://google.com">Google</a>\n<a href="https://x.com" target="_blank">X</a>',"حط رابط لموقعك.","Add a link to your site.","إزاي تفتح في تاب جديد؟","How to open in new tab?",'<a href="https://google.com" target="_blank">Go</a>',"target='_blank'.","target='_blank'."],
+["HTML","D5: Images","1. img is self-closing.\n2. src is image path.\n3. alt is description.\n4. width/height for size.","1. img وسم منفرد.\n2. src مسار الصورة.\n3. alt وصف الصورة.\n4. width/height للحجم.",'<img src="pic.jpg" alt="My Pic" width="100">',"حط صورة مع وصف.","Add image with alt.","ليه بنستخدم alt؟","Why use alt?",'<img src="me.jpg" alt="My Photo">',"لو الصورة مش ظاهرة.","If image fails."],
+["HTML","D6: Lists","1. ul unordered (bullets).\n2. ol ordered (numbers).\n3. li list item.","1. ul غير مرتبة (نقط).\n2. ol مرتبة (أرقام).\n3. li عنصر القائمة.",'<ul>\n  <li>A</li>\n  <li>B</li>\n</ul>',"اعمل قائمة ب5 أكلات.","List 5 foods.","الفرق بين ul و ol؟","Difference ul vs ol?",'<ol>\n  <li>First</li>\n</ol>',"ul بنقط، ol بأرقام.","ul dots, ol numbers."],
+["HTML","D7: Tables","1. table for table.\n2. tr row.\n3. td cell.\n4. th header cell.","1. table للجدول.\n2. tr صف.\n3. td خلية.\n4. th خلية عنوان.",'<table border="1">\n  <tr><th>Name</th></tr>\n  <tr><td>Ali</td></tr>\n</table>',"اعمل جدول بصفين.","Create 2x2 table.","فايدة th؟","What is th?",'<table border="1">\n  <tr><th>N</th></tr>\n</table>',"عنوان الخلية.","Header cell."],
+["HTML","D8: Forms","1. form collects data.\n2. input takes input.\n3. button for submit.\n4. password hides chars.","1. form يجمع البيانات.\n2. input للإدخال.\n3. button للزر.\n4. password يخفي الحروف.",'<form>\n  <input type="text">\n  <input type="password">\n  <button>Send</button>\n</form>',"اعمل فورم للاسم.","Create name form.","إيه input type=password؟","What is password input?",'<form>\n  <input type="password">\n</form>',"بيخفي الحروف.","Hides characters."],
+["HTML","D9: Divs","1. div is a container.\n2. No visual effect alone.\n3. Used for grouping.\n4. Can hold anything.","1. div حاوية.\n2. مفيش تأثير مرئي لوحده.\n3. يستخدم للتجميع.\n4. ممكن يحتوي أي حاجة.",'<div style="border:1px solid red;">\n  <h1>Title</h1>\n</div>',"اعمل قسمين.","Create two sections.","فايدة div؟","What is div for?",'<div><h1>A</h1></div>',"لتجميع العناصر.","Grouping elements."],
+["HTML","D10: Comments","1. Comments not visible.\n2. Written between <!-- and -->.\n3. Used for notes.\n4. Helps organize code.","1. التعليقات مش مرئية.\n2. بين <!-- و -->.\n3. تستخدم للملاحظات.\n4. تساعد في تنظيم الكود.",'<!-- This is a comment -->\n<h1>Hi</h1>',"اكتب تعليق فوق عنوان.","Write comment above heading.","هل بتظهر للمستخدم؟","Visible to user?",'<!-- Comment -->\n<h1>Hi</h1>',"لأ، في الكود بس.","No, code only."],
+["CSS","D11: CSS Intro","1. CSS styles the page.\n2. Written in <style>.\n3. Selectors target elements.\n4. Properties define styles.","1. CSS تنسق الصفحة.\n2. تكتب في <style>.\n3. المحددات تستهدف العناصر.\n4. الخصائص تحدد التنسيق.",'<style>\n  h1 { color: red; }\n</style>',"لون العنوان بالأزرق.","Color heading blue.","إزاي نختار عنصر؟","How to select?",'<style>\n  h1 { color: blue; }\n</style>',"باسم العنصر أو id أو class.","By tag, id, or class."],
+["CSS","D12: Colors & Backgrounds","1. color for text.\n2. background-color for background.\n3. Hex codes like #fff.\n4. RGB also works.","1. color للنص.\n2. background-color للخلفية.\n3. أكواد Hex زي #fff.\n4. RGB برضه شغال.",'<style>\n  body { background: #eee; color: blue; }\n</style>',"خلفية سودة ونص أبيض.","Black bg, white text.","فايدة background-color؟","What is background-color?",'<style>\n  body { background: black; color: white; }\n</style>',"بتلون الخلفية.","Colors background."],
+["CSS","D13: Fonts","1. font-size for size.\n2. font-family for type.\n3. font-weight for boldness.\n4. text-align for alignment.","1. font-size للحجم.\n2. font-family للنوع.\n3. font-weight للتخانة.\n4. text-align للمحاذاة.",'<style>\n  p { font-size: 20px; font-family: Arial; }\n</style>',"غير نوع الخط.","Change font family.","فايدة font-weight؟","What is font-weight?",'<style>\n  p { font-weight: bold; }\n</style>',"تخانة الخط.","Text thickness."],
+["CSS","D14: Margin & Padding","1. margin is outside space.\n2. padding is inside space.\n3. Can set per side (top, right, bottom, left).\n4. Shorthand: margin: 10px 5px.","1. margin مسافة برا.\n2. padding مسافة جوه.\n3. لكل جهة على حدة.\n4. اختصار: margin: 10px 5px.",'<style>\n  div { margin: 10px; padding: 20px; }\n</style>',"طبق الهوامش على صندوق.","Apply margins to box.","الفرق بينهم؟","Difference?",'<style>\n  div { margin: 15px; padding: 10px; }\n</style>',"margin برا، padding جوه.","margin out, padding in."],
+["CSS","D15: Borders","1. border adds outline.\n2. border-radius rounds corners.\n3. border-width, style, color.\n4. Can be dotted or dashed.","1. border يضيف حدود.\n2. border-radius يدور الحواف.\n3. عرض ونوع ولون.\n4. ممكن يكون منقط أو متقطع.",'<style>\n  div { border: 2px solid black; border-radius: 10px; }\n</style>',"اعمل صندوق بحواف دايرة.","Make rounded box.","فايدة border-radius؟","What is border-radius?",'<style>\n  div { border-radius: 10px; border: 1px solid red; }\n</style>',"حواف ناعمة.","Rounded corners."],
+["CSS","D16: Flexbox","1. display: flex enables flexbox.\n2. justify-content horizontal alignment.\n3. align-items vertical alignment.\n4. gap for spacing.","1. display: flex للترتيب.\n2. justify-content محاذاة أفقية.\n3. align-items محاذاة رأسية.\n4. gap للمسافات.",'<style>\n  .box { display: flex; justify-content: center; gap: 10px; }\n</style>',"رتب 3 عناصر.","Center 3 elements.","فايدة flex؟","What is flex?",'<style>\n  .box { display: flex; gap: 10px; }\n</style>',"ترتيب العناصر.","Arranges elements."],
+["CSS","D17: Class & ID","1. class with . in CSS.\n2. id with # in CSS.\n3. id is unique.\n4. class can repeat.","1. class بـ . في CSS.\n2. id بـ # في CSS.\n3. id فريد.\n4. class يتكرر.",'<style>\n  .c { color: red; }\n  #i { color: blue; }\n</style>',"استخدم class و id.","Use class and id.","الفرق بينهم؟","Difference?",'<style>\n  .c { color: green; }\n  #i { color: orange; }\n</style>',"id مرة واحدة، class يتكرر.","id once, class repeats."],
+["CSS","D18: Width & Height","1. width for width.\n2. height for height.\n3. Units: px, %, vh, vw.\n4. max-width limits size.","1. width للعرض.\n2. height للارتفاع.\n3. وحدات: px, %, vh, vw.\n4. max-width يحدد الحجم.",'<style>\n  div { width: 100px; height: 100px; }\n</style>',"اعمل مربع 200x200.","Make 200x200 square.","الوحدة؟","Unit?",'<style>\n  div { width: 200px; height: 200px; }\n</style>',"px أو %.","px or %."],
+["CSS","D19: Gradients","1. linear-gradient for gradient.\n2. Can specify direction.\n3. Can use multiple colors.\n4. radial-gradient for circular.","1. linear-gradient للتدرج.\n2. ممكن تحدد الاتجاه.\n3. ممكن تستخدم ألوان كتير.\n4. radial-gradient للدايرة.",'<style>\n  body { background: linear-gradient(red, blue); }\n</style>',"تدرج أسود لرمادي.","Black to gray gradient.","فايدة التدرج؟","Use of gradient?",'<style>\n  body { background: linear-gradient(black, gray); }\n</style>',"خلفية متدرجة.","Gradient background."],
+["CSS","D20: Text Align","1. text-align aligns text.\n2. Values: left, right, center, justify.\n3. justify stretches text.\n4. Works on block elements.","1. text-align يحاذي النص.\n2. القيم: left, right, center, justify.\n3. justify يمدد النص.\n4. يعمل على العناصر الكتلية.",'<style>\n  h1 { text-align: center; }\n</style>',"نص في اليمين.","Align text right.","فايدة text-align؟","What is text-align?",'<style>\n  h1 { text-align: right; }\n</style>',"محاذاة النص.","Aligns text."],
+["Projects","D21: Profile Card","1. Combine HTML and CSS.\n2. Use div with border.\n3. Center content.\n4. Add padding and shadow.","1. نجمع HTML و CSS.\n2. نستخدم div بحدود.\n3. نوسط المحتوى.\n4. نضيف هوامش وظل.",'<div style="text-align:center; border:1px solid black; padding:10px;">\n  <h2>Ali</h2>\n  <p>Programmer</p>\n</div>',"غير التصميم.","Change design.","إزاي نعمل كارت؟","How to make card?",'<div style="text-align:center; border:1px solid black;">\n  <h2>Ali</h2>\n</div>',"div منسق.","Styled div."],
+["Projects","D22: Landing Page","1. Simple intro page.\n2. Has heading, text, button.\n3. Use flex for layout.\n4. Add background color.","1. صفحة تعريفية بسيطة.\n2. عنوان ونص وزر.\n3. نستخدم flex للتخطيط.\n4. نضيف لون خلفية.",'<h1>Welcome</h1>\n<p>Product</p>\n<button>Buy</button>',"طور الصفحة.","Style the page.","مكونات الصفحة؟","Page components?",'<h1>Welcome</h1>\n<button>Buy</button>',"عنوان وزر.","Heading and button."],
+["Projects","D23: Signup Form","1. Collect user data.\n2. Use form tag.\n3. Inputs for name, email, password.\n4. Button for submit.","1. جمع بيانات المستخدم.\n2. نستخدم form.\n3. إدخالات للاسم والإيميل والباسورد.\n4. زر للإرسال.",'<form>\n  <input type="text" placeholder="Name">\n  <input type="password" placeholder="Password">\n  <button>Signup</button>\n</form>',"ضيف إيميل.","Add email.","input type=password؟","password input?",'<form>\n  <input type="email" placeholder="Email">\n</form>',"بيخفي الحروف.","Hides characters."],
+["Projects","D24: Image Gallery","1. Group images in flex.\n2. Add gap between images.\n3. Set image width.\n4. Add hover effect.","1. تجميع الصور في flex.\n2. إضافة مسافة بين الصور.\n3. تحديد عرض الصورة.\n4. إضافة تأثير hover.",'<div style="display:flex; gap:10px;">\n  <img src="a.jpg" width="100">\n</div>',"ضيف 3 صور.","Add 3 images.","إزاي ترتب الصور؟","How to arrange images?",'<div style="display:flex; gap:10px;"><img src="1.jpg"></div>',"display: flex.","display: flex."],
+["Projects","D25: Personal Page","1. Combine everything.\n2. Heading, image, text, form.\n3. Style with CSS.\n4. Add background color.","1. نجمع كل حاجة.\n2. عنوان وصورة ونص وفورم.\n3. ننسق بـ CSS.\n4. نضيف لون خلفية.",'<h1>My Page</h1>\n<p>Welcome</p>',"اعمل صفحة كاملة.","Create full page.","إزاي تنسق الصفحة؟","How to style page?",'<style>\n  body { background: #eee; }\n</style>',"بـ CSS.","With CSS."],
+["CSS","D26: Box Shadow","1. box-shadow adds shadow.\n2. Syntax: x y blur color.\n3. Can have multiple shadows.\n4. Adds depth.","1. box-shadow يضيف ظل.\n2. الصيغة: x y blur color.\n3. ممكن أكتر من ظل.\n4. يضيف عمق.",'<style>\n  div { box-shadow: 5px 5px 10px gray; }\n</style>',"ضيف ظل.","Add shadow.","فايدة box-shadow؟","What is box-shadow?",'<style>\n  div { box-shadow: 2px 2px 5px black; }\n</style>',"إحساس بالعمق.","Depth feeling."],
+["CSS","D27: Opacity","1. opacity controls transparency.\n2. Value 0 (hidden) to 1 (visible).\n3. 0.5 is half transparent.\n4. Applies to whole element.","1. opacity للشفافية.\n2. 0 مخفي، 1 ظاهر.\n3. 0.5 نص شفاف.\n4. يطبق على العنصر كله.",'<style>\n  div { opacity: 0.5; }\n</style>',"صورة شفافة.","Transparent image.","فايدة opacity؟","What is opacity?",'<style>\n  img { opacity: 0.3; }\n</style>',"شفافية العنصر.","Element transparency."],
+["CSS","D28: Styling Buttons","1. Style with background and color.\n2. border-radius for rounded.\n3. padding for size.\n4. cursor pointer.","1. ننسق بـ background و color.\n2. border-radius للدايرة.\n3. padding للحجم.\n4. cursor pointer.",'<style>\n  button { background: blue; color: white; border-radius: 5px; padding: 10px; }\n</style>',"زرار أحمر.","Red button.","إزاي نخلي الزرار دائري؟","How to round button?",'<style>\n  button { border-radius: 10px; }\n</style>',"border-radius.","border-radius."],
+["CSS","D29: Hover",'1. :hover when mouse over.\n2. Change color, size, anything.\n3. Adds interactivity.\n4. Can use transition for smooth.','1. :hover لما الماوس ييجي.\n2. غير اللون أو الحجم.\n3. يضيف تفاعل.\n4. ممكن transition للنعومة.','<style>\n  button:hover { background: green; }\n</style>',"غير اللون عند المرور.","Change color on hover.","فايدة hover؟","What is hover?",'<style>\n  h1:hover { color: red; }\n</style>',"تأثير تفاعلي.","Interactive effect."],
+["CSS","D30: CSS Variables","1. :root defines variables.\n2. var() uses them.\n3. Makes changing easy.\n4. Can hold any value.","1. :root تعرف المتغيرات.\n2. var() تستخدمها.\n3. تسهل التغيير.\n4. تحمل أي قيمة.",'<style>\n  :root { --c: blue; }\n  h1 { color: var(--c); }\n</style>',"عرف متغير خلفية.","Define background variable.","فايدة var()؟","What is var()?",'<style>\n  :root { --bg: black; }\n</style>',"استخدام المتغير.","Using variable."],
+["JS","D31: JS Intro","1. JS adds interactivity.\n2. Written in script.\n3. Can change HTML/CSS.\n4. Runs in browser.","1. JS تضيف تفاعل.\n2. تكتب في script.\n3. تغير HTML/CSS.\n4. تعمل في المتصفح.",'<script>\n  alert("Hello");\n</script>',"رسالة ترحيب.","Welcome message.","فايدة alert؟","What is alert?",'<script>\n  alert("Welcome");\n</script>',"رسالة منبثقة.","Popup message."],
+["JS","D32: JS Variables","1. let for changeable.\n2. const for constant.\n3. var is old.\n4. Use clear names.","1. let للمتغير.\n2. const للثابت.\n3. var قديمة.\n4. استخدم أسماء واضحة.",'<script>\n  let name = "Ali";\n  const age = 20;\n</script>',"عرف متغير باسمك.","Define your name.","الفرق let و const؟","Difference let and const?",'<script>\n  let x = 10;\n</script>',"let تتغير، const لأ.","let changes, const no."],
+["JS","D33: JS Functions","1. function defines it.\n2. Call with name().\n3. Can take parameters.\n4. return sends value back.","1. function تعرفها.\n2. نناديها بالاسم.\n3. تاخد باراميترز.\n4. return ترجع قيمة.",'<script>\n  function greet() { alert("Hi"); }\n  greet();\n</script>',"دالة تطبع رقمك.","Function prints number.","إزاي ننادي دالة؟","How to call?",'<script>\n  function hello() { alert("Hi"); }\n  hello();\n</script>',"بالاسم والأقواس.","Name and brackets."],
+["JS","D34: JS Conditions","1. if makes decision.\n2. else for alternative.\n3. Use {} for code block.\n4. Comparison: ==, ===, >, <.","1. if تعمل قرار.\n2. else للبديل.\n3. استخدم {} للكود.\n4. مقارنة: ==, ===, >, <.",'<script>\n  let age = 20;\n  if (age >= 18) { alert("Adult"); }\n</script>',"شرط للرقم السالب.","Condition for negative.","هل نستخدم : بعد if؟","Use : after if?",'<script>\n  let n = -5;\n  if (n < 0) { alert("Negative"); }\n</script>',"لأ، {} بدالها.","No, {} instead."],
+["JS","D35: JS Loops","1. for loops known times.\n2. while loops until condition.\n3. Use i++ to increment.\n4. console.log for testing.","1. for تلف عدد معروف.\n2. while لحد الشرط.\n3. i++ للزيادة.\n4. console.log للتجربة.",'<script>\n  for (let i = 0; i < 3; i++) { console.log(i); }\n</script>',"اطبع 1 لـ 5.","Print 1 to 5.","فايدة console.log؟","What is console.log?",'<script>\n  for (let i = 1; i <= 5; i++) { console.log(i); }\n</script>',"طباعة في الكونسول.","Print to console."],
+["DOM","D36: DOM Intro","1. DOM is page representation.\n2. getElementById finds element.\n3. Can change content.\n4. Can change styles.","1. DOM تمثيل الصفحة.\n2. getElementById يجد العنصر.\n3. تغير المحتوى.\n4. تغير التنسيق.",'<h1 id="t">Hi</h1>\n<script>\n  document.getElementById("t").innerText = "Changed";\n</script>',"غير نص عنوان.","Change heading text.","فايدة getElementById؟","What is getElementById?",'<h1 id="t">Hi</h1>\n<script>\n  document.getElementById("t").innerText = "New";\n</script>',"بتجيب العنصر بالـ id.","Gets element by id."],
+["DOM","D37: Change Colors","1. style.color for text.\n2. style.backgroundColor for bg.\n3. Can use hex or name.\n4. Changes live.","1. style.color للنص.\n2. style.backgroundColor للخلفية.\n3. استخدم hex أو اسم.\n4. يتغير فوراً.",'<h1 id="t">Hi</h1>\n<script>\n  document.getElementById("t").style.color = "red";\n</script>',"غير لون الخلفية.","Change background.","إزاي نغير اللون؟","How to change color?",'<h1 id="t">Hi</h1>\n<script>\n  document.getElementById("t").style.color = "blue";\n</script>',"بـ style.color.","With style.color."],
+["DOM","D38: Events","1. addEventListener listens.\n2. 'click' for clicks.\n3. Can listen to many events.\n4. Callback runs on event.","1. addEventListener تسمع.\n2. 'click' للضغط.\n3. أحداث كتير.\n4. الدالة تنفذ عند الحدث.",'<button id="b">Click</button>\n<script>\n  document.getElementById("b").addEventListener("click", function() {\n    alert("Clicked");\n  });\n</script>',"الزرار يغير لونه.","Button changes color.","فايدة addEventListener؟","What is addEventListener?",'<button id="b">Click</button>\n<script>\n  document.getElementById("b").addEventListener("click", function() {\n    this.style.color = "red";\n  });\n</script>',"بتسمع لحدث.","Listens to event."],
+["DOM","D39: Read Inputs","1. .value reads input.\n2. Works with input, textarea.\n3. Returns string always.\n4. Use Number() for math.","1. .value تقرأ الإدخال.\n2. تعمل مع input.\n3. ترجع نص دايماً.\n4. استخدم Number() للحساب.",'<input id="i">\n<button id="b">Go</button>\n<script>\n  document.getElementById("b").onclick = function() {\n    alert(document.getElementById("i").value);\n  };\n</script>',"اعرض النص.","Show text.","إزاي نقرا input؟","How to read input?",'<input id="i">\n<script>\n  alert(document.getElementById("i").value);\n</script>',"بـ .value.","With .value."],
+["DOM","D40: Hide & Show","1. style.display none hides.\n2. block shows.\n3. Can toggle.\n4. visibility hidden keeps space.","1. display none يخفي.\n2. block يظهر.\n3. ممكن تبديل.\n4. visibility hidden يحتفظ بالمساحة.",'<h1 id="t">Hi</h1>\n<script>\n  document.getElementById("t").style.display = "none";\n</script>',"زرار يظهر تاني.","Button to show.","إزاي نخفي عنصر؟","How to hide?",'<h1 id="t">Hi</h1>\n<script>\n  document.getElementById("t").style.display = "none";\n</script>',"display: none.","display: none."],
+["Projects","D41: Calculator","1. Read two numbers.\n2. Use Number() to convert.\n3. Sum and display.\n4. Add more operations.","1. اقرا رقمين.\n2. استخدم Number().\n3. اجمع واعرض.\n4. ضيف عمليات.",'<input id="a">\n<button id="b">+</button>\n<p id="o"></p>\n<script>\n  document.getElementById("b").onclick = function() {\n    let x = Number(document.getElementById("a").value);\n    document.getElementById("o").innerText = x + 5;\n  };\n</script>',"ضيف طرح.","Add subtraction.","فايدة Number؟","What is Number?",'<input id="a">\n<button id="b">+</button>\n<p id="o"></p>\n<script>\n  document.getElementById("b").onclick = function() {\n    let x = Number(document.getElementById("a").value);\n    document.getElementById("o").innerText = x + 5;\n  };\n</script>',"تحويل لنص لرقم.","String to number."],
+["Projects","D42: Click Counter","1. Variable counts clicks.\n2. Increment with c++.\n3. Display with innerText.\n4. Add reset button.","1. متغير يعد الضغطات.\n2. زيادة بـ c++.\n3. عرض بـ innerText.\n4. ضيف زرار تصفير.",'<button id="b">Click</button>\n<p id="o">0</p>\n<script>\n  let c = 0;\n  document.getElementById("b").onclick = function() {\n    c++;\n    document.getElementById("o").innerText = c;\n  };\n</script>',"زرار تصفير.","Reset button.","إيه c++؟","What is c++?",'<button id="b">Click</button>\n<p id="o">0</p>\n<script>\n  let c = 0;\n  document.getElementById("b").onclick = function() {\n    c++;\n    document.getElementById("o").innerText = c;\n  };\n</script>',"زيادة بواحد.","Increment by one."],
+["Projects","D43: Change Background","1. document.body.style.background.\n2. Can use color names.\n3. Changes page background.\n4. Add button to trigger.","1. body.style.background.\n2. ممكن أسماء ألوان.\n3. يغير خلفية الصفحة.\n4. ضيف زرار.",'<button id="b">Change</button>\n<script>\n  document.getElementById("b").onclick = function() {\n    document.body.style.background = "black";\n  };\n</script>',"بدل بين لونين.","Toggle two colors.","إزاي نغير الخلفية؟","How to change background?",'<button id="b">Change</button>\n<script>\n  document.getElementById("b").onclick = function() {\n    document.body.style.background = "red";\n  };\n</script>',"body.style.background.","body.style.background."],
+["Projects","D44: Show Time","1. new Date() gets time.\n2. toLocaleTimeString() formats.\n3. Display in element.\n4. Can update with setInterval.","1. new Date() للوقت.\n2. toLocaleTimeString() ينسق.\n3. اعرض في عنصر.\n4. ممكن تحديث بـ setInterval.",'<h1 id="t"></h1>\n<script>\n  document.getElementById("t").innerText = new Date().toLocaleTimeString();\n</script>',"اعرض التاريخ.","Show date.","فايدة new Date؟","What is new Date?",'<h1 id="t"></h1>\n<script>\n  document.getElementById("t").innerText = new Date().toLocaleDateString();\n</script>',"الوقت أو التاريخ.","Time or date."],
+["Projects","D45: Form Validation","1. Check if input is empty.\n2. Compare with ''.\n3. Alert if empty.\n4. Prevent submission.","1. شوف لو فاضي.\n2. قارن بـ ''.\n3. نبه لو فاضي.\n4. امنع الإرسال.",'<input id="i">\n<button id="b">Send</button>\n<script>\n  document.getElementById("b").onclick = function() {\n    if (document.getElementById("i").value === "") {\n      alert("Empty");\n    }\n  };\n</script>',"اطلب إيميل.","Ask for email.","إزاي نشوف لو فاضي؟","How to check empty?",'<input id="i">\n<script>\n  if (document.getElementById("i").value === "") { alert("Empty"); }\n</script>',"مقارنة بـ ''.","Compare with ''."],
+["Projects","D46: Swap Images","1. Change img src.\n2. Use .src.\n3. Can use button.\n4. Toggle between two.","1. غير src الصورة.\n2. استخدم .src.\n3. ممكن زرار.\n4. بدل بين صورتين.",'<img id="i" src="a.jpg">\n<button id="b">Change</button>\n<script>\n  document.getElementById("b").onclick = function() {\n    document.getElementById("i").src = "b.jpg";\n  };\n</script>',"بدل بين صورتين.","Toggle two images.","فايدة .src؟","What is .src?",'<img id="i" src="1.jpg">\n<script>\n  document.getElementById("i").src = "2.jpg";\n</script>',"تغيير الصورة.","Change image."],
+["Projects","D47: Countdown","1. setInterval repeats.\n2. Decrease counter.\n3. Clear when zero.\n4. Display in element.","1. setInterval يكرر.\n2. نقص العداد.\n3. امسح عند الصفر.\n4. اعرض في عنصر.",'<h1 id="t">5</h1>\n<script>\n  let c = 5;\n  let x = setInterval(function() {\n    c--;\n    document.getElementById("t").innerText = c;\n    if (c === 0) clearInterval(x);\n  }, 1000);\n</script>',"رسالة عند الصفر.","Message at zero.","فايدة setInterval؟","What is setInterval?",'<h1 id="t">5</h1>\n<script>\n  let c = 5;\n  let x = setInterval(function() {\n    c--;\n    document.getElementById("t").innerText = c;\n    if (c === 0) clearInterval(x);\n  }, 1000);\n</script>',"تكرار كل فترة.","Repeat at intervals."],
+["Projects","D48: Fetch Data","1. fetch gets data.\n2. Returns Promise.\n3. Use .then for response.\n4. Parse with .json().","1. fetch يجيب بيانات.\n2. ترجع Promise.\n3. استخدم .then.\n4. حلل بـ .json().",'<button id="b">Get</button>\n<p id="o"></p>\n<script>\n  document.getElementById("b").onclick = function() {\n    document.getElementById("o").innerText = "Loading...";\n  };\n</script>',"طوره ببيانات حقيقية.","Improve with real data.","فايدة fetch؟","What is fetch?",'<button id="b">Get</button>\n<script>\n  document.getElementById("b").onclick = function() {\n    fetch("https://api.com").then(r => r.json()).then(d => console.log(d));\n  };\n</script>',"جلب بيانات من سيرفر.","Get data from server."],
+["Projects","D49: To-Do List","1. createElement makes new element.\n2. Set innerText.\n3. appendChild adds it.\n4. Can add delete button.","1. createElement ينشئ عنصر.\n2. حدد innerText.\n3. appendChild يضيفه.\n4. ممكن زرار حذف.",'<input id="i">\n<button id="b">Add</button>\n<ul id="l"></ul>\n<script>\n  document.getElementById("b").onclick = function() {\n    let li = document.createElement("li");\n    li.innerText = document.getElementById("i").value;\n    document.getElementById("l").appendChild(li);\n  };\n</script>',"زرار حذف.","Delete button.","فايدة createElement؟","What is createElement?",'<input id="i">\n<button id="b">Add</button>\n<script>\n  let li = document.createElement("li");\n  document.body.appendChild(li);\n</script>',"إنشاء عنصر جديد.","Create new element."],
+["Projects","D50: Final Project","1. Combine everything.\n2. HTML + CSS + JS.\n3. Interactive page.\n4. Real-world use.","1. نجمع كل حاجة.\n2. HTML + CSS + JS.\n3. صفحة تفاعلية.\n4. استخدام واقعي.",'<h1>My App</h1>\n<button onclick="alert(1)">Click</button>',"اعمل صفحة كاملة.","Create full page.","إيه اللي اتعلمناه؟","What did we learn?",'<h1>App</h1>\n<button>Go</button>',"HTML, CSS, JS.","HTML, CSS, JS."]
 ];
 
 function renderLessons() {
-  const container = document.getElementById('lessonsContainer');
-  container.innerHTML = "";
-  let currentSection = "";
-
-  lessons.forEach((l, i) => {
-    if(l.section !== currentSection){
-      currentSection = l.section;
-      container.insertAdjacentHTML('beforeend', `<div class="sec">${currentSection}</div>`);
+  const c = document.getElementById('lessonsContainer');
+  c.innerHTML = "";
+  let sec = "";
+  D.forEach((l, i) => {
+    let secName = currentLang === 'ar' ? l[0] : (l[0] === 'HTML' ? 'HTML' : l[0] === 'CSS' ? 'CSS' : l[0] === 'JS' ? 'JS' : l[0] === 'DOM' ? 'DOM' : 'Projects');
+    if(secName !== sec){
+      sec = secName;
+      c.insertAdjacentHTML('beforeend', `<div class="sec">${sec}</div>`);
     }
+    const title = currentLang === 'ar' ? l[1] : l[1].replace('D', 'Lesson ');
+    const steps = currentLang === 'ar' ? l[3] : l[2];
+    const code = l[4];
+    const practice = currentLang === 'ar' ? l[5] : l[6];
+    const quiz = currentLang === 'ar' ? l[7] : l[8];
+    const quizAns = currentLang === 'ar' ? l[11] : l[12];
+    const ans = l[9];
 
-    const html = `
+    const h = `
       <div class="lesson">
-        <h3>${l.title}</h3>
+        <h3>${title}</h3>
         <div class="explain-steps">
-          <strong style="color:#FFD700; font-size:18px;">📖 الشرح التفصيلي:</strong><br><br>
-          ${l.steps.replace(/\n/g, '<br><br>')}
+          <strong style="color:#FFD700; font-size:18px;">${currentLang === 'ar' ? '📖 الشرح التفصيلي:' : '📖 Detailed Explanation:'}</strong><br><br>
+          ${steps.replace(/\n/g, '<br><br>')}
         </div>
         <div class="code-box">
-          <div class="code-header"><span>تطبيق الكود (HTML)</span></div>
-          <pre class="code-content">${l.code.replace(/</g, '&lt;')}</pre>
+          <div class="code-header"><span>${currentLang === 'ar' ? 'تطبيق الكود' : 'Code Example'}</span></div>
+          <pre class="code-content">${code.replace(/</g, '&lt;')}</pre>
         </div>
-        <div class="try">🎯 التطبيق العملي: ${l.practice}</div>
+        <div class="try">${currentLang === 'ar' ? '🎯 التطبيق العملي:' : '🎯 Practice:'} ${practice}</div>
         <div class="quiz-box">
-          ❓ سؤال للتقييم: ${l.quiz}
-          <button class="btn-ans" onclick="toggleAns('ans${i}')">👁️ شوف الإجابة</button>
+          ${currentLang === 'ar' ? '❓ سؤال للتقييم:' : '❓ Quiz:'} ${quiz}
+          <button class="btn-ans" onclick="toggleAns('ans${i}')">${currentLang === 'ar' ? '👁️ شوف الإجابة' : '👁️ Show Answer'}</button>
           <div class="ans" id="ans${i}">
-            <strong>الحل:</strong><br>${l.quizAns}<br><br>
-            <strong>الكود:</strong><br>${l.answer.replace(/</g, '&lt;')}
+            <strong>${currentLang === 'ar' ? 'الحل:' : 'Answer:'}</strong><br>${quizAns}<br><br>
+            <strong>${currentLang === 'ar' ? 'الكود:' : 'Code:'}</strong><br>${ans.replace(/</g, '&lt;')}
           </div>
         </div>
-      </div>
-    `;
-    container.insertAdjacentHTML('beforeend', html);
+      </div>`;
+    c.insertAdjacentHTML('beforeend', h);
   });
 }
-
 renderLessons();
 </script>
 </body>
-</html>
+  </html>
