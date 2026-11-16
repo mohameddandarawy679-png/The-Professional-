@@ -4,14 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>كتاب الويب - المحترف 😎</title>
+
 <style>
 *{box-sizing:border-box;font-family:'Segoe UI',Tahoma,sans-serif}
-body{margin:0;background:linear-gradient(135deg, #0A1931 0%, #1A3A6B 100%);color:#fff;line-height:1.9;min-height:100vh}
+body{margin:0;background:linear-gradient(135deg, #0A1931 0%, #1A3A6B 100%);color:#fff;line-height:1.8;min-height:100vh}
 .lang-bar{display:flex;gap:8px;justify-content:center;padding:12px;background:#000;position:sticky;top:0;z-index:99}
 .lang-bar button{padding:10px 22px;border-radius:20px;border:1px solid #FFD700;background:#0A1931;color:#fff;cursor:pointer;font-weight:bold;font-size:15px}
 .lang-bar button.active{background:#FFD700;color:#0A1931}
 .top{padding:40px 20px;text-align:center;border-bottom:3px solid #FFD700}
-.top h1{color:#FFD700;font-size:28px;margin:10px 0}
+.top h1{color:#FFD700;font-size:28px;margin:10px 0;line-height:1.4}
 .stars{color:#FFD700;font-size:28px;margin:15px 0}
 .lock-box{margin:30px auto;max-width:500px;background:#0E2447;border:2px solid #FFD700;border-radius:20px;padding:25px;text-align:center;box-shadow:0 0 20px rgba(255,215,0,0.2)}
 .whats{background:#25D366;color:#fff;padding:15px;border-radius:12px;display:block;text-decoration:none;font-weight:bold;margin:15px 0;font-size:18px}
@@ -22,18 +23,19 @@ input{width:100%;padding:14px;border-radius:12px;border:none;font-size:16px;text
 #promoScreen p{font-size:18px;margin-bottom:25px}
 .promo-btn{background:#25D366;color:#fff;padding:15px;border-radius:12px;text-decoration:none;font-weight:bold;font-size:20px;display:block;margin-top:20px;box-shadow:0 4px 10px rgba(0,0,0,0.3)}
 .book{display:none;padding:15px;max-width:900px;margin:0 auto}
-.sec{background:#FFD700;color:#0A1931;padding:15px;border-radius:12px;text-align:center;font-weight:bold;font-size:22px;margin:40px 0 20px}
-.lesson{background:#122A52;border:1px solid #FFD700;border-radius:16px;padding:25px;margin-bottom:30px}
-.lesson h3{color:#FFD700;font-size:24px;margin:0 0 15px;border-bottom:1px dashed #FFD700;padding-bottom:10px}
-.explain-steps{background:#0E2447;padding:20px;border-radius:10px;border-right:4px solid #25D366;font-size:17px;margin-bottom:20px}
-.code-box{background:#000;border-radius:10px;margin:20px 0;overflow:hidden;border:1px solid #444}
-.code-header{background:#1a1a1a;padding:10px 15px;border-bottom:1px solid #333;display:flex;justify-content:space-between}
-.code-header span{color:#FFD700;font-weight:bold;font-size:14px}
+.sec{background:#FFD700;color:#0A1931;padding:12px;border-radius:12px;text-align:center;font-weight:bold;font-size:22px;margin:30px 0 15px}
+.lesson{background:#122A52;border:1px solid #FFD700;border-radius:16px;padding:20px;margin-bottom:25px}
+.lesson h3{color:#FFD700;font-size:22px;margin:0 0 12px}
+.explain-steps{margin:15px 0}
+.step-item{background:#0E2447;padding:12px 15px;border-radius:10px;margin-bottom:10px;border-right:4px solid #25D366;font-size:16px}
+.code-box{background:#000;border-radius:10px;margin:15px 0;overflow:hidden;border:1px solid #333}
+.code-header{background:#1a1a1a;padding:8px 15px;border-bottom:1px solid #333}
+.code-header span{color:#aaa;font-size:14px}
 .code-content{background:#000;padding:15px;direction:ltr;text-align:left;color:#7CFF7C;font-size:15px;font-family:monospace;white-space:pre-wrap;margin:0}
-.try{background:#1A3A6B;padding:15px;border-radius:10px;border-right:4px solid #FFD700;margin:20px 0;font-weight:bold;font-size:17px}
-.quiz-box{background:#2a1a4a;padding:20px;border-radius:10px;border-right:4px solid #c084fc;margin:20px 0;font-size:17px;font-weight:bold}
-.btn-ans{background:#c084fc;color:#fff;border:none;padding:12px;border-radius:8px;cursor:pointer;font-weight:bold;margin-top:15px;width:100%;font-size:16px}
-.ans{display:none;background:#000;padding:15px;border-radius:8px;margin-top:15px;color:#7CFF7C;direction:ltr;text-align:left;font-family:monospace;white-space:pre-wrap;border:1px solid #c084fc;font-size:14px;line-height:1.6}
+.try{background:#1A3A6B;padding:15px;border-radius:10px;border-right:4px solid #FFD700;margin:15px 0;font-weight:bold}
+.quiz-box{background:#0E2447;padding:15px;border-radius:10px;border-right:4px solid #c084fc;margin:15px 0;font-size:16px;font-weight:bold}
+.btn-ans{background:#c084fc;color:#fff;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;font-weight:bold;margin-top:10px;width:100%;font-size:16px}
+.ans{display:none;background:#000;padding:15px;border-radius:8px;margin-top:10px;color:#7CFF7C;direction:ltr;text-align:left;font-family:monospace;white-space:pre-wrap;border:1px solid #c084fc}
 .footer{margin-top:40px;padding:20px;text-align:center;border-top:1px solid #FFD700;color:#FFD700}
 </style>
 </head>
@@ -48,7 +50,7 @@ input{width:100%;padding:14px;border-radius:12px;border:none;font-size:16px;text
 <div class="top">
 <h1>كتاب الويب - المحترف 😎</h1>
 <div class="stars">★★★★★ 5/5</div>
-<p>تأسيس HTML/CSS/JS من الصفر لسوق العمل</p>
+<p>تأسيس HTML/CSS من الصفر لسوق العمل</p>
 </div>
 <div class="lock-box">
 <h2>🔒 الدخول للمشتركين فقط</h2>
@@ -62,21 +64,21 @@ input{width:100%;padding:14px;border-radius:12px;border:none;font-size:16px;text
 
 <div id="promoScreen">
   <h1>مرحباً بك في عالم الاحتراف! 🚀</h1>
-  <p>أنت الآن تمتلك أقوى موسوعة لتأسيس الويب. هذا الكتاب مش مجرد دروس، ده خطوة حقيقية ناحية سوق العمل. استعد لتبدأ رحلتك.</p>
+  <p>أنت الآن تمتلك أقوى كتاب لتأسيس الويب. هذا الكتاب مش مجرد دروس، ده خطوة حقيقية ناحية سوق العمل. استعد لتبدأ رحلتك.</p>
   <a href="#" onclick="startBook()" class="promo-btn">ابدأ التعلم الآن! 💻</a>
 </div>
 
 <div id="bookScreen" class="book">
 <div class="top">
 <h1>كتاب الويب - المحترف 😎</h1>
-<p>شرح موسوعي + أكواد + أسئلة</p>
+<p>50 درس لتعليم HTML/CSS/JS من الصفر</p>
 </div>
 <div id="lessonsContainer"></div>
 <div class="footer"><p>© 2026 المحترف 😎</p></div>
 </div>
 
 <script>
-// التفعيل (أكواد الويب من snsn51 لـ snsn100)
+// ====== التفعيل (أكواد الويب من snsn51 لـ snsn100) ======
 const VALID_CODES = Array.from({length: 50}, (_, i) => "snsn" + (i + 51));
 
 function activate(){
@@ -113,99 +115,44 @@ function toggleAns(id){
   el.style.display = el.style.display === 'block' ? 'none' : 'block';
 }
 
-// بيانات الدروس (أول 5 دروس بشرح مفصل)
+// ====== بيانات الـ 50 درس ======
 const lessons = [
-  {
-    section: "المرحلة التأسيسية: HTML",
-    title: "الدرس 1: مقدمة في لغة HTML",
-    steps: "1. لغة HTML هي اختصار لـ (HyperText Markup Language)، وهي مش لغة برمجة بالمعنى الحرفي، لكنها لغة 'ترميز' أو 'هيكلة'.\n2. وظيفتها الأساسية هي بناء الهيكل العظمي لأي صفحة ويب. زي ما المبني محتاج هيكل خرساني، الموقع محتاج HTML.\n3. بتتكون من عناصر (Elements) كل عنصر ليه وسم بداية (Opening Tag) ووسم نهاية (Closing Tag).\n4. المتصفح بيقرأ الكود ده ويترجمه لشكل مرئي (عناوين، فقرات، صور).",
-    code: '<!-- ده عنوان رئيسي -->\n<h1>أهلاً بيك في موقعي</h1>\n\n<!-- ده عنوان فرعي -->\n<h2>أنا بتعلم برمجة</h2>\n\n<!-- ده نص عادي (فقرة) -->\n<p>النهاردة بدأت أتعلم HTML.</p>',
-    practice: "اكتب كود HTML فيه عنوان رئيسي باسمك، وعنوان فرعي بمدينتك، وفقرة بتعبر فيها عن نفسك.",
-    quiz: "لو كتبت الكود بدون أقواس زاوية < >، المتصفح هيفهمه؟",
-    answer: '<h1>اسمي أحمد</h1>\n<h2>أنا من القاهرة</h2>\n<p>أنا أحب البرمجة جداً وأتمنى أن أصبح محترفاً.</p>',
-    quizAns: "لأ، المتصفح مش هيعرف يترجمه وهيظهر كنص عادي جداً، لأن أقواس الزاوية هي اللي بتقول للمتصفح 'ده كود HTML'."
-  },
-  {
-    section: "المرحلة التأسيسية: HTML",
-    title: "الدرس 2: هيكل صفحة الويب الكامل",
-    steps: "1. أي صفحة ويب محترفة لازم يكون ليها هيكل أساسي ثابت.\n2. `<!DOCTYPE html>`: بيعرف المتصفح إن الملف ده HTML5.\n3. `<html>`: العنصر الجذر اللي بيحتوي كل حاجة.\n4. `<head>`: فيه معلومات مش بتظهر للمستخدم (زي عنوان الصفحة، وترميز الحروف، وروابط ملفات CSS).\n5. `<body>`: ده اللي بيظهر للمستخدم (الكلام، الصور، الأزرار).",
-    code: '<!DOCTYPE html>\n<html lang="ar">\n<head>\n  <meta charset="UTF-8">\n  <title>موقعي الأول</title>\n</head>\n<body>\n  <h1>مرحباً</h1>\n  <p>أنا الآن أبني موقعي الأول.</p>\n</body>\n</html>',
-    practice: "اعمل هيكل صفحة كاملة، وخلي عنوان الصفحة (Title) هو اسمك.",
-    quiz: "إيه الفرق بين وسم head ووسم body؟",
-    answer: '<!DOCTYPE html>\n<html lang="ar">\n<head>\n  <title>أحمد</title>\n</head>\n<body>\n  <h1>أهلاً</h1>\n</body>\n</html>',
-    quizAns: "الـ head بيحتوي على معلومات للخلفية (زي عنوان الصفحة) مش بتظهر في الشاشة، بينما الـ body هو كل المحتوى المرئي اللي بيشوفه المستخدم."
-  },
-  {
-    section: "المرحلة التأسيسية: HTML",
-    title: "الدرس 3: العناوين والفقرات",
-    steps: "1. العناوين في HTML بتبدأ من h1 (الأكبر والأهم) لحد h6 (الأصغر).\n2. استخدام العناوين بشكل منطقي مهم جداً لمحركات البحث (SEO).\n3. الفقرات بتتكتب بوسم p (Paragraph).\n4. تقدر تعمل كسر سطر بـ <br> بدون ما تفتح فقرة جديدة، وتقدر تعمل خط فاصل بـ <hr>.",
-    code: '<h1>عنوان رئيسي 1</h1>\n<h2>عنوان فرعي 2</h2>\n<h3>عنوان فرعي 3</h3>\n<h4>عنوان فرعي 4</h4>\n<h5>عنوان فرعي 5</h5>\n<h6>عنوان فرعي 6</h6>\n\n<hr>\n\n<p>ده نص فقرة عادي. بنقدر نكتب فيه أي حاجة.</p>\n<p>الفقرة دي تانية.<br>وهنا عملنا كسر سطر.</p>',
-    practice: "اكتب فقرة عن يومك، وقسمها لسطرين باستخدام وسم <br>.",
-    quiz: "كام مستوى للعناوين في HTML؟",
-    answer: '<p>استيقظت الصباح<br>ثم ذهبت للعمل</p>',
-    quizAns: "6 مستويات، من <h1> لحد <h6>."
-  },
-  {
-    section: "المرحلة التأسيسية: HTML",
-    title: "الدرس 4: الروابط (Links)",
-    steps: "1. الروابط بتتنشأ بوسم <a>.\n2. أهم خاصية فيه هي `href` (Hypertext Reference) وبتحدد مكان الرابط.\n3. ممكن يكون الرابط لموقع خارجي، أو لصفحة تانية في نفس الموقع، أو حتى لإيميل.\n4. خاصية `target=\"_blank\"` بتفتح الرابط في صفحة جديدة (تاب جديد).",
-    code: '<!-- رابط لموقع خارجي -->\n<a href="https://google.com">اذهب لجوجل</a>\n\n<!-- رابط يفتح في صفحة جديدة -->\n<a href="https://youtube.com" target="_blank">افتح يوتيوب في تاب جديد</a>\n\n<!-- رابط لإرسال إيميل -->\n<a href="mailto:test@test.com">راسلنا</a>',
-    practice: "اعمل رابط لموقعك المفضل، وخليه يفتح في تاب جديد.",
-    quiz: "إيه وظيفة target='_blank'؟",
-    answer: '<a href="https://www.facebook.com" target="_blank">فيسبوك</a>',
-    quizAns: "بتخلي الرابط يفتح في صفحة أو تاب جديد بدل ما يفتح في نفس الصفحة."
-  },
-  {
-    section: "المرحلة التأسيسية: HTML",
-    title: "الدرس 5: الصور (Images)",
-    steps: "1. الصور بتتضاف بوسم <img>، وهو وسم منفرد (مش بيقفل).\n2. خاصية `src` بتحدد مسار الصورة.\n3. خاصية `alt` بتكتب فيها وصف للصورة (بتظهر لو الصورة مش موجودة، ومهمة جداً للـ SEO وللمكفوفين).\n4. ممكن تتحكم في الحجم بـ `width` و `height`.",
-    code: '<!-- صورة عادية -->\n<img src="image.jpg" alt="صورة طبيعة">\n\n<!-- صورة بحجم محدد -->\n<img src="logo.png" alt="لوجو الموقع" width="100" height="100">',
-    practice: "ضيف صورة لموقعك بحجم 200 بكسل، واكتب لها وصف (alt).",
-    quiz: "ليه وسم الصورة من غير وسم إغلاق؟",
-    answer: '<img src="my-photo.jpg" alt="صورتي الشخصية" width="200">',
-    quizAns: "لأنه وسم منفرد (Self-closing) ومحتاجش محتوى جواه عشان يقفل."
-  }
-];
-
-// بناء الدروس
-function renderLessons() {
-  const container = document.getElementById('lessonsContainer');
-  container.innerHTML = "";
-  let currentSection = "";
-
-  lessons.forEach((l, i) => {
-    if(l.section !== currentSection){
-      currentSection = l.section;
-      container.insertAdjacentHTML('beforeend', `<div class="sec">${currentSection}</div>`);
-    }
-
-    const html = `
-      <div class="lesson">
-        <h3>${l.title}</h3>
-        <div class="explain-steps">
-          <strong style="color:#FFD700; font-size:18px;">📖 الشرح التفصيلي:</strong><br><br>
-          ${l.steps.replace(/\n/g, '<br><br>')}
-        </div>
-        <div class="code-box">
-          <div class="code-header"><span>تطبيق الكود (HTML)</span></div>
-          <pre class="code-content">${l.code.replace(/</g, '&lt;')}</pre>
-        </div>
-        <div class="try">🎯 التطبيق العملي: ${l.practice}</div>
-        <div class="quiz-box">
-          ❓ سؤال للتقييم: ${l.quiz}
-          <button class="btn-ans" onclick="toggleAns('ans${i}')">👁️ شوف الإجابة</button>
-          <div class="ans" id="ans${i}">
-            <strong>الحل:</strong><br>${l.quizAns}<br><br>
-            <strong>الكود:</strong><br>${l.answer.replace(/</g, '&lt;')}
-          </div>
-        </div>
-      </div>
-    `;
-    container.insertAdjacentHTML('beforeend', html);
-  });
-}
-
-renderLessons();
-</script>
-</body>
-</html>
+  {section_ar:"أساسيات HTML",title_ar:"الدرس 1: مقدمة في HTML",steps_ar:["HTML هي هيكل الصفحة.","بتتكون من Tags (وسوم).","بنكتب الكود بين قوسين <>."],code:'<h1>Hello World</h1>\n<p>This is a paragraph</p>',practice_ar:"اكتب عنوان رئيسي باسمك.",quiz_ar:"إيه فايدة h1؟",answer:'<h1>My Name</h1>',quizAns_ar:"عنوان رئيسي."},
+  {section_ar:"أساسيات HTML",title_ar:"الدرس 2: هيكل الصفحة",steps_ar:["head فيه معلومات الصفحة (مش بتظهر).","body فيه المحتوى اللي بيظهر للمستخدم."],code:'<!DOCTYPE html>\n<html>\n<head><title>My Site</title></head>\n<body><h1>Hi</h1></body>\n</html>',practice_ar:"اعمل صفحة كاملة بالهيكل.",quiz_ar:"فين بيظهر المحتوى؟",answer:'<!DOCTYPE html>\n<html><head></head><body><h1>Hi</h1></body></html>',quizAns_ar:"جوه body."},
+  {section_ar:"أساسيات HTML",title_ar:"الدرس 3: العناوين والفقرات",steps_ar:["h1 لأكبر عنوان، h6 لأصغر عنوان.","p للفقرات."],code:'<h1>Main</h1>\n<h2>Sub</h2>\n<p>Text here</p>',practice_ar:"اكتب 3 مستويات عناوين.",quiz_ar:"كام مستوى للعناوين؟",answer:'<h1>A</h1>\n<h2>B</h2>\n<h3>C</h3>',quizAns_ar:"6 مستويات."},
+  {section_ar:"أساسيات HTML",title_ar:"الدرس 4: الروابط",steps_ar:["a بتعمل رابط.","href بيحدد الوجهة."],code:'<a href="https://google.com">Google</a>',practice_ar:"حط رابط لموقعك المفضل.",quiz_ar:"إزاي تفتح الرابط في تاب جديد؟",answer:'<a href="https://google.com" target="_blank">Google</a>',quizAns_ar:"باستخدام target='_blank'."},
+  {section_ar:"أساسيات HTML",title_ar:"الدرس 5: الصور",steps_ar:["img بتحط صورة.","src مكان الصورة، alt وصف بديل."],code:'<img src="pic.jpg" alt="My Picture">',practice_ar:"حط صورة مع وصف.",quiz_ar:"ليه بنستخدم alt؟",answer:'<img src="me.jpg" alt="My Photo">',quizAns_ar:"لو الصورة مش ظاهرة أو للـ SEO."},
+  {section_ar:"أساسيات HTML",title_ar:"الدرس 6: القوائم",steps_ar:["ul قائمة غير مرتبة (بنقط).","ol قائمة مرتبة (أرقام).","li عنصر القائمة."],code:'<ul>\n  <li>Apple</li>\n  <li>Banana</li>\n</ul>',practice_ar:"اعمل قائمة ب5 أكلات.",quiz_ar:"إيه الفرق بين ul و ol؟",answer:'<ol>\n  <li>First</li>\n  <li>Second</li>\n</ol>',quizAns_ar:"ul بنقط، ol بأرقام."},
+  {section_ar:"أساسيات HTML",title_ar:"الدرس 7: الجداول",steps_ar:["table بيعمل جدول.","tr صف، td خلية.","th خلية عنوان."],code:'<table>\n  <tr><td>A</td><td>B</td></tr>\n</table>',practice_ar:"اعمل جدول بصفين وعمودين.",quiz_ar:"إيه فايدة th؟",answer:'<table>\n  <tr><th>Name</th></tr>\n  <tr><td>Ali</td></tr>\n</table>',quizAns_ar:"عنوان الخلية."},
+  {section_ar:"أساسيات HTML",title_ar:"الدرس 8: النماذج Forms",steps_ar:["form بيجمع بيانات.","input بياخد إدخال.","button للزر."],code:'<form>\n  <input type="text">\n  <button>Send</button>\n</form>',practice_ar:"اعمل فورم للاسم والإيميل.",quiz_ar:"إيه input type=password؟",answer:'<form>\n  <input type="email">\n  <button>Send</button>\n</form>',quizAns_ar:"بيخفي الحروف اللي بتتكتب."},
+  {section_ar:"أساسيات HTML",title_ar:"الدرس 9: الأقسام Div",steps_ar:["div صندوق بيجمع عناصر.","بنستخدمه لتقسيم الصفحة."],code:'<div>\n  <h1>Title</h1>\n  <p>Text</p>\n</div>',practice_ar:"اعمل قسمين في الصفحة.",quiz_ar:"إيه فايدة div؟",answer:'<div><h1>A</h1></div>\n<div><h1>B</h1></div>',quizAns_ar:"لتجميع العناصر مع بعض."},
+  {section_ar:"أساسيات HTML",title_ar:"الدرس 10: التعليقات",steps_ar:["التعليقات مش بتظهر في المتصفح.","بنكتبها بين <!-- و -->."],code:'<!-- This is a comment -->\n<h1>Hi</h1>',practice_ar:"اكتب تعليق فوق عنوان.",quiz_ar:"هل التعليقات بتظهر للمستخدم؟",answer:'<!-- My Comment -->\n<h2>Hello</h2>',quizAns_ar:"لأ، بتظهر في الكود بس."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 11: مقدمة CSS",steps_ar:["CSS بتتنسق الشكل.","بتتكتب في style."],code:'<style>\n  h1 { color: red; }\n</style>',practice_ar:"لون العنوان بالأزرق.",quiz_ar:"إزاي بنختار عنصر في CSS؟",answer:'<style>\n  h1 { color: blue; }\n</style>',quizAns_ar:"باسم العنصر أو الـ id أو الـ class."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 12: الألوان والخلفيات",steps_ar:["color للنص.","background-color للخلفية."],code:'<style>\n  body { background-color: #eee; }\n</style>',practice_ar:"خلي الخلفية سودة والنص أبيض.",quiz_ar:"إيه فايدة background-color؟",answer:'<style>\n  body { background: black; color: white; }\n</style>',quizAns_ar:"بتلون خلفية العنصر."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 13: الخطوط",steps_ar:["font-size لحجم الخط.","font-family لنوع الخط.","font-weight لتخانة الخط."],code:'<style>\n  p { font-size: 20px; font-weight: bold; }\n</style>',practice_ar:"غير نوع الخط.",quiz_ar:"إيه فايدة font-weight؟",answer:'<style>\n  p { font-family: Arial; }\n</style>',quizAns_ar:"بيتحكم في تخانة الخط."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 14: الهوامش",steps_ar:["margin مسافة برا العنصر.","padding مسافة جوه العنصر."],code:'<style>\n  div { margin: 10px; padding: 20px; }\n</style>',practice_ar:"طبق الهوامش على صندوق.",quiz_ar:"إيه الفرق بين margin و padding؟",answer:'<style>\n  div { margin: 15px; padding: 10px; }\n</style>',quizAns_ar:"margin برا، padding جوه."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 15: الحدود",steps_ar:["border بيحط حدود.","border-radius بيعمل حواف دايرة."],code:'<style>\n  div { border: 2px solid black; }\n</style>',practice_ar:"اعمل صندوق بحواف دايرة.",quiz_ar:"إيه فايدة border-radius؟",answer:'<style>\n  div { border-radius: 10px; border: 1px solid red; }\n</style>',quizAns_ar:"بيخلي الحواف ناعمة أو دايرية."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 16: Flexbox",steps_ar:["display: flex بترتب العناصر.","justify-content للمحاذاة الأفقية.","align-items للمحاذاة الرأسية."],code:'<style>\n  .box { display: flex; justify-content: center; }\n</style>',practice_ar:"رتب 3 عناصر في النص.",quiz_ar:"إيه فايدة flex؟",answer:'<style>\n  .box { display: flex; gap: 10px; }\n</style>',quizAns_ar:"بيرتب العناصر أفقياً أو رأسياً بسهولة."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 17: الـ Class والـ ID",steps_ar:["class بتتكتب بـ . في CSS.","id بيتكتب بـ # في CSS.","id فريد، class متكرر."],code:'<style>\n  .my-class { color: red; }\n  #my-id { color: blue; }\n</style>',practice_ar:"استخدم class و id في عنصرين.",quiz_ar:"إيه الفرق بينهم؟",answer:'<style>\n  .c { color: green; }\n  #i { color: orange; }\n</style>\n<p class="c">A</p>\n<p id="i">B</p>',quizAns_ar:"id بيستخدم مرة واحدة، class ممكن يتكرر."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 18: العرض والارتفاع",steps_ar:["width للعرض.","height للارتفاع."],code:'<style>\n  div { width: 100px; height: 100px; }\n</style>',practice_ar:"اعمل مربع 200x200.",quiz_ar:"إيه الوحدة اللي بنستخدمها؟",answer:'<style>\n  div { width: 200px; height: 200px; }\n</style>',quizAns_ar:"px (بكسل) أو % (نسبة مئوية)."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 19: الخلفيات المتدرجة",steps_ar:["بتعمل تدرج لوني.","بنستخدم linear-gradient."],code:'<style>\n  body { background: linear-gradient(red, blue); }\n</style>',practice_ar:"اعمل تدرج من الأسود للرمادي.",quiz_ar:"إيه فايدة linear-gradient؟",answer:'<style>\n  body { background: linear-gradient(black, gray); }\n</style>',quizAns_ar:"لعمل خلفية متدرجة."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 20: محاذاة النصوص",steps_ar:["text-align بتحدد مكان النص.","center, left, right."],code:'<style>\n  h1 { text-align: center; }\n</style>',practice_ar:"خلي النص في اليمين.",quiz_ar:"إيه فايدة text-align؟",answer:'<style>\n  h1 { text-align: right; }\n</style>',quizAns_ar:"بتحدد محاذاة النص."},
+  {section_ar:"مشاريع الويب",title_ar:"الدرس 21: مشروع كارت شخصي",steps_ar:["هنجمع كل حاجة.","صورة، اسم، وصف، وتنسيق."],code:'<div style="text-align:center; border:1px solid black;">\n  <h2>Ali</h2>\n  <p>Programmer</p>\n</div>',practice_ar:"غير التصميم وضيف صورة.",quiz_ar:"إزاي نعمل كارت؟",answer:'<div style="text-align:center; border:1px solid black;">\n  <h2>Ali</h2>\n  <p>Programmer</p>\n</div>',quizAns_ar:"بنستخدم div وننسقه."},
+  {section_ar:"مشاريع الويب",title_ar:"الدرس 22: مشروع صفحة هبوط",steps_ar:["صفحة تعريفية بسيطة.","عنوان، وصف، وزرار."],code:'<h1>Welcome</h1>\n<p>Our product is great</p>\n<button>Buy</button>',practice_ar:"طور الصفحة بتنسيق.",quiz_ar:"إيه مكونات صفحة الهبوط؟",answer:'<h1>Welcome</h1>\n<p>Product</p>\n<button>Buy</button>',quizAns_ar:"عنوان ووصف وزرار."},
+  {section_ar:"مشاريع الويب",title_ar:"الدرس 23: مشروع نموذج تسجيل",steps_ar:["هنجمع بيانات المستخدم.","اسم، إيميل، باسورد، وزرار."],code:'<form>\n  <input type="text" placeholder="Name">\n  <input type="password" placeholder="Password">\n  <button>Signup</button>\n</form>',practice_ar:"ضيف خانة إيميل.",quiz_ar:"إيه input type=password؟",answer:'<form>\n  <input type="email" placeholder="Email">\n  <button>Signup</button>\n</form>',quizAns_ar:"بيخفي الحروف."},
+  {section_ar:"مشاريع الويب",title_ar:"الدرس 24: مشروع معرض صور",steps_ar:["هنجمع صور في صفوف.","بنستخدم flex."],code:'<div style="display:flex; gap:10px;">\n  <img src="a.jpg" width="100">\n  <img src="b.jpg" width="100">\n</div>',practice_ar:"ضيف 3 صور.",quiz_ar:"إزاي نرتب الصور جنب بعض؟",answer:'<div style="display:flex; gap:10px;">\n  <img src="1.jpg" width="50">\n  <img src="2.jpg" width="50">\n</div>',quizAns_ar:"باستخدام display: flex."},
+  {section_ar:"مشاريع الويب",title_ar:"الدرس 25: مشروع صفحة شخصية",steps_ar:["هنجمع كل حاجة عملناها في صفحة واحدة.","عنوان، صورة، فورم، وتنسيق."],code:'<h1>My Page</h1>\n<p>Welcome</p>',practice_ar:"اعمل صفحة تعريفية كاملة بنفسك.",quiz_ar:"إزاي تنسق صفحة HTML؟",answer:'<style>\n  body { background: #eee; }\n  h1 { color: blue; }\n</style>\n<h1>Hi</h1>',quizAns_ar:"بإضافة كود CSS في وسم style."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 26: الظلال Box Shadow",steps_ar:["box-shadow بتعمل ظل للعنصر.","بتديه شكل ثلاثي الأبعاد."],code:'<style>\n  div { box-shadow: 5px 5px 10px gray; }\n</style>',practice_ar:"ضيف ظل لصندوق.",quiz_ar:"إيه فايدة box-shadow؟",answer:'<style>\n  div { box-shadow: 2px 2px 5px black; }\n</style>',quizAns_ar:"بتدي إحساس بالعمق."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 27: الشفافية Opacity",steps_ar:["opacity بتتحكم في شفافية العنصر.","من 0 (مخفي) لـ 1 (ظاهر)."],code:'<style>\n  div { opacity: 0.5; }\n</style>',practice_ar:"خلي صورة شفافة.",quiz_ar:"إيه فايدة opacity؟",answer:'<style>\n  img { opacity: 0.3; }\n</style>',quizAns_ar:"بتخلي العنصر شفاف."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 28: الأزرار والتنسيق",steps_ar:["بننسق الأزرار بـ background و color.","border-radius بيعملها دايرية."],code:'<style>\n  button { background: blue; color: white; border-radius: 5px; }\n</style>',practice_ar:"اعمل زرار أحمر.",quiz_ar:"إزاي نخلي الزرار دائري؟",answer:'<style>\n  button { background: red; border-radius: 10px; }\n</style>',quizAns_ar:"باستخدام border-radius."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 29: Hover",steps_ar:["hover بيتنفذ لما الماوس ييجي على العنصر.","بنستخدم :hover في CSS."],code:'<style>\n  button:hover { background: green; }\n</style>',practice_ar:"غير لون النص عند المرور.",quiz_ar:"إيه فايدة hover؟",answer:'<style>\n  h1:hover { color: red; }\n</style>',quizAns_ar:"بيضيف تأثير تفاعلي."},
+  {section_ar:"أساسيات CSS",title_ar:"الدرس 30: المتغيرات CSS",steps_ar:["بنستخدم :root لتعريف متغيرات.","بنستخدم var() لاستخدامها."],code:'<style>\n  :root { --main-color: blue; }\n  h1 { color: var(--main-color); }\n</style>',practice_ar:"عرف متغير للون الخلفية.",quiz_ar:"إيه فايدة var()؟",answer:'<style>\n  :root { --bg: black; }\n  body { background: var(--bg); }\n</style>',quizAns_ar:"بتستخدم قيمة المتغير."},
+  {section_ar:"أساسيات JavaScript",title_ar:"الدرس 31: مقدمة JS",steps_ar:["JavaScript بتخلي الصفحة تتفاعل.","بتتكتب جوه وسم script."],code:'<script>\n  alert("Hello");\n</script>',practice_ar:"اطلع رسالة ترحيب.",quiz_ar:"إيه فايدة alert؟",answer:'<script>\n  alert("Welcome");\n</script>',quizAns_ar:"بتظهر رسالة منبثقة."},
+  {section_ar:"أساسيات JavaScript",title_ar:"الدرس 32: المتغيرات في JS",steps_ar:["let للمتغيرات اللي بتتغير.","const للثوابت.","var قديمة (يفضل عدم استخدامها)."],code:'<script>\n  let name = "Ali";\n  const age = 20;\n</script>',practice_ar:"عرف متغير باسمك.",quiz_ar:"إيه الفرق بين let و const؟",answer:'<script>\n  let x = 10;\n  const y = 20;\n</script>',quizAns_ar:"let ممكن تتغير، const لأ."},
+  {section_ar:"أساسيات JavaScript",title_ar:"الدرس 33: الدوال في JS",steps_ar:["بنستخدم function لتعريف دالة.","أو Arrow Function."],code:'<script>\n  function greet() { alert("Hi"); }\n  greet();\n</script>',practice_ar:"اعمل دالة تطبع رقمك.",quiz_ar:"إزاي ننادي دالة؟",answer:'<script>\n  function hello() { alert("Hi"); }\n  hello();\n</script>',quizAns_ar:"باسمها وبعدين أقواس."},
+  {section_ar:"أساسيات JavaScript",title_ar:"الدرس 34: الشروط في JS",steps_ar:["if و else بنفس طريقة بايثون.","لازم الأقواس المعقوفة {}."],code:'<script>\n  let age = 20;\n  if (age >= 18) { alert("Adult"); }\n</script>',practice_ar:"اعمل شرط للرقم السالب.",quiz_ar:"هل بنستخدم : بعد if؟",answer:'<script>\n  let n = -5;\n  if (n < 0) { alert("Negative"); }\n</script>',quizAns_ar:"لأ، بنستخدم {} بدالها."},
+  {section_ar:"أساسيات JavaScript",title_ar:"الدرس 35: الحلقات في JS",steps_ar:["for بتلف عدد معروف.","بنفس طريقة بايثون تقريباً."],code:'<script>\n  for (let i = 0; i < 3; i++) {\n    console.log(i);\n  }\n</script>',practice_ar:"اطبع الأرقام من 1 لـ 5.",quiz_ar:"إيه فايدة console.log؟",answer:'<script>\n  for (let i = 1; i <= 5; i++) {\n    console.log(i);\n  }\n</script>',quizAns_ar:"بتطبع في الكونسول (للتجربة)."},
+  {section_ar:"التفاعل مع الصفحة",title_ar:"الدرس 36: DOM",steps_ar:["DOM هو تمثيل الصفحة في JS.","بنستخدم document.getElementById."],code:'<h1 id="title">Hello</h1>\n<script>\n  document.getElementById("title").innerText = "Changed";\n</script>',practice_ar:"غير نص عنوان.",quiz_ar:"إيه فايدة getElementById؟",answer:'<h1 id="t">Hi</h1>\n<script>\n  document.getElementById("t").innerText = "New";\n</script>',quizAns_ar:"بتجيب العنصر بالـ id."},
+  {section_ar:"التفاعل مع الصفحة",title_ar:"الدرس 37: تغيير الألوان",steps_ar:["بنغير اللون بـ style.color.","أو style.backgroundColor."],code:'<h1 id="t">Hi</h1>\n<script>\n  document.getElementById("t").style.color = "red";\n</script>',practice_ar:"غير لون الخلفية.",quiz_ar:"إزاي نغير اللون بـ JS؟",answer:'<h1 id="t">Hi</h1>\n<script>\n  document.getElementById("t").style.color = "blue";\n</script>',quizAns_ar:"بـ style.color."},
+  {section_ar:"التفاعل مع الصفحة",title_ar:"الدرس 38: الاستماع للأحداث",steps_ar:["addEventListener بتسمع لحدث.","زي الضغط على زرار."],code:'<button id="b">Click</button>\n<script>\n  document.getElementById("b").addEventListener("click", function() {\n    alert("Clicked");\n  });\n</script>',practice_ar:"خلي الزرار يغير لون نفسه.",quiz_ar:"إيه فايدة addEventListener؟",answer:'<button id="b">Click</button>\n<script>\n  document.getElementById("b").addEventListener("click", function() {\n    this.style.color = "red";\n  });\n</script>',quizAns_ar:"بتسمع لحدث معين."},
+  {section_ar:"التفاعل مع الصفحة",title_ar:"الدرس 39: قراءة المدخلات",steps_ar:["بنستخدم .value عشان نقرا اللي المستخدم كتبه.","بتنفع مع input."],code:'<input id="i" type="
